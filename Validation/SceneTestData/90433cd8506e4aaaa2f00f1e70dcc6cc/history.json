@@ -1,0 +1,74 @@
+{
+    "records": [
+        {
+            "sessionId": "fixed-week-20260923",
+            "startedAt": "2026-09-23T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 29700.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260922",
+            "startedAt": "2026-09-22T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 27000.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260921",
+            "startedAt": "2026-09-21T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 28800.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260920",
+            "startedAt": "2026-09-20T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 24900.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260919",
+            "startedAt": "2026-09-19T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 27900.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260918",
+            "startedAt": "2026-09-18T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 29400.0,
+            "sample": true
+        },
+        {
+            "sessionId": "fixed-week-20260917",
+            "startedAt": "2026-09-17T13:00:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 26400.0,
+            "sample": true
+        }
+    ]
+}

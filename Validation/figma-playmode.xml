@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="15" result="Failed(Child)" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.557786">
+  <test-suite type="TestSuite" id="1023" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.557786" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1017" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.544660" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="8208" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1018" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.543584" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1019" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.542712" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="P0Tests" fullname="Sleepet.Tests.P0Tests" classname="Sleepet.Tests.P0Tests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:37Z" duration="1.540713" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1009" name="Audio_ImportedClipsPreviewStopFadeContinueSilence" fullname="Sleepet.Tests.P0Tests.Audio_ImportedClipsPreviewStopFadeContinueSilence" methodname="Audio_ImportedClipsPreviewStopFadeContinueSilence" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="146100033" result="Failed" start-time="2026-09-23 04:17:35Z" end-time="2026-09-23 04:17:36Z" duration="0.843863" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+Failed to set the active render target, ensure that it is a valid render target.
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1003" name="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" fullname="Sleepet.Tests.P0Tests.AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" methodname="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="612577330" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.049193" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1012" name="Camera_FakeFeedPlacementDragAndRelease" fullname="Sleepet.Tests.P0Tests.Camera_FakeFeedPlacementDragAndRelease" methodname="Camera_FakeFeedPlacementDragAndRelease" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1400835381" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.048836" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1013" name="Camera_NoDeviceTimeoutAndExplicitTestBackground" fullname="Sleepet.Tests.P0Tests.Camera_NoDeviceTimeoutAndExplicitTestBackground" methodname="Camera_NoDeviceTimeoutAndExplicitTestBackground" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="2048857059" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.046878" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1011" name="Chat_EmptyRepeatedSendAndFailureFallback" fullname="Sleepet.Tests.P0Tests.Chat_EmptyRepeatedSendAndFailureFallback" methodname="Chat_EmptyRepeatedSendAndFailureFallback" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="515697006" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.046557" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1016" name="Detector_BoundariesAndEndedState" fullname="Sleepet.Tests.P0Tests.Detector_BoundariesAndEndedState" methodname="Detector_BoundariesAndEndedState" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1496266139" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.048012" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1005" name="FullJourney_ChatSettingsSleepHoldHistory" fullname="Sleepet.Tests.P0Tests.FullJourney_ChatSettingsSleepHoldHistory" methodname="FullJourney_ChatSettingsSleepHoldHistory" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="2019769215" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.046309" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1014" name="HardwareCamera_RealFramesProbe" fullname="Sleepet.Tests.P0Tests.HardwareCamera_RealFramesProbe" methodname="HardwareCamera_RealFramesProbe" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="332691518" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.047621" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1008" name="History_PaginatesManyRecordsAndKeepsSamplesSeparate" fullname="Sleepet.Tests.P0Tests.History_PaginatesManyRecordsAndKeepsSamplesSeparate" methodname="History_PaginatesManyRecordsAndKeepsSamplesSeparate" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1498775968" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.048757" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1015" name="Inactivity_ActualFramesAndHoldExitCancellation" fullname="Sleepet.Tests.P0Tests.Inactivity_ActualFramesAndHoldExitCancellation" methodname="Inactivity_ActualFramesAndHoldExitCancellation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="35102429" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:36Z" duration="0.048009" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1007" name="MeControls_DropdownSelectionAndWheelScrolling" fullname="Sleepet.Tests.P0Tests.MeControls_DropdownSelectionAndWheelScrolling" methodname="MeControls_DropdownSelectionAndWheelScrolling" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1279950776" result="Failed" start-time="2026-09-23 04:17:36Z" end-time="2026-09-23 04:17:37Z" duration="0.049960" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1004" name="MochaSprites_AnimateTapStrokeRestAndDrag" fullname="Sleepet.Tests.P0Tests.MochaSprites_AnimateTapStrokeRestAndDrag" methodname="MochaSprites_AnimateTapStrokeRestAndDrag" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1949383933" result="Failed" start-time="2026-09-23 04:17:37Z" end-time="2026-09-23 04:17:37Z" duration="0.049053" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1010" name="Navigation_DoesNotEndSession_AndCompanionModes" fullname="Sleepet.Tests.P0Tests.Navigation_DoesNotEndSession_AndCompanionModes" methodname="Navigation_DoesNotEndSession_AndCompanionModes" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1589400087" result="Failed" start-time="2026-09-23 04:17:37Z" end-time="2026-09-23 04:17:37Z" duration="0.048145" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1002" name="QuitPreparation_SavesRunningSessionAndStopsMedia" fullname="Sleepet.Tests.P0Tests.QuitPreparation_SavesRunningSessionAndStopsMedia" methodname="QuitPreparation_SavesRunningSessionAndStopsMedia" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="219355726" result="Failed" start-time="2026-09-23 04:17:37Z" end-time="2026-09-23 04:17:37Z" duration="0.046850" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1006" name="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" fullname="Sleepet.Tests.P0Tests.Settings_ValidateTimePersistAndReminderOnlyOncePerDay" methodname="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1527666993" result="Failed" start-time="2026-09-23 04:17:37Z" end-time="2026-09-23 04:17:37Z" duration="0.050963" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp :   EnterApp blocked by HomePage
+  Expected: same as <EnterApp (UnityEngine.GameObject)>
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.P0Tests+<Click>d__24.MoveNext () [0x0011a] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:349
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

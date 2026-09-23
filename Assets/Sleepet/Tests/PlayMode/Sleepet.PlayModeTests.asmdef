@@ -1,0 +1,6 @@
+{
+  "name": "Sleepet.PlayModeTests",
+  "references": ["Sleepet.Runtime", "Sleepet.Editor", "UnityEngine.UI", "Unity.InputSystem"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

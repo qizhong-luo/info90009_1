@@ -1,0 +1,13 @@
+{
+    "sessionId": "2346ab15d98f404b8cd5777f4a431f06",
+    "sessionStartTime": "2026-09-23T10:19:42.6974135Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T10:19:42.6974135Z",
+            "sessionId": "2346ab15d98f404b8cd5777f4a431f06",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "sessionId": "67e4368037274305b627954dc548164f",
+    "sessionStartTime": "2026-09-23T05:23:06.0972894Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:23:06.0972894Z",
+            "sessionId": "67e4368037274305b627954dc548164f",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.1347220Z",
+            "sessionId": "67e4368037274305b627954dc548164f",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

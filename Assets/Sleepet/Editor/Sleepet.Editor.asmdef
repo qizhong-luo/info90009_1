@@ -1,0 +1,5 @@
+{
+  "name": "Sleepet.Editor",
+  "references": ["Sleepet.Runtime", "UnityEngine.UI", "Unity.InputSystem"],
+  "includePlatforms": ["Editor"]
+}

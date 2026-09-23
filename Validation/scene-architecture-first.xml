@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.4642612">
+  <test-suite type="TestSuite" id="1023" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.464261" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1017" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.452425" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39800" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1018" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.451305" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1019" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.450643" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1012" name="SceneArchitectureTests" fullname="Sleepet.Tests.SceneArchitectureTests" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:09Z" duration="2.449066" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1013" name="BuildContainsOnlyTheSevenRequestedMainScreens" fullname="Sleepet.Tests.SceneArchitectureTests.BuildContainsOnlyTheSevenRequestedMainScreens" methodname="BuildContainsOnlyTheSevenRequestedMainScreens" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="282618310" result="Failed" start-time="2026-09-23 07:30:07Z" end-time="2026-09-23 07:30:08Z" duration="0.864691" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Exception] UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></output>
+            </test-case>
+            <test-case id="1015" name="CounterAndSavedStateContinueAcrossScenes" fullname="Sleepet.Tests.SceneArchitectureTests.CounterAndSavedStateContinueAcrossScenes" methodname="CounterAndSavedStateContinueAcrossScenes" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="1194688927" result="Failed" start-time="2026-09-23 07:30:08Z" end-time="2026-09-23 07:30:08Z" duration="0.510986" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Exception] UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></output>
+            </test-case>
+            <test-case id="1014" name="EachSceneHasOneEditablePage" fullname="Sleepet.Tests.SceneArchitectureTests.EachSceneHasOneEditablePage" methodname="EachSceneHasOneEditablePage" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="304094318" result="Failed" start-time="2026-09-23 07:30:08Z" end-time="2026-09-23 07:30:09Z" duration="0.509548" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Exception] UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></output>
+            </test-case>
+            <test-case id="1016" name="RoutineAndARReturnKeepSession" fullname="Sleepet.Tests.SceneArchitectureTests.RoutineAndARReturnKeepSession" methodname="RoutineAndARReturnKeepSession" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="931917607" result="Failed" start-time="2026-09-23 07:30:09Z" end-time="2026-09-23 07:30:09Z" duration="0.545487" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Exception] UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[UnassignedReferenceException: The variable pages of SleepetHighFi has not been assigned.
+You probably need to assign the pages variable of the SleepetHighFi script in the inspector.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+UnityEngine.GameObject.get_transform () (at <048e1259bbea40078e5d4fad1c7a86a5>:0)
+Sleepet.HighFiAdaptiveLayout.Find (Sleepet.HighFiPage page, System.String name) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:108)
+Sleepet.HighFiAdaptiveLayout.ApplyLayout (System.Single height, System.Single extra) (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:70)
+Sleepet.HighFiAdaptiveLayout.LateUpdate () (at Assets/Sleepet/Runtime/HighFiAdaptiveLayout.cs:39)
+
+Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

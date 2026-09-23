@@ -1,0 +1,27 @@
+{
+    "sessionId": "ae7eb52f82444c7ba1bc42a41e22fd2b",
+    "sessionStartTime": "2026-09-23T05:20:04.2886124Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:20:04.2886124Z",
+            "sessionId": "ae7eb52f82444c7ba1bc42a41e22fd2b",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:20:04.2954045Z",
+            "sessionId": "ae7eb52f82444c7ba1bc42a41e22fd2b",
+            "eventType": "REMINDER_TEST_SHOWN",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:20:04.2969196Z",
+            "sessionId": "ae7eb52f82444c7ba1bc42a41e22fd2b",
+            "eventType": "PET_TAPPED",
+            "value": "Mocha",
+            "context": "Home"
+        }
+    ]
+}

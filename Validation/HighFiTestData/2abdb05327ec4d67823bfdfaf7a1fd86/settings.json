@@ -1,0 +1,13 @@
+{
+    "reminderEnabled": false,
+    "reminderTime": "22:15",
+    "lastReminderDate": "",
+    "sound": 0,
+    "volume": 0.3499999940395355,
+    "behaviour": 1,
+    "companion": 0,
+    "wakeTime": "07:45",
+    "windDownMinutes": 25,
+    "petName": "Luna",
+    "petOption": 0
+}

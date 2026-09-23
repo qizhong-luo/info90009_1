@@ -1,0 +1,41 @@
+{
+    "sessionId": "0c5dc92707c546678a2130224d82a840",
+    "sessionStartTime": "2026-09-23T10:42:20.1722387Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T10:42:20.1722387Z",
+            "sessionId": "0c5dc92707c546678a2130224d82a840",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T10:42:20.6402593Z",
+            "sessionId": "0c5dc92707c546678a2130224d82a840",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T10:42:23.0114464Z",
+            "sessionId": "0c5dc92707c546678a2130224d82a840",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-09-23T10:42:23.4291490Z",
+            "sessionId": "0c5dc92707c546678a2130224d82a840",
+            "eventType": "CAMERA_STARTED",
+            "value": "",
+            "context": "live frames received; no recording"
+        },
+        {
+            "timestamp": "2026-09-23T10:42:23.4721733Z",
+            "sessionId": "0c5dc92707c546678a2130224d82a840",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

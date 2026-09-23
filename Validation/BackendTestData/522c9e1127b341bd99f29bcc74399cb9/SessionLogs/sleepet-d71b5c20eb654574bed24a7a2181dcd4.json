@@ -1,0 +1,34 @@
+{
+    "sessionId": "d71b5c20eb654574bed24a7a2181dcd4",
+    "sessionStartTime": "2026-09-23T05:23:06.1994588Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:23:06.1994588Z",
+            "sessionId": "d71b5c20eb654574bed24a7a2181dcd4",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.2075401Z",
+            "sessionId": "d71b5c20eb654574bed24a7a2181dcd4",
+            "eventType": "AI_CHAT_OPENED",
+            "value": "MOCK",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.2088033Z",
+            "sessionId": "d71b5c20eb654574bed24a7a2181dcd4",
+            "eventType": "AI_MESSAGE_SENT",
+            "value": "12",
+            "context": "character count only"
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.6119274Z",
+            "sessionId": "d71b5c20eb654574bed24a7a2181dcd4",
+            "eventType": "AI_RESPONSE_RECEIVED",
+            "value": "67",
+            "context": "MOCK"
+        }
+    ]
+}

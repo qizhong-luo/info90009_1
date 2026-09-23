@@ -1,0 +1,76 @@
+{
+    "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+    "sessionStartTime": "2026-09-23T08:17:22.6067232Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T08:17:22.6077232Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.6584544Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.6605150Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.6618005Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_SOUND_SELECTED",
+            "value": "Rain",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.6638786Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_SESSION_STARTED",
+            "value": "",
+            "context": "inactivity demo; not measured sleep"
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.6648785Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Awake",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.7851161Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "MEDIA_STARTED",
+            "value": "Rain",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.7871283Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T08:17:23.7895969Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T08:17:24.2354757Z",
+            "sessionId": "7e12d8329a4447f184c64f614b2c68da",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

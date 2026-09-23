@@ -1,0 +1,34 @@
+{
+    "sessionId": "96aa3059a9ab4c378feee3e48cc26bbf",
+    "sessionStartTime": "2026-09-23T05:23:06.8311465Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:23:06.8311465Z",
+            "sessionId": "96aa3059a9ab4c378feee3e48cc26bbf",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.8417529Z",
+            "sessionId": "96aa3059a9ab4c378feee3e48cc26bbf",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "22:15",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.8432558Z",
+            "sessionId": "96aa3059a9ab4c378feee3e48cc26bbf",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "PlayAllNight",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:23:06.8444807Z",
+            "sessionId": "96aa3059a9ab4c378feee3e48cc26bbf",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Occasional",
+            "context": ""
+        }
+    ]
+}

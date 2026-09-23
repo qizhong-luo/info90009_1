@@ -6,8 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Sleepet/Scenes/Sleepet_Home.unity
+    guid: b562510c476eec1448d985767bc78474
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Sleep.unity
+    guid: 2ba1f2d8873d6e14fa89ab36be753e78
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Me.unity
+    guid: 919cec94bcb83d44bb40021456741356
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Routine.unity
+    guid: ad4f1a750a52cc340a2c35e5e505bd22
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Daily.unity
+    guid: 62c9f558b67a8a74895378286066c139
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Weekly.unity
+    guid: 46acec2c3077a7645906ba0d2a3ced8b
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_AR.unity
+    guid: d3f1e155450760344ac67eb1451dbc60
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_DayDetail.unity
+    guid: 4e0c83ffcf3c4b458b0632219309816a
   m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

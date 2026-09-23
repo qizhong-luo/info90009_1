@@ -1,0 +1,108 @@
+{
+    "records": [
+        {
+            "sessionId": "fixed-week-20260923",
+            "startedAt": "2026-09-23T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 29700.0,
+            "sample": true,
+            "deepMinutes": 110,
+            "lightMinutes": 265,
+            "remMinutes": 120
+        },
+        {
+            "sessionId": "real-session-today",
+            "startedAt": "2026-09-23T12:00:00.0000000Z",
+            "result": "Calm",
+            "behaviour": "",
+            "companion": "",
+            "sound": "",
+            "durationSeconds": 3600.0,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0
+        },
+        {
+            "sessionId": "fixed-week-20260922",
+            "startedAt": "2026-09-22T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 27000.0,
+            "sample": true,
+            "deepMinutes": 100,
+            "lightMinutes": 240,
+            "remMinutes": 110
+        },
+        {
+            "sessionId": "fixed-week-20260921",
+            "startedAt": "2026-09-21T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 28800.0,
+            "sample": true,
+            "deepMinutes": 115,
+            "lightMinutes": 240,
+            "remMinutes": 125
+        },
+        {
+            "sessionId": "fixed-week-20260920",
+            "startedAt": "2026-09-20T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 24900.0,
+            "sample": true,
+            "deepMinutes": 90,
+            "lightMinutes": 230,
+            "remMinutes": 95
+        },
+        {
+            "sessionId": "fixed-week-20260919",
+            "startedAt": "2026-09-19T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 27900.0,
+            "sample": true,
+            "deepMinutes": 105,
+            "lightMinutes": 245,
+            "remMinutes": 115
+        },
+        {
+            "sessionId": "fixed-week-20260918",
+            "startedAt": "2026-09-18T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 29400.0,
+            "sample": true,
+            "deepMinutes": 110,
+            "lightMinutes": 260,
+            "remMinutes": 120
+        },
+        {
+            "sessionId": "fixed-week-20260917",
+            "startedAt": "2026-09-17T13:50:00.0000000Z",
+            "result": "Sample",
+            "behaviour": "Fixed week",
+            "companion": "Mocha",
+            "sound": "Sample",
+            "durationSeconds": 26400.0,
+            "sample": true,
+            "deepMinutes": 100,
+            "lightMinutes": 230,
+            "remMinutes": 110
+        }
+    ]
+}

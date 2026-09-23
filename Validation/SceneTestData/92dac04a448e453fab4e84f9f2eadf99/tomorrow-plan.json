@@ -1,0 +1,11 @@
+{
+    "date": "2026/09/24",
+    "water": true,
+    "stretch": true,
+    "breakfast": true,
+    "groceries": true,
+    "gym": false,
+    "meeting": true,
+    "call": false,
+    "shortEvent": ""
+}

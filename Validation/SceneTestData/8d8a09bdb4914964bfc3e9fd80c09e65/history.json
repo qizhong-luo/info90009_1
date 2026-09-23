@@ -1,0 +1,17 @@
+{
+    "records": [
+        {
+            "sessionId": "c29d357df87f458ab1dff0e3b6f1f2fd",
+            "startedAt": "2026-09-23T10:42:10.4586141Z",
+            "result": "Calm",
+            "behaviour": "FadeOutGently",
+            "companion": "Quiet",
+            "sound": "Ocean",
+            "durationSeconds": 0.47452330589294436,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0
+        }
+    ]
+}

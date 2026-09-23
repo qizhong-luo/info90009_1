@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="18" result="Failed(Child)" total="18" passed="3" failed="15" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:08Z" duration="1.6867065">
+  <test-suite type="TestSuite" id="1027" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:08Z" duration="1.686707" total="18" passed="3" failed="15" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1021" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:08Z" duration="1.675405" total="18" passed="3" failed="15" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="14424" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1022" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:08Z" duration="1.674201" total="18" passed="3" failed="15" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1023" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:08Z" duration="1.673494" total="18" passed="3" failed="15" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="HighFiTests" fullname="Sleepet.Tests.HighFiTests" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:07Z" duration="1.254793" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="FigmaScreens_RenderAtReferenceSize" fullname="Sleepet.Tests.HighFiTests.FigmaScreens_RenderAtReferenceSize" methodname="FigmaScreens_RenderAtReferenceSize" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="1995039099" result="Passed" start-time="2026-09-23 05:09:06Z" end-time="2026-09-23 05:09:07Z" duration="0.988842" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1003" name="ReportsHealthFallbackAndARHaveOutcomes" fullname="Sleepet.Tests.HighFiTests.ReportsHealthFallbackAndARHaveOutcomes" methodname="ReportsHealthFallbackAndARHaveOutcomes" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="590752629" result="Passed" start-time="2026-09-23 05:09:07Z" end-time="2026-09-23 05:09:07Z" duration="0.194450" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+]]></output>
+            </test-case>
+            <test-case id="1002" name="SevenScreensAndEdits_SaveAndNavigate" fullname="Sleepet.Tests.HighFiTests.SevenScreensAndEdits_SaveAndNavigate" methodname="SevenScreensAndEdits_SaveAndNavigate" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="1514881801" result="Passed" start-time="2026-09-23 05:09:07Z" end-time="2026-09-23 05:09:07Z" duration="0.055945" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="P0Tests" fullname="Sleepet.Tests.P0Tests" classname="Sleepet.Tests.P0Tests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 05:09:07Z" end-time="2026-09-23 05:09:08Z" duration="0.417001" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1013" name="Audio_ImportedClipsPreviewStopFadeContinueSilence" fullname="Sleepet.Tests.P0Tests.Audio_ImportedClipsPreviewStopFadeContinueSilence" methodname="Audio_ImportedClipsPreviewStopFadeContinueSilence" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1426357304" result="Failed" label="Error" start-time="2026-09-23 05:09:07Z" end-time="2026-09-23 05:09:08Z" duration="0.028552" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1007" name="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" fullname="Sleepet.Tests.P0Tests.AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" methodname="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="993436620" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.027164" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1016" name="Camera_FakeFeedPlacementDragAndRelease" fullname="Sleepet.Tests.P0Tests.Camera_FakeFeedPlacementDragAndRelease" methodname="Camera_FakeFeedPlacementDragAndRelease" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="246122020" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.034176" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1017" name="Camera_NoDeviceTimeoutAndExplicitTestBackground" fullname="Sleepet.Tests.P0Tests.Camera_NoDeviceTimeoutAndExplicitTestBackground" methodname="Camera_NoDeviceTimeoutAndExplicitTestBackground" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1732426130" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.028134" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1015" name="Chat_EmptyRepeatedSendAndFailureFallback" fullname="Sleepet.Tests.P0Tests.Chat_EmptyRepeatedSendAndFailureFallback" methodname="Chat_EmptyRepeatedSendAndFailureFallback" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1661904053" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.035279" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1020" name="Detector_BoundariesAndEndedState" fullname="Sleepet.Tests.P0Tests.Detector_BoundariesAndEndedState" methodname="Detector_BoundariesAndEndedState" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="491332990" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.027089" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1009" name="FullJourney_ChatSettingsSleepHoldHistory" fullname="Sleepet.Tests.P0Tests.FullJourney_ChatSettingsSleepHoldHistory" methodname="FullJourney_ChatSettingsSleepHoldHistory" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1620810562" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.027873" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1018" name="HardwareCamera_RealFramesProbe" fullname="Sleepet.Tests.P0Tests.HardwareCamera_RealFramesProbe" methodname="HardwareCamera_RealFramesProbe" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1683437999" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.025496" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1012" name="History_PaginatesManyRecordsAndKeepsSamplesSeparate" fullname="Sleepet.Tests.P0Tests.History_PaginatesManyRecordsAndKeepsSamplesSeparate" methodname="History_PaginatesManyRecordsAndKeepsSamplesSeparate" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1815930648" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.024800" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1019" name="Inactivity_ActualFramesAndHoldExitCancellation" fullname="Sleepet.Tests.P0Tests.Inactivity_ActualFramesAndHoldExitCancellation" methodname="Inactivity_ActualFramesAndHoldExitCancellation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1018458289" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.025257" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1011" name="MeControls_DropdownSelectionAndWheelScrolling" fullname="Sleepet.Tests.P0Tests.MeControls_DropdownSelectionAndWheelScrolling" methodname="MeControls_DropdownSelectionAndWheelScrolling" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1803302861" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.024856" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1008" name="MochaSprites_AnimateTapStrokeRestAndDrag" fullname="Sleepet.Tests.P0Tests.MochaSprites_AnimateTapStrokeRestAndDrag" methodname="MochaSprites_AnimateTapStrokeRestAndDrag" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1958389176" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.025271" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1014" name="Navigation_DoesNotEndSession_AndCompanionModes" fullname="Sleepet.Tests.P0Tests.Navigation_DoesNotEndSession_AndCompanionModes" methodname="Navigation_DoesNotEndSession_AndCompanionModes" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="2031080330" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.025439" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1006" name="QuitPreparation_SavesRunningSessionAndStopsMedia" fullname="Sleepet.Tests.P0Tests.QuitPreparation_SavesRunningSessionAndStopsMedia" methodname="QuitPreparation_SavesRunningSessionAndStopsMedia" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="898295825" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.025413" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1010" name="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" fullname="Sleepet.Tests.P0Tests.Settings_ValidateTimePersistAndReminderOnlyOncePerDay" methodname="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="701136426" result="Failed" label="Error" start-time="2026-09-23 05:09:08Z" end-time="2026-09-23 05:09:08Z" duration="0.027539" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : UnityEngine.UnassignedReferenceException : The variable coverPanel of SleepetView has not been assigned.
+You probably need to assign the coverPanel variable of the SleepetView script in the inspector.]]></message>
+                <stack-trace><![CDATA[--SetUp
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at UnityEngine.GameObject.get_activeSelf () [0x00006] in <048e1259bbea40078e5d4fad1c7a86a5>:0 
+  at Sleepet.Tests.P0Tests+<SetUp>d__6.MoveNext () [0x00145] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\P0Tests.cs:40 
+  at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00017] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35 
+  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00132] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,4 @@
+{
+  "name": "Sleepet.Runtime",
+  "references": ["UnityEngine.UI", "Unity.InputSystem"]
+}

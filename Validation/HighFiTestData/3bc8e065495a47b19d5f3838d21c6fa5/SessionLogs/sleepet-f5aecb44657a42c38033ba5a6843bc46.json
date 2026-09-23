@@ -1,0 +1,125 @@
+{
+    "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+    "sessionStartTime": "2026-09-23T05:24:02.4697366Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:24:02.4697366Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.4775118Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.4795238Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.4805243Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_SOUND_SELECTED",
+            "value": "Rain",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.4820947Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_SESSION_STARTED",
+            "value": "",
+            "context": "inactivity demo; not measured sleep"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.4841353Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Awake",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.5980021Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "MEDIA_STARTED",
+            "value": "Rain",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.5993620Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6013628Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6065614Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Ended",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6085636Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "MEDIA_STOPPED",
+            "value": "Rain",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6107566Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "SLEEP_SESSION_ENDED",
+            "value": "0.1",
+            "context": "duration seconds"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6127905Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Calm",
+            "context": "simulated"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6249239Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6259610Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "CAMERA_TEST_BACKGROUND_SELECTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6279609Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "PET_PLACED",
+            "value": "Mocha",
+            "context": "explicit test background"
+        },
+        {
+            "timestamp": "2026-09-23T05:24:02.6300225Z",
+            "sessionId": "f5aecb44657a42c38033ba5a6843bc46",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

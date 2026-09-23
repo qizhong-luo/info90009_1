@@ -1,0 +1,188 @@
+{
+    "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+    "sessionStartTime": "2026-09-05T08:01:21.9575614Z",
+    "events": [
+        {
+            "timestamp": "2026-09-05T08:01:21.9575614Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.3968549Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "FALLBACK_STARTED",
+            "value": "",
+            "context": "P0: fixed 2D placement, no AR"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.3991826Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "PET_PLACED",
+            "value": "Mocha",
+            "context": "fallback"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.4027628Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "PET_TAPPED",
+            "value": "Mocha",
+            "context": "Home"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.4052881Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "AI_CHAT_OPENED",
+            "value": "MOCK",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.4101764Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "AI_MESSAGE_SENT",
+            "value": "21",
+            "context": "MOCK; character count only"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:22.8119880Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "AI_RESPONSE_RECEIVED",
+            "value": "67",
+            "context": "MOCK"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0355422Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0375530Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0456035Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "StopWhenAsleep",
+            "context": "user"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0486095Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": "user"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0723045Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "StopWhenAsleep",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0738077Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0748207Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_SESSION_STARTED",
+            "value": "",
+            "context": "accelerated simulation"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0768282Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Awake",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0778446Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "MEDIA_STARTED",
+            "value": "",
+            "context": "Unity placeholder audio only"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0843583Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "LowAttention",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0869006Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "LOW_ATTENTION_DETECTED",
+            "value": "",
+            "context": "simulated inactivity"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0894134Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "LikelyAsleep",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0904139Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "LIKELY_ASLEEP_DETECTED",
+            "value": "",
+            "context": "simulated inactivity"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:23.0924908Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "MEDIA_STOPPED",
+            "value": "",
+            "context": "Unity placeholder audio only"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:24.7661104Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Ended",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-05T08:01:24.7686313Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "SLEEP_SESSION_ENDED",
+            "value": "1.7",
+            "context": "duration seconds"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:24.7696344Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Calm",
+            "context": "simulated, not measured"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:24.9890563Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "DEBUG_RESULT_SELECTED",
+            "value": "Difficult",
+            "context": "simulated, not measured"
+        },
+        {
+            "timestamp": "2026-09-05T08:01:24.9905597Z",
+            "sessionId": "512b19e6ccaa41dd9512bc82dfc3f4a9",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Difficult",
+            "context": "debug preview"
+        }
+    ]
+}

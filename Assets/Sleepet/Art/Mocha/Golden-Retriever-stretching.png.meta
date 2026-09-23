@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 7150b068cbf4f01478d07b2b5bbfc1ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3898588611746091869
+    second: Golden-Retriever-stretching_0
+  - first:
+      213: -6406444331410782197
+    second: Golden-Retriever-stretching_1
+  - first:
+      213: 2880986054623446914
+    second: Golden-Retriever-stretching_2
+  - first:
+      213: -3377996167018144083
+    second: Golden-Retriever-stretching_3
+  - first:
+      213: -1303230093236959941
+    second: Golden-Retriever-stretching_4
+  - first:
+      213: -4762119892147968445
+    second: Golden-Retriever-stretching_5
+  - first:
+      213: 7517287428923263907
+    second: Golden-Retriever-stretching_6
+  - first:
+      213: 1888769346192208042
+    second: Golden-Retriever-stretching_7
+  - first:
+      213: -4397719806409766939
+    second: Golden-Retriever-stretching_8
+  - first:
+      213: 4778145461967593088
+    second: Golden-Retriever-stretching_9
+  - first:
+      213: -8155989290637569661
+    second: stretching_00
+  - first:
+      213: 7671414569845168941
+    second: stretching_01
+  - first:
+      213: -7192711606466964710
+    second: stretching_02
+  - first:
+      213: -1718908507974120780
+    second: stretching_03
+  - first:
+      213: 8991474424093093787
+    second: stretching_04
+  - first:
+      213: 5781198855665870527
+    second: stretching_05
+  - first:
+      213: 2986415967878002278
+    second: stretching_06
+  - first:
+      213: 8764645509888076698
+    second: stretching_07
+  - first:
+      213: 8362890292181485057
+    second: stretching_08
+  - first:
+      213: -4843460165788086442
+    second: stretching_09
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stretching_00
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38158a3d3fa10de80800000000000000
+      internalID: -8155989290637569661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_01
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b906808e6567a60800000000000000
+      internalID: 7671414569845168941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_02
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1315bc07ea5e2c90800000000000000
+      internalID: -7192711606466964710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_03
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba4ec4b1d53528e0800000000000000
+      internalID: -1718908507974120780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_04
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f241f895228cc70800000000000000
+      internalID: 8991474424093093787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_05
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6ebd7aab1fa3050800000000000000
+      internalID: 5781198855665870527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_06
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6663ce40081e17920800000000000000
+      internalID: 2986415967878002278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_07
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9be91777a642a970800000000000000
+      internalID: 8764645509888076698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_08
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1064a098964fe0470800000000000000
+      internalID: 8362890292181485057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stretching_09
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 39
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f427614a298ccb0800000000000000
+      internalID: -4843460165788086442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Golden-Retriever-stretching_0: 3898588611746091869
+      Golden-Retriever-stretching_1: -6406444331410782197
+      Golden-Retriever-stretching_2: 2880986054623446914
+      Golden-Retriever-stretching_3: -3377996167018144083
+      Golden-Retriever-stretching_4: -1303230093236959941
+      Golden-Retriever-stretching_5: -4762119892147968445
+      Golden-Retriever-stretching_6: 7517287428923263907
+      Golden-Retriever-stretching_7: 1888769346192208042
+      Golden-Retriever-stretching_8: -4397719806409766939
+      Golden-Retriever-stretching_9: 4778145461967593088
+      stretching_00: -8155989290637569661
+      stretching_01: 7671414569845168941
+      stretching_02: -7192711606466964710
+      stretching_03: -1718908507974120780
+      stretching_04: 8991474424093093787
+      stretching_05: 5781198855665870527
+      stretching_06: 2986415967878002278
+      stretching_07: 8764645509888076698
+      stretching_08: 8362890292181485057
+      stretching_09: -4843460165788086442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

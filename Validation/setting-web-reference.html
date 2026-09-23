@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleepet Preferences Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="demo-shell">
+      <p class="demo-label">Sleepet · Preferences interactive demo</p>
+      <div class="phone" id="phone" aria-label="Sleepet preferences page">
+        <header class="status-bar" aria-label="Status bar">
+          <span>9:41</span>
+          <span class="status-icons"><span class="signal"></span><span class="wifi">⌁</span><span class="battery"></span></span>
+        </header>
+
+        <section class="scroll-area" id="scrollArea">
+          <div class="profile-row">
+            <div class="avatar avatar-sally" aria-hidden="true"></div>
+            <div class="profile-copy">
+              <strong>Sally</strong>
+              <span>123456@gmail.com</span>
+            </div>
+          </div>
+
+          <section class="content-section plan-section">
+            <h2>My Plan</h2>
+            <div class="plan-card">
+              <button class="plan-summary" id="openTime" type="button" aria-label="Edit sleep schedule">
+                <span><small>BEDTIME</small><b id="bedtimeSummary">8:10PM</b></span>
+                <span><small>WIND-DOWN</small><b id="winddownSummary">20MIN</b></span>
+                <span><small>WAKE UP</small><b id="wakeSummary">9:52AM</b></span>
+              </button>
+              <div class="clock-stage" id="clockStage" role="group" aria-label="Sleep schedule dial">
+                <img class="dial-base" src="./assets/clock/dial-base.png" alt="24 hour sleep schedule dial" />
+                <svg class="clock-progress" viewBox="0 0 288 288" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="sleepArcGradient" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#034579" />
+                      <stop offset="1" stop-color="#008abb" />
+                    </linearGradient>
+                  </defs>
+                  <circle id="sleepArc" cx="144" cy="144" r="128" fill="none" stroke="url(#sleepArcGradient)" stroke-width="24" stroke-linecap="round" />
+                </svg>
+                <button class="clock-handle bedtime-handle" data-handle="bed" type="button" aria-label="Adjust bedtime">
+                  <img src="./assets/clock/bedtime-handle.svg" alt="" />
+                  <span class="clock-tooltip" id="bedTooltip"></span>
+                </button>
+                <button class="clock-handle wake-handle" data-handle="wake" type="button" aria-label="Adjust wake up time">
+                  <img src="./assets/clock/wake-handle.svg" alt="" />
+                  <span class="clock-tooltip" id="wakeTooltip"></span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section sleepet-section">
+            <h2>My Sleepet</h2>
+            <div class="sleepet-row">
+              <div class="avatar avatar-mocha" id="mainPetAvatar" aria-hidden="true"></div>
+              <div class="sleepet-copy">
+                <strong id="mainPetName">Mocha</strong>
+                <button class="pill-button" id="openPet" type="button">Change Pet</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section preferences-section">
+            <h2>Preferences</h2>
+            <div class="settings-card">
+              <div class="setting-row">
+                <span class="setting-label">Sound</span>
+                <button class="chevron" type="button" aria-label="Previous sound" data-cycle="sound" data-dir="-1">‹</button>
+                <span class="setting-value" id="soundValue">Ocean</span>
+                <button class="chevron" type="button" aria-label="Next sound" data-cycle="sound" data-dir="1">›</button>
+              </div>
+              <div class="divider"></div>
+              <div class="setting-row volume-row">
+                <span class="setting-label">Volume</span>
+                <span class="setting-value volume-value" id="volumeValue">50%</span>
+                <input id="volumeSlider" type="range" min="0" max="100" value="50" aria-label="Volume" />
+              </div>
+              <div class="divider"></div>
+              <div class="setting-row">
+                <span class="setting-label">Mode</span>
+                <button class="chevron" type="button" aria-label="Previous mode" data-cycle="mode" data-dir="-1">‹</button>
+                <span class="setting-value" id="modeValue">Quiet</span>
+                <button class="chevron" type="button" aria-label="Next mode" data-cycle="mode" data-dir="1">›</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section support-section">
+            <h2>Setting &amp; Support</h2>
+            <div class="settings-card support-card">
+              <button class="support-row" type="button">Privacy &amp; data <span>›</span></button>
+              <div class="divider"></div>
+              <button class="support-row" type="button">Accessibility <span>›</span></button>
+              <div class="divider"></div>
+              <button class="support-row" type="button">Connected Devices <span>›</span></button>
+              <div class="divider"></div>
+              <button class="support-row" type="button">Notifications <span>›</span></button>
+              <div class="divider"></div>
+              <button class="support-row" type="button">Help &amp; Q&amp;A <span>›</span></button>
+            </div>
+          </section>
+          <div class="scroll-bottom-space"></div>
+        </section>
+
+        <nav class="bottom-nav" aria-label="Primary navigation">
+          <button type="button" aria-label="Home"><img src="./assets/nav-home.svg" alt="" /></button>
+          <button type="button" aria-label="Sleep"><img src="./assets/nav-sleep.svg" alt="" /></button>
+          <button class="active" type="button" aria-label="Me"><img src="./assets/nav-me.svg" alt="" /></button>
+        </nav>
+
+        <div class="sheet-layer" id="timeLayer" aria-hidden="true">
+          <button class="scrim" type="button" aria-label="Close time settings"></button>
+          <section class="bottom-sheet time-sheet" role="dialog" aria-modal="true" aria-labelledby="timeTitle">
+            <div class="sheet-section">
+              <h3 id="timeTitle">BEDTIME</h3>
+              <div class="time-inputs">
+                <label><input id="bedHour" inputmode="numeric" maxlength="2" value="08" /><span>Hour</span></label>
+                <b>:</b>
+                <label><input id="bedMinute" inputmode="numeric" maxlength="2" value="10" /><span>Minute</span></label>
+                <div class="ampm"><button type="button" data-ampm="bed" data-value="AM">AM</button><button class="selected" type="button" data-ampm="bed" data-value="PM">PM</button></div>
+              </div>
+            </div>
+            <div class="sheet-section">
+              <h3>WAKE UP</h3>
+              <div class="time-inputs">
+                <label><input id="wakeHour" inputmode="numeric" maxlength="2" value="08" /><span>Hour</span></label>
+                <b>:</b>
+                <label><input id="wakeMinute" inputmode="numeric" maxlength="2" value="52" /><span>Minute</span></label>
+                <div class="ampm"><button type="button" data-ampm="wake" data-value="AM">AM</button><button class="selected" type="button" data-ampm="wake" data-value="PM">PM</button></div>
+              </div>
+            </div>
+            <div class="sheet-section winddown-editor">
+              <h3>WIND-DOWN</h3>
+              <div class="duration-inputs"><label><input id="windMinutes" inputmode="numeric" maxlength="2" value="20" /><span>Minutes</span></label><label><input id="windSeconds" inputmode="numeric" maxlength="2" value="00" /><span>Seconds</span></label></div>
+            </div>
+            <div class="sheet-actions"><span class="clock-glyph">◷</span><button class="sheet-pill" id="cancelTime" type="button">Cancel</button><button class="sheet-pill" id="saveTime" type="button">Save</button></div>
+          </section>
+        </div>
+
+        <div class="sheet-layer" id="petLayer" aria-hidden="true">
+          <button class="scrim" type="button" aria-label="Close pet settings"></button>
+          <section class="bottom-sheet pet-sheet" role="dialog" aria-modal="true" aria-labelledby="petTitle">
+            <h3 id="petTitle">My Sleepet</h3>
+            <div class="pet-selector">
+              <button class="pet-thumb selected" type="button" data-pet-index="0"><span class="avatar avatar-mocha"></span></button>
+              <button class="pet-thumb" type="button" data-pet-index="1"><img src="./assets/pet-option-1.png" alt="Cat pet" /></button>
+              <button class="pet-thumb" type="button" data-pet-index="2"><img src="./assets/pet-option-2.png" alt="Hamster pet" /></button>
+              <button class="pet-thumb add-pet" type="button" aria-label="Add pet">＋</button>
+            </div>
+            <div class="pet-details">
+              <div class="pet-detail-row"><strong>Name</strong><button class="pet-choice" id="petNameChoice" type="button">Mocha <span>›</span></button></div>
+              <div class="divider"></div>
+              <div class="pet-detail-row pet-image-row"><strong>Appearance</strong><button class="tiny-arrow" id="appearancePrev" type="button">‹</button><img id="appearanceImage" src="./assets/pet-option-3.png" alt="Pet appearance" /><button class="tiny-arrow" id="appearanceNext" type="button">›</button></div>
+              <div class="divider"></div>
+              <div class="pet-detail-row pet-image-row pose-row"><strong>Movements/<br />Poses</strong><button class="tiny-arrow" id="posePrev" type="button">‹</button><div class="pose-preview" id="posePreview" aria-label="Current pet pose"></div><button class="tiny-arrow" id="poseNext" type="button">›</button></div>
+            </div>
+            <div class="sheet-actions pet-actions"><button class="sheet-pill" type="button" disabled>Preview</button><button class="sheet-pill" id="savePet" type="button">Save</button></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

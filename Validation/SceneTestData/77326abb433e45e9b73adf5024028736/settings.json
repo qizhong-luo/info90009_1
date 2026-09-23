@@ -1,0 +1,18 @@
+{
+    "reminderEnabled": false,
+    "reminderTime": "22:15",
+    "lastReminderDate": "",
+    "sound": 1,
+    "volume": 0.7300000190734863,
+    "behaviour": 1,
+    "companion": 0,
+    "wakeTime": "07:30",
+    "windDownMinutes": 20,
+    "windDownSeconds": 0,
+    "petName": "Mocha",
+    "petOption": 0,
+    "petAppearance": 0,
+    "petPose": 0,
+    "profileName": "AlexandraZ",
+    "profileAvatar": 2
+}

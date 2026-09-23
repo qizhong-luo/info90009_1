@@ -1,0 +1,69 @@
+{
+    "sessionId": "044fc42a13c542c1a467791af64777d1",
+    "sessionStartTime": "2026-09-23T10:12:28.1587280Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T10:12:28.1587280Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T10:12:29.7406854Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.1790206Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "CAMERA_STARTED",
+            "value": "",
+            "context": "live frames received; no recording"
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.2256505Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "CAMERA_TEST_BACKGROUND_SELECTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.2282219Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "PET_PLACED",
+            "value": "Mocha",
+            "context": "explicit test background"
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.2338064Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "AI_CHAT_OPENED",
+            "value": "MOCK",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.2428381Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "AI_MESSAGE_SENT",
+            "value": "11",
+            "context": "character count only"
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.6494958Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "AI_RESPONSE_RECEIVED",
+            "value": "75",
+            "context": "MOCK"
+        },
+        {
+            "timestamp": "2026-09-23T10:12:30.8492725Z",
+            "sessionId": "044fc42a13c542c1a467791af64777d1",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

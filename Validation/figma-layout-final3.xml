@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:03Z" duration="2.1271448">
+  <test-suite type="TestSuite" id="1018" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:03Z" duration="2.127145" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:03Z" duration="2.115877" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6536" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:03Z" duration="2.114927" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1014" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:03Z" duration="2.114363" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="HighFiTests" fullname="Sleepet.Tests.HighFiTests" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:02Z" duration="1.310635" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="FigmaScreens_RenderAtReferenceSize" fullname="Sleepet.Tests.HighFiTests.FigmaScreens_RenderAtReferenceSize" methodname="FigmaScreens_RenderAtReferenceSize" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="1408310110" result="Passed" start-time="2026-09-23 05:24:01Z" end-time="2026-09-23 05:24:02Z" duration="1.018092" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1005" name="OriginalVisualTreeIsRemoved_AndPortraitLayoutTracksHeight" fullname="Sleepet.Tests.HighFiTests.OriginalVisualTreeIsRemoved_AndPortraitLayoutTracksHeight" methodname="OriginalVisualTreeIsRemoved_AndPortraitLayoutTracksHeight" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="259184432" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:02Z" duration="0.034246" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1003" name="ReportsHealthFallbackAndARHaveOutcomes" fullname="Sleepet.Tests.HighFiTests.ReportsHealthFallbackAndARHaveOutcomes" methodname="ReportsHealthFallbackAndARHaveOutcomes" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="120254610" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:02Z" duration="0.185741" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+]]></output>
+            </test-case>
+            <test-case id="1002" name="SevenScreensAndEdits_SaveAndNavigate" fullname="Sleepet.Tests.HighFiTests.SevenScreensAndEdits_SaveAndNavigate" methodname="SevenScreensAndEdits_SaveAndNavigate" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="1958059023" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:02Z" duration="0.056373" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1006" name="P0Tests" fullname="Sleepet.Tests.P0Tests" classname="Sleepet.Tests.P0Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:03Z" duration="0.802218" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="CameraTestModeIsExplicit_AndDoesNotOpenFeed" fullname="Sleepet.Tests.P0Tests.CameraTestModeIsExplicit_AndDoesNotOpenFeed" methodname="CameraTestModeIsExplicit_AndDoesNotOpenFeed" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1433377900" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:02Z" duration="0.032848" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1009" name="OfflineChatProducesReply" fullname="Sleepet.Tests.P0Tests.OfflineChatProducesReply" methodname="OfflineChatProducesReply" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="470541588" result="Passed" start-time="2026-09-23 05:24:02Z" end-time="2026-09-23 05:24:03Z" duration="0.634521" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1008" name="PreferencesContinueThroughStateBridge" fullname="Sleepet.Tests.P0Tests.PreferencesContinueThroughStateBridge" methodname="PreferencesContinueThroughStateBridge" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1007467110" result="Passed" start-time="2026-09-23 05:24:03Z" end-time="2026-09-23 05:24:03Z" duration="0.040520" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1011" name="ReminderAndPetActionsRetainState" fullname="Sleepet.Tests.P0Tests.ReminderAndPetActionsRetainState" methodname="ReminderAndPetActionsRetainState" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="656157106" result="Passed" start-time="2026-09-23 05:24:03Z" end-time="2026-09-23 05:24:03Z" duration="0.035545" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+            <test-case id="1007" name="SessionSurvivesNavigation_AndPersistsOneRecord" fullname="Sleepet.Tests.P0Tests.SessionSurvivesNavigation_AndPersistsOneRecord" methodname="SessionSurvivesNavigation_AndPersistsOneRecord" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="183719504" result="Passed" start-time="2026-09-23 05:24:03Z" end-time="2026-09-23 05:24:03Z" duration="0.056780" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

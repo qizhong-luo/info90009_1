@@ -105,3 +105,12 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Sleepet P0 local test sessions and scratch compilation/reference files
+/SessionLogs/
+/Validation/Compile/
+/Validation/Reference/
+/SleepetData/
+/Validation/AudioTools/
+/Validation/SourceAudio/
+/Validation/Editable/TestData/

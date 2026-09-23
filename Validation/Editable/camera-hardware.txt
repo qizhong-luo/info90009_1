@@ -1,0 +1,4 @@
+State: Live
+Frames: 3
+Live camera | tap Place Mocha, then drag to reposition.
+Screen overlay only; no room or plane tracking.

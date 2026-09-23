@@ -1,0 +1,202 @@
+{
+    "sessionId": "6aed30888d4043acb5f4731eef062a85",
+    "sessionStartTime": "2026-09-23T04:44:54.4304936Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T04:44:54.4304936Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:54.4597129Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "PET_TAPPED",
+            "value": "Mocha",
+            "context": "Home"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:54.4627281Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "AI_CHAT_OPENED",
+            "value": "MOCK",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:54.4669289Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "AI_MESSAGE_SENT",
+            "value": "21",
+            "context": "character count only"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:54.8694265Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "AI_RESPONSE_RECEIVED",
+            "value": "67",
+            "context": "MOCK"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.0935716Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1047071Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "22:45",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1062103Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "StopWhenAsleep",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1072120Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Occasional",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1354564Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1606861Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "StopWhenAsleep",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1621985Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Occasional",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1632104Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_SOUND_SELECTED",
+            "value": "Ocean",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1645076Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_SESSION_STARTED",
+            "value": "",
+            "context": "inactivity demo; not measured sleep"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1655105Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Awake",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1670136Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "MEDIA_STARTED",
+            "value": "Ocean",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1690965Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1721179Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "LowAttention",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1731278Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "LOW_ATTENTION_DETECTED",
+            "value": "",
+            "context": "simulated inactivity"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1741362Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "COMPANION_PROMPT_SHOWN",
+            "value": "Occasional",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1751353Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "LikelyAsleep",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1775788Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "LIKELY_ASLEEP_DETECTED",
+            "value": "",
+            "context": "simulated inactivity"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:55.1785814Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "MEDIA_STOPPED",
+            "value": "Ocean",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:56.8533342Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Ended",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:56.8543397Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "SLEEP_SESSION_ENDED",
+            "value": "1.7",
+            "context": "duration seconds"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:56.8563583Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Calm",
+            "context": "simulated"
+        },
+        {
+            "timestamp": "2026-09-23T04:44:57.0722757Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "DEBUG_RESULT_SELECTED",
+            "value": "Difficult",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T04:44:57.0793070Z",
+            "sessionId": "6aed30888d4043acb5f4731eef062a85",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Difficult",
+            "context": "debug preview"
+        }
+    ]
+}

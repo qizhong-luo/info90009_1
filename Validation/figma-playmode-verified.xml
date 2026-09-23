@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="17" result="Failed(Child)" total="17" passed="2" failed="15" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:40Z" duration="1.9310927">
+  <test-suite type="TestSuite" id="1026" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:40Z" duration="1.931093" total="17" passed="2" failed="15" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1020" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:40Z" duration="1.918937" total="17" passed="2" failed="15" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22552" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1021" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:40Z" duration="1.917887" total="17" passed="2" failed="15" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1022" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="17" result="Failed" site="Child" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:40Z" duration="1.917146" total="17" passed="2" failed="15" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="HighFiTests" fullname="Sleepet.Tests.HighFiTests" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:39Z" duration="0.711793" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1003" name="ReportsHealthFallbackAndARHaveOutcomes" fullname="Sleepet.Tests.HighFiTests.ReportsHealthFallbackAndARHaveOutcomes" methodname="ReportsHealthFallbackAndARHaveOutcomes" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="401506922" result="Passed" start-time="2026-09-23 04:21:38Z" end-time="2026-09-23 04:21:39Z" duration="0.611015" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+]]></output>
+            </test-case>
+            <test-case id="1002" name="SevenScreensAndEdits_SaveAndNavigate" fullname="Sleepet.Tests.HighFiTests.SevenScreensAndEdits_SaveAndNavigate" methodname="SevenScreensAndEdits_SaveAndNavigate" classname="Sleepet.Tests.HighFiTests" runstate="Runnable" seed="1476584583" result="Passed" start-time="2026-09-23 04:21:39Z" end-time="2026-09-23 04:21:39Z" duration="0.084281" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1004" name="P0Tests" fullname="Sleepet.Tests.P0Tests" classname="Sleepet.Tests.P0Tests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-09-23 04:21:39Z" end-time="2026-09-23 04:21:40Z" duration="1.203344" total="15" passed="0" failed="15" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1012" name="Audio_ImportedClipsPreviewStopFadeContinueSilence" fullname="Sleepet.Tests.P0Tests.Audio_ImportedClipsPreviewStopFadeContinueSilence" methodname="Audio_ImportedClipsPreviewStopFadeContinueSilence" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1084893094" result="Failed" start-time="2026-09-23 04:21:39Z" end-time="2026-09-23 04:21:40Z" duration="0.503275" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+Failed to set the active render target, ensure that it is a valid render target.
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1006" name="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" fullname="Sleepet.Tests.P0Tests.AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" methodname="AuthoredHierarchy_EditableBeforePlayAndStableAcrossNavigation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="405560475" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.046694" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1015" name="Camera_FakeFeedPlacementDragAndRelease" fullname="Sleepet.Tests.P0Tests.Camera_FakeFeedPlacementDragAndRelease" methodname="Camera_FakeFeedPlacementDragAndRelease" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1121692350" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.045303" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1016" name="Camera_NoDeviceTimeoutAndExplicitTestBackground" fullname="Sleepet.Tests.P0Tests.Camera_NoDeviceTimeoutAndExplicitTestBackground" methodname="Camera_NoDeviceTimeoutAndExplicitTestBackground" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="156946725" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.047554" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1014" name="Chat_EmptyRepeatedSendAndFailureFallback" fullname="Sleepet.Tests.P0Tests.Chat_EmptyRepeatedSendAndFailureFallback" methodname="Chat_EmptyRepeatedSendAndFailureFallback" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="303195306" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.049941" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1019" name="Detector_BoundariesAndEndedState" fullname="Sleepet.Tests.P0Tests.Detector_BoundariesAndEndedState" methodname="Detector_BoundariesAndEndedState" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1825365868" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.051389" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1008" name="FullJourney_ChatSettingsSleepHoldHistory" fullname="Sleepet.Tests.P0Tests.FullJourney_ChatSettingsSleepHoldHistory" methodname="FullJourney_ChatSettingsSleepHoldHistory" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1167958551" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.048739" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1017" name="HardwareCamera_RealFramesProbe" fullname="Sleepet.Tests.P0Tests.HardwareCamera_RealFramesProbe" methodname="HardwareCamera_RealFramesProbe" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="894993163" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.050762" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1011" name="History_PaginatesManyRecordsAndKeepsSamplesSeparate" fullname="Sleepet.Tests.P0Tests.History_PaginatesManyRecordsAndKeepsSamplesSeparate" methodname="History_PaginatesManyRecordsAndKeepsSamplesSeparate" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="991501309" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.049947" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1018" name="Inactivity_ActualFramesAndHoldExitCancellation" fullname="Sleepet.Tests.P0Tests.Inactivity_ActualFramesAndHoldExitCancellation" methodname="Inactivity_ActualFramesAndHoldExitCancellation" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="353893197" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.049217" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1010" name="MeControls_DropdownSelectionAndWheelScrolling" fullname="Sleepet.Tests.P0Tests.MeControls_DropdownSelectionAndWheelScrolling" methodname="MeControls_DropdownSelectionAndWheelScrolling" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1199671364" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.047538" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1007" name="MochaSprites_AnimateTapStrokeRestAndDrag" fullname="Sleepet.Tests.P0Tests.MochaSprites_AnimateTapStrokeRestAndDrag" methodname="MochaSprites_AnimateTapStrokeRestAndDrag" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="341991177" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.047534" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1013" name="Navigation_DoesNotEndSession_AndCompanionModes" fullname="Sleepet.Tests.P0Tests.Navigation_DoesNotEndSession_AndCompanionModes" methodname="Navigation_DoesNotEndSession_AndCompanionModes" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="347299846" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.056447" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1005" name="QuitPreparation_SavesRunningSessionAndStopsMedia" fullname="Sleepet.Tests.P0Tests.QuitPreparation_SavesRunningSessionAndStopsMedia" methodname="QuitPreparation_SavesRunningSessionAndStopsMedia" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="419128373" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.048835" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+]]></output>
+            </test-case>
+            <test-case id="1009" name="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" fullname="Sleepet.Tests.P0Tests.Settings_ValidateTimePersistAndReminderOnlyOncePerDay" methodname="Settings_ValidateTimePersistAndReminderOnlyOncePerDay" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="452803672" result="Failed" start-time="2026-09-23 04:21:40Z" end-time="2026-09-23 04:21:40Z" duration="0.054886" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[SetUp : Unhandled log message: '[Error] RenderTexture.Create failed'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Camera:Render ()
+Sleepet.Tests.P0Tests:Capture (string) (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:374)
+Sleepet.Tests.P0Tests/<SetUp>d__6:MoveNext () (at Assets/Sleepet/Tests/PlayMode/P0Tests.cs:41)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[The referenced script on this Behaviour (Game Object '<null>') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+The referenced script on this Behaviour (Game Object 'Slide to end sleep') is missing!
+RenderTexture.Create failed
+RenderTexture.Create failed
+RenderTexture.Create failed
+Renderer2D Pass: Unable to find surface for attachment 0
+EndRenderPass: Not inside a Renderpass
+Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

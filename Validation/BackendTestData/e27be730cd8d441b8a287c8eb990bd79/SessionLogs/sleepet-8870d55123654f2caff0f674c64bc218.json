@@ -1,0 +1,27 @@
+{
+    "sessionId": "8870d55123654f2caff0f674c64bc218",
+    "sessionStartTime": "2026-09-23T05:13:46.7817836Z",
+    "events": [
+        {
+            "timestamp": "2026-09-23T05:13:46.7817836Z",
+            "sessionId": "8870d55123654f2caff0f674c64bc218",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:13:46.7904879Z",
+            "sessionId": "8870d55123654f2caff0f674c64bc218",
+            "eventType": "CAMERA_TEST_BACKGROUND_SELECTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-09-23T05:13:46.7920014Z",
+            "sessionId": "8870d55123654f2caff0f674c64bc218",
+            "eventType": "PET_PLACED",
+            "value": "Mocha",
+            "context": "explicit test background"
+        }
+    ]
+}

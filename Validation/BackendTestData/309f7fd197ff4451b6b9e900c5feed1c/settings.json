@@ -1,0 +1,13 @@
+{
+    "reminderEnabled": true,
+    "reminderTime": "22:15",
+    "lastReminderDate": "",
+    "sound": 1,
+    "volume": 0.6000000238418579,
+    "behaviour": 2,
+    "companion": 1,
+    "wakeTime": "08:00",
+    "windDownMinutes": 20,
+    "petName": "Mocha",
+    "petOption": 0
+}
