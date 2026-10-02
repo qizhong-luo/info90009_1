@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.438972">
+  <test-suite type="TestSuite" id="1024" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.438972" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1018" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.427791" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="42500" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1019" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.426597" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1020" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.425908" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1004" name="SceneArchitectureTests" fullname="Sleepet.Tests.SceneArchitectureTests" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.424319" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1015" name="MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" fullname="Sleepet.Tests.SceneArchitectureTests.MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" methodname="MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="315475855" result="Passed" start-time="2026-10-02 06:04:50Z" end-time="2026-10-02 06:04:53Z" duration="3.407501" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

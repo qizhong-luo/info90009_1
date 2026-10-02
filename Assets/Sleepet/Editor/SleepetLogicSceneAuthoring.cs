@@ -14,6 +14,16 @@ namespace Sleepet.Editor
     {
         static readonly Color Ink = new Color(.027f, .157f, .329f), Card = new Color(.906f, .953f, .988f), Navy = new Color(.012f, .271f, .475f);
         static Sprite panel;
+        [MenuItem("Sleepet/Apply Weekly Figma Layout")]
+        public static void ApplyWeekly()
+        {
+            panel = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sleepet/Art/Figma/rounded-panel-22.png");
+            var scene = EditorSceneManager.OpenScene("Assets/Sleepet/Scenes/Sleepet_Weekly.unity");
+            Weekly(Object.FindFirstObjectByType<SleepetHighFi>());
+            EditorSceneManager.MarkSceneDirty(scene);
+            EditorSceneManager.SaveScene(scene);
+            AssetDatabase.SaveAssets();
+        }
         [MenuItem("Sleepet/Apply Audited Figma Interactions")]
         public static void Apply()
         {
@@ -175,6 +185,78 @@ namespace Sleepet.Editor
             var old = rhythm.GetComponentsInChildren<Text>().FirstOrDefault(t => t.text.Contains("daily sleep report")); if (old) Object.DestroyImmediate(old.gameObject);
             Text(bedtime, "Date hint", 19, 227, 314, 17, "Tap any day to see your daily sleep report", 12, Ink);
             Text(rhythm, "Health description", 248, 52, 90, 48, "Open Health\nfor details", 12, Ink);
+            WeeklyStyle(ui, page, routine, bedtime, rhythm);
+        }
+
+        static void WeeklyStyle(SleepetHighFi ui, Transform page, Transform routine, Transform bedtime, Transform rhythm)
+        {
+            var secondary = new Color(73 / 255f, 107 / 255f, 134 / 255f);
+            var deep = new Color(2 / 255f, 69 / 255f, 122 / 255f);
+            foreach (var card in new[] { routine, bedtime, rhythm })
+            {
+                foreach (var t in card.GetComponentsInChildren<Text>()) t.color = secondary;
+                var title = card.Find("Title").GetComponent<Text>();
+                Box(title.transform, 19, 17, 314, 23); title.fontSize = 17; title.fontStyle = FontStyle.Bold; title.color = Ink;
+            }
+            foreach (var t in new[] { ui.weeklyCount, ui.weeklyWakeCount }) { t.color = deep; t.fontStyle = FontStyle.Bold; }
+            ui.weeklyAverage.color = Ink; ui.weeklyAverage.fontStyle = FontStyle.Bold;
+            routine.Find("Divider").GetComponent<Image>().color = new Color(214 / 255f, 232 / 255f, 238 / 255f);
+            for (int i = 0; i < 4; i++) bedtime.Find("Grid " + i).GetComponent<Image>().color = new Color(214 / 255f, 232 / 255f, 238 / 255f);
+            var smallPanel = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sleepet/Art/Figma/rounded-panel-5.png");
+            for (int i = 0; i < 7; i++)
+            {
+                var button = ui.weeklyDayButtons[i];
+                var label = button.GetComponentInChildren<Text>(); label.fontSize = 12;
+                label.color = i == 6 ? Ink : secondary; label.fontStyle = i == 6 ? FontStyle.Bold : FontStyle.Normal;
+                var bar = button.transform.Find("Bar").GetComponent<Image>(); bar.sprite = smallPanel; bar.type = UnityEngine.UI.Image.Type.Sliced;
+                Box(bar.transform, 7, 0, 22, new[] { 87, 99, 77, 87, 87, 99, 99 }[i]);
+                bar.color = i == 6 ? Ink : new Color(.20f, .66f, .80f);
+                label.text = new[] { "M", "T", "W", "T", "F", "S", "S" }[i];
+                foreach (var effect in bar.GetComponents<Shadow>()) Object.DestroyImmediate(effect);
+                if (i == 6) Image(button.transform, "Selected day underline", 13, 123, 10, 1, Ink);
+            }
+            ui.weeklyAverageLine.GetComponent<Image>().color = Color.clear;
+            for (int i = 0; i < 34; i++) Image(ui.weeklyAverageLine, "Dash " + i, i * 8, 0, Mathf.Min(4, 270 - i * 8), 1.5f, deep);
+            var keep = rhythm.Find("Keep using").GetComponent<Text>(); Box(keep.transform, 19, 47, 220, 16); keep.fontSize = 14; keep.color = deep;
+            Box(ui.weeklyAverageSleep.transform, 19, 68, 229, 18); ui.weeklyAverageSleep.fontSize = 14; ui.weeklyAverageSleep.color = deep;
+            var health = rhythm.Find("Health description").GetComponent<Text>(); Box(health.transform, 236, 48, 117, 53); health.text = "Click to see more\ninformation"; health.fontSize = 13;
+            var healthButton = rhythm.Find("Open health details");
+            if (healthButton) { Box(healthButton, 236, 10, 112, 94); foreach (var t in healthButton.GetComponentsInChildren<Text>()) t.text = ""; }
+            Image(rhythm, "Watch icon", 248, 15, 24, 28, Color.white, WeeklyIcon("weekly-watch.png"));
+            Image(rhythm, "Open details chevron", 305, 20, 20, 20, Color.white, WeeklyIcon("weekly-chevron.png"));
+            var message = page.Find("Mocha message"); Box(message, 28, 133, 354, 61); message.GetComponent<Image>().sprite = panel; message.GetComponent<Image>().type = UnityEngine.UI.Image.Type.Sliced;
+            var messageText = message.GetComponentInChildren<Text>(); if (messageText) { Box(messageText.transform, 16, 10, 208, 40); messageText.fontSize = 16; messageText.alignment = TextAnchor.MiddleCenter; }
+            var mascot = page.GetComponentsInChildren<Transform>().First(t => t.name == "Sleeping mascot");
+            Box(mascot, mascot.parent == message ? 228 : 256, mascot.parent == message ? -7.5f : 125.5f, 118, 76);
+            var period = page.Find("Weekly period display"); Box(period, 24, 214, 369, 46);
+            var rim = period.GetComponent<Image>(); rim.sprite = panel; rim.type = UnityEngine.UI.Image.Type.Sliced; rim.color = new Color(214 / 255f, 232 / 255f, 238 / 255f);
+            var inside = Image(period, "Period navy inset", 4, 4, 361, 38, new Color(0, 27 / 255f, 72 / 255f), panel); inside.transform.SetAsFirstSibling();
+            // The range label is a page sibling in the authored scene.
+            Box(ui.weeklyRange.transform, ui.weeklyRange.transform.parent == period ? 8 : 32, ui.weeklyRange.transform.parent == period ? 4 : 218, 353, 38); ui.weeklyRange.fontSize = 20;
+            Box(ui.weeklyDataNote.transform, 24, 270, 292, 18); ui.weeklyDataNote.fontSize = 9; ui.weeklyDataNote.alignment = TextAnchor.MiddleLeft;
+            Text(page, "Nights in period", 326, 271, 54, 15, "7 nights", 12, Color.white, TextAnchor.MiddleRight);
+            foreach (var card in new[] { routine, bedtime, rhythm, message })
+            {
+                var outline = Component<Outline>(card.gameObject); outline.effectColor = Color.white; outline.effectDistance = new Vector2(.5f, -.5f);
+            }
+            ui.navActive = new Color(1, 1, 1, .14f);
+            for (int i = 0; i < ui.navHighlights.Length; i++)
+            {
+                var highlight = ui.navHighlights[i]; if (!highlight) continue;
+                highlight.sprite = panel; highlight.type = UnityEngine.UI.Image.Type.Sliced;
+                highlight.pixelsPerUnitMultiplier = 22f / 14f;
+                highlight.color = i == 1 ? ui.navActive : Color.clear;
+                Box(highlight.transform, new[] { 24, 156, 264 }[i], 5, 112, 56);
+            }
+        }
+
+        static Sprite WeeklyIcon(string name)
+        {
+            var path = "Assets/Sleepet/Art/Figma/" + name;
+            var importer = (TextureImporter)AssetImporter.GetAtPath(path);
+            importer.textureType = TextureImporterType.Sprite; importer.spriteImportMode = SpriteImportMode.Single;
+            importer.alphaIsTransparency = true; importer.mipmapEnabled = false; importer.SaveAndReimport();
+            return AssetDatabase.LoadAssetAtPath<Sprite>(path);
         }
     }
 }

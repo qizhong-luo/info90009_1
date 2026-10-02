@@ -31,6 +31,12 @@
 
 ## 本地验证与真机验收
 
-PlayMode 测试检查 Build Settings 严格为 8 个 Scene、每个 Scene 只有一个主页面、跨 Scene 的同一数据对象、切换计数、设置与会话持久化、月亮入口、七个日期选择、测试样本幂等写入及真实记录优先、AR 宠物选项一致性、Home/Me 状态栏移除、底部导航透明度、阶段样本数值、设置头像裁切、Mode 行点击区域与外部健康入口结果，以及 402×874 页面截图。最终结果文件为 `Validation/figma-final.xml`（13/13 通过，2026-09-23 20:48 本地时间）；`Validation/SceneScreens/` 包含空状态、`WeeklyWithTestData.png`、`DayDetailWithTestData.png` 与 `ARWithCustomizedPet.png`。桌面横屏 Game View 将竖屏应用居中显示；iPhone 竖屏以屏幕宽度为缩放基准。
+最终回归结果：**15/15 通过，0 失败**，结果文件 `Validation/figma-logic-verified.xml`。此轮包括存档替换失败修复后的内存与磁盘一致性检查。
+
+PlayMode 测试检查 Build Settings 严格为 8 个 Scene、每个 Scene 只有一个主页面、跨 Scene 的同一数据对象、切换计数、设置与会话持久化、月亮入口、七个日期选择、测试样本幂等写入及真实记录优先、AR 宠物选项一致性、系统状态栏移除、底部导航透明度、阶段样本数值、设置头像裁切、实际点击区域与外部健康入口结果，以及 402×874 页面截图。新增检查包括名字字母限制、资料取消与保存、跨场景／磁盘恢复、时间 AM/PM 与无效输入、宠物预览不改变选择、外观和姿势同步 AR、计划与 AR 返回路径、周报目标统计。最新结果文件为 `Validation/figma-logic-verified.xml`；旧 XML 为历史运行记录。
+
+截图位于 `Validation/SceneScreens/`：八个主页面、`WeeklyWithTestData.png`、`DayDetailWithTestData.png`、`ARWithCustomizedPet.png`，以及新增 `SettingProfileEditor.png`、`SettingTimePicker.png`、`SettingPetPicker.png`、`SettingCustomized.png`、`SettingSupport.png`。已修正截图检查发现的滑块拉长、支持列表对齐、周报旧文字重叠和图标切片问题。桌面横屏 Game View 将竖屏应用居中显示；iPhone 竖屏以屏幕宽度为缩放基准。
+
+逐项原型路径、用户覆盖规则、统计含义和剩余外部依赖见 `Validation/FIGMA_LOGIC_AUDIT.md`。存档采用临时文件原子替换；针对本轮出现的一次替换失败，增加最多三次短暂重试，最终失败仍保留旧存档并反馈错误。
 
 iPhone 真机逐页验收仍需要：同尺寸竖屏视觉对照、刘海／安全区域、触摸拖动和滚动、离开和返回 App、健康 App 跳转失败与成功路径、摄像头权限、不同机型缩放。当前 Windows 环境未安装 Unity iOS Build Support，无法在本机生成 iOS 包或完成上述真机验收。逐像素 1:1 视觉一致仍需按真机截图调整字体、图标、卡片细节与安全区。

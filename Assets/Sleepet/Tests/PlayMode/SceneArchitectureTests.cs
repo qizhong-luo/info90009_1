@@ -107,7 +107,9 @@ namespace Sleepet.Tests
             ui.OpenPetSheet();
             ui.petNameInput.SetTextWithoutNotify("Luna");
             ui.SavePet();
+            Assert.IsNull(store.Error);
             Assert.AreEqual("Luna", store.Preferences.petName);
+            Assert.AreEqual("Luna", new SleepetStore(dataRoot).Preferences.petName);
             ui.OpenHome();
             yield return null; yield return null;
             Assert.AreEqual(HighFiPage.Home, Object.FindFirstObjectByType<SleepetHighFi>().scenePage);

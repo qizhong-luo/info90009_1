@@ -168,8 +168,19 @@ namespace Sleepet
                 System.IO.Directory.CreateDirectory(DirectoryPath);
                 string target = Path.Combine(DirectoryPath, name), temp = target + ".tmp";
                 File.WriteAllText(temp, JsonUtility.ToJson(value, true));
-                if (File.Exists(target)) File.Replace(temp, target, null);
-                else File.Move(temp, target);
+                // File scanners can briefly hold the destination on Windows. Keep the
+                // atomic replacement and the previous valid save; retry only briefly.
+                for (int attempt = 0; ; attempt++)
+                {
+                    try
+                    {
+                        if (File.Exists(target)) File.Replace(temp, target, null);
+                        else File.Move(temp, target);
+                        break;
+                    }
+                    catch (IOException) when (attempt < 3)
+                    { System.Threading.Thread.Sleep(25 * (attempt + 1)); }
+                }
                 Error = null;
                 return true;
             }

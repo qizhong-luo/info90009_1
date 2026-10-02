@@ -574,19 +574,19 @@ namespace Sleepet
                 if (weeklyDayButtons != null && i < weeklyDayButtons.Length && weeklyDayButtons[i] != null)
                 {
                     var label = weeklyDayButtons[i].GetComponentInChildren<Text>();
-                    if (label != null) label.text = firstDay.AddDays(i).ToString("ddd", CultureInfo.InvariantCulture).Substring(0, 1).ToUpperInvariant()
-                        + " " + firstDay.AddDays(i).Day.ToString(CultureInfo.InvariantCulture);
+                    if (label != null) label.text = firstDay.AddDays(i).ToString("ddd", CultureInfo.InvariantCulture).Substring(0, 1).ToUpperInvariant();
                     var bar = weeklyDayButtons[i].transform.Find("Bar") as RectTransform;
                     if (bar != null)
                     {
-                        float top = found ? NightPlotY(NightMinutes(start.TimeOfDay)) : 103;
-                        float bottom = found ? NightPlotY(NightMinutes(end.TimeOfDay)) : 105;
+                        // Figma uses top-aligned duration columns, not floating sleep intervals.
+                        float top = found ? 0 : 103;
+                        float bottom = found ? Mathf.Clamp(chosen.durationSeconds / 3600f * 11.2f, 2, 105) : 105;
                         bar.anchorMin = bar.anchorMax = bar.pivot = new Vector2(0, 1);
                         bar.anchoredPosition = new Vector2(7, -top);
                         bar.sizeDelta = new Vector2(22, Mathf.Max(2, bottom - top));
                         var barImage = bar.GetComponent<Image>();
                         barImage.color = !found ? new Color(0.84f, 0.91f, 0.93f)
-                            : i == 6 ? new Color(0.004f, 0.11f, 0.28f) : new Color(0.0f, 0.54f, 0.74f);
+                            : i == 6 ? new Color(0.027f, 0.157f, 0.329f) : new Color(0.20f, 0.66f, 0.80f);
                     }
                 }
             }
