@@ -30,7 +30,7 @@ namespace Sleepet
         public string LastError { get; private set; }
 
         public static string DefaultDirectory => Path.Combine(
-#if UNITY_EDITOR || UNITY_STANDALONE
+#if UNITY_EDITOR
             Path.GetDirectoryName(Application.dataPath),
 #else
             Application.persistentDataPath,

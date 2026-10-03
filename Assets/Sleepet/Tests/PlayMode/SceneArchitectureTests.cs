@@ -135,6 +135,9 @@ namespace Sleepet.Tests
             Assert.AreEqual(HighFiPage.AR, ui.scenePage);
             ui.ARTestBackground(); ui.PlaceOrChat();
             Assert.IsTrue(ui.arPet.gameObject.activeSelf);
+            Assert.IsFalse(ui.arChatControls.activeSelf);
+            ui.OpenSleepetChat();
+            demo.AI = new MockCompanionAI();
             ui.arInput.SetTextWithoutNotify("Hello Mocha");
             ui.SendARMessage();
             yield return new WaitForSecondsRealtime(demo.config.mockReplyDelay + 0.2f);

@@ -73,7 +73,13 @@ namespace Sleepet
         public GameObject arPlaceControls, arChatControls;
         public Image arPet;
         public Button arPlaceButton, arSendButton, sleepStartButton;
+        public Button arChatEntryButton;
+        public Text arModelNotice;
         public Text arModelLabel;
+        public Text arAIStatus, arDataLabel;
+        public Button[] arSkillButtons;
+        public Button arRetryButton, arCancelButton;
+        public ScrollRect arChatScroll;
         public string[] arModelLabels = { "Offline demo", "ChatGPT", "Claude", "Doubao" };
         public Sprite[] petOptions;
         public Sprite restingPet;
@@ -92,13 +98,16 @@ namespace Sleepet
 
         TomorrowPlan plan;
         bool placed, arChatOpen, applyingPlan;
-        int selectedPet, arModel;
+        int selectedPet;
         int selectedAppearance, selectedPose;
         Coroutine petAnimation;
         string lastPageBeforeAR = "Home";
         float previousReportScroll;
         ScrollRect reportScroll;
         string dataPath;
+        string lastChatText;
+        int lastReplyRevision;
+        float arReactionUntil;
 
         IEnumerator Start()
         {
@@ -123,6 +132,11 @@ namespace Sleepet
                 placed = false; arChatOpen = false;
                 arPet.gameObject.SetActive(false); arChat.text = "";
                 arPlaceControls.SetActive(true); arChatControls.SetActive(false);
+                arInput.characterLimit = 2000;
+                arInput.SetTextWithoutNotify(demo.ChatDraft);
+                arInput.onValueChanged.AddListener(demo.SetChatDraft);
+                arChat.supportRichText = false;
+                lastReplyRevision = demo.ChatReplyRevision;
                 demo.OpenCamera();
             }
             else if (scenePage == HighFiPage.Home) demo.OpenHome();
@@ -278,7 +292,7 @@ namespace Sleepet
             var p = demo.Store.Preferences;
             if (homeGreeting) homeGreeting.text = "Good evening, " + p.profileName + ".";
             if (homeReadyLabel) homeReadyLabel.text = "Ready to sleep with " + p.petName;
-            if (homeARLabel) homeARLabel.text = "Meet " + p.petName + " in AR";
+            if (homeARLabel) homeARLabel.text = "Meet the Sleepet in AR";
             if (homeTapHint) homeTapHint.text = "Tap " + p.petName + " to interact";
             if (meBedtime) meBedtime.text = Format12(p.reminderTime);
             if (profileEditor) profileEditor.Refresh();
@@ -618,10 +632,11 @@ namespace Sleepet
         }
         public void CloseAR()
         {
-            if (placed)
+            if (arChatOpen || placed)
             {
+                demo.CloseChat();
                 placed = false; arChatOpen = false; arPet.gameObject.SetActive(false);
-                arPlaceControls.SetActive(true); arChatControls.SetActive(false); RefreshAR(); return;
+                arPlaceControls.SetActive(true); arChatControls.SetActive(false); demo.OpenCamera(); RefreshAR(); return;
             }
             demo.CloseCamera();
             var target = SleepetSceneSession.Instance != null ? SleepetSceneSession.Instance.ReturnPage : HighFiPage.Home;
@@ -631,44 +646,79 @@ namespace Sleepet
         {
             var c = demo.cameraCompanion;
             arPreview.texture = c.preview.texture;
-            arPreview.gameObject.SetActive(c.preview.texture != null && c.IsLive);
-            if (arRoom != null) arRoom.SetActive(!c.IsLive);
+            arPreview.gameObject.SetActive(!arChatOpen && c.preview.texture != null && c.IsLive);
+            if (arRoom != null) arRoom.SetActive(!arChatOpen && !c.IsLive);
             string petName = string.IsNullOrWhiteSpace(demo.Store.Preferences.petName) ? "Mocha" : demo.Store.Preferences.petName;
-            arStatus.text = placed ? petName + " is here!" + (c.IsTestMode ? "\n<size=14>Test background · no camera</size>" : "") : c.IsLive ? "Move your phone slowly to find a flat area" : c.IsTestMode ? "Test background · no camera" : c.status.text;
-            arPlaceButton.GetComponentInChildren<Text>().text = "Place " + petName;
+            arStatus.text = arChatOpen ? "Chat with the Sleepet" : placed ? petName + " is here!" + (c.IsTestMode ? "\n<size=14>Test background · no camera</size>" : "") : c.IsLive ? "Place your pet on the camera view\nScreen overlay only" : c.IsTestMode ? "Test background · no camera" : c.status.text;
+            arPlaceButton.GetComponentInChildren<Text>().text = "Meet the Sleepet in AR";
             arSendButton.interactable = !string.IsNullOrWhiteSpace(arInput.text) && !demo.ChatBusy;
-            if (arChatOpen && demo.view.chatBubbles.Length > 0)
+            arInput.interactable = !demo.ChatBusy;
+            if (arModelLabel) arModelLabel.text = demo.OnlineAI ? "Online model  ↔" : "Local model  ↔";
+            if (arModelNotice) arModelNotice.text = demo.OnlineAI ? "Chat and saved information are sent online." : "On your device. No Internet needed.";
+            if (arAIStatus) arAIStatus.text = demo.ChatBusy
+                ? (demo.AI is LocalCompanionAI local && !local.Ready ? "Getting ready..." : "Thinking...")
+                : demo.CanRetryChat ? "Try again when you're ready." : "Here with you";
+            if (arRetryButton) arRetryButton.gameObject.SetActive(demo.CanRetryChat);
+            if (arCancelButton) arCancelButton.gameObject.SetActive(demo.ChatBusy);
+            if (!demo.ChatBusy && string.IsNullOrEmpty(arInput.text) && !string.IsNullOrEmpty(demo.ChatDraft))
+                arInput.SetTextWithoutNotify(demo.ChatDraft);
+            if (arChatOpen)
             {
-                var parts = new List<string>();
-                foreach (var t in demo.view.chatBubbles) if (t.transform.parent.gameObject.activeSelf) parts.Add(t.text);
-                arChat.text = string.Join("\n\n", parts);
+                string transcript = demo.ChatTranscript;
+                if (string.IsNullOrEmpty(transcript))
+                    transcript = "Hi, I'm " + petName + ".\n\nTell me about your day, look back on your recent sessions, or let's get ready for tomorrow.";
+                if (transcript != lastChatText)
+                {
+                    lastChatText = transcript; arChat.text = transcript;
+                    Canvas.ForceUpdateCanvases();
+                    if (arChatScroll) arChatScroll.verticalNormalizedPosition = 0;
+                }
+                if (demo.ChatReplyRevision != lastReplyRevision)
+                { lastReplyRevision = demo.ChatReplyRevision; arReactionUntil = Time.unscaledTime + .8f; }
+            }
+            if (placed)
+            {
+                float pulse = demo.ChatBusy ? Mathf.Sin(Time.unscaledTime * 2) * .012f
+                    : Time.unscaledTime < arReactionUntil ? Mathf.Sin((arReactionUntil - Time.unscaledTime) * Mathf.PI / .8f) * .035f : 0;
+                arPet.transform.localScale = Vector3.one * (1 + pulse);
             }
         }
+        // Placement and chat are independent actions. Chat never requires a camera or placed pet.
         public void PlaceOrChat()
         {
-            if (!placed)
-            {
-                if (!demo.cameraCompanion.IsLive && !demo.cameraCompanion.IsTestMode) { ShowNotice("Camera unavailable. Use Test background to try placement."); return; }
-                demo.cameraCompanion.PlacePet(); placed = true; arPet.gameObject.SetActive(true);
-                arPlaceControls.SetActive(false); arChatControls.SetActive(true);
-                RefreshAR();
-            }
-            else { arChatOpen = true; demo.OpenChat(); RefreshAR(); }
+            if (!demo.cameraCompanion.IsLive && !demo.cameraCompanion.IsTestMode)
+            { ShowNotice("Camera unavailable. Use Test background to try placement."); return; }
+            demo.cameraCompanion.PlacePet(); placed = true;
+            arPet.rectTransform.anchoredPosition = new Vector2(116, -210); arPet.rectTransform.sizeDelta = new Vector2(170, 165);
+            arPet.gameObject.SetActive(true); RefreshAR();
+        }
+        public void OpenSleepetChat()
+        {
+            demo.CloseCamera();
+            placed = false; arChatOpen = true;
+            arPet.rectTransform.anchoredPosition = new Vector2(141, -168); arPet.rectTransform.sizeDelta = new Vector2(120, 126);
+            arPet.gameObject.SetActive(true);
+            arPlaceControls.SetActive(false); arChatControls.SetActive(true);
+            demo.OpenChat(); RefreshAR();
         }
         public void ARTestBackground() { demo.cameraCompanion.UseTestBackground(); RefreshAR(); }
         public void ARSwitchCamera() { demo.cameraCompanion.SwitchCamera(); RefreshAR(); }
         public void CycleARModel()
         {
-            arModel = (arModel + 1) % arModelLabels.Length;
-            arModelLabel.text = arModelLabels[arModel] + " ▾";
-            if (arModel > 0) ShowNotice(arModelLabels[arModel] + " is not connected. Replies remain from the offline demo.");
+            demo.SetOnlineAI(!demo.OnlineAI); RefreshAR();
         }
+        public void SelectDailySkill() { demo.SelectChatSkill(CompanionSkills.Daily); RefreshAR(); }
+        public void SelectRecordsSkill() { demo.SelectChatSkill(CompanionSkills.Records); RefreshAR(); }
+        public void SelectTomorrowSkill() { demo.SelectChatSkill(CompanionSkills.Tomorrow); RefreshAR(); }
+        public void ToggleAIData() { demo.SetAIDataSharing(!demo.ShareAIData); RefreshAR(); }
+        public void RetryARMessage() { demo.RetryChat(); if (demo.ChatBusy) arInput.SetTextWithoutNotify(""); RefreshAR(); }
+        public void CancelARMessage() { demo.CancelChat(); RefreshAR(); }
         public void SendARMessage()
         {
             if (string.IsNullOrWhiteSpace(arInput.text)) return;
             if (!arChatOpen) { arChatOpen = true; demo.OpenChat(); }
-            demo.view.chatInput.SetTextWithoutNotify(arInput.text);
-            demo.SendChat(); arInput.SetTextWithoutNotify(""); RefreshAR();
+            if (demo.SendChatMessage(arInput.text)) arInput.SetTextWithoutNotify("");
+            RefreshAR();
         }
     }
 

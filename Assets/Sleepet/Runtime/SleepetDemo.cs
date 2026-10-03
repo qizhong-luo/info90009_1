@@ -22,13 +22,22 @@ namespace Sleepet
         public SleepMediaController Media => media;
         public EventLogger Logger { get; private set; }
         public SleepetStore Store { get; private set; }
-        public ICompanionAI AI { get; set; } = new MockCompanionAI();
+        ICompanionAI ai = new MockCompanionAI();
+        public ICompanionAI AI { get => ai; set { if (ReferenceEquals(ai, value)) return; (ai as IDisposable)?.Dispose(); ai = value; } }
         public SleepBehaviour Behaviour { get; private set; }
         public CompanionMode Companion { get; private set; }
         public MorningResult Result { get; private set; }
         public string Page { get; private set; } = "Home";
         public PetController Pet => view.resultPanel.activeSelf ? view.resultPet : Page == "Sleep" ? view.sleepPet : view.homePet;
         public bool ChatBusy { get; private set; }
+        public string ChatSkill { get; private set; } = CompanionSkills.Daily;
+        public bool ShareAIData { get; private set; } = true;
+        public bool OnlineAI => AI is OpenAICompanion;
+        public string ChatStatus { get; private set; } = "Offline LLM | Saved data on";
+        public string ChatDraft { get; private set; } = "";
+        public string ChatTranscript => string.Join("\n\n", messages);
+        public bool CanRetryChat => !ChatBusy && !string.IsNullOrEmpty(retryInput);
+        public int ChatReplyRevision { get; private set; }
         public bool ChatOpen => view.chatPanel.activeSelf;
         public bool DebugOpen => view.debugPanel.activeSelf;
         public InputField ChatInput => view.chatInput;
@@ -36,6 +45,10 @@ namespace Sleepet
         public string CompanionPrompt { get; private set; } = "";
         public readonly Dictionary<string, Button> Buttons = new Dictionary<string, Button>();
         readonly List<string> messages = new List<string>();
+        readonly List<CompanionTurn> conversation = new List<CompanionTurn>();
+        readonly Dictionary<string, string> skillSnapshots = new Dictionary<string, string>();
+        Coroutine chatRoutine;
+        string pendingInput, retryInput;
         bool finished, occasionalShown, proactiveShown, previewing;
         float elapsed, previewUntil;
         int chatVersion, historyPage;
@@ -62,6 +75,7 @@ namespace Sleepet
             view.chatPanel.SetActive(false); view.resultPanel.SetActive(false); view.debugPanel.SetActive(false);
             view.cameraPanel.SetActive(false); view.reminderPanel.SetActive(false);
             OpenHome();
+            SetOnlineAI(false);
             RefreshChat();
             if (view.coverPanel != null) view.coverPanel.SetActive(true);
         }
@@ -100,7 +114,7 @@ namespace Sleepet
             Logger.Log(first ? "APP_STARTED" : "DEMO_SESSION_STARTED");
             finished = false; currentSummary = null; elapsed = 0;
             Result = MorningResult.Calm; CompanionPrompt = "";
-            messages.Clear(); chatVersion++; ChatBusy = false;
+            CancelChat(); messages.Clear(); conversation.Clear(); retryInput = null; ChatDraft = "";
         }
         public void BeginNewSession(bool appStarted = false)
         {
@@ -116,6 +130,7 @@ namespace Sleepet
         }
         public void PrepareToQuit()
         {
+            CancelChat();
             StopPreview();
             if (Detector != null && Detector.Running) EndSleep();
             view.cameraPanel.SetActive(false);
@@ -137,6 +152,7 @@ namespace Sleepet
         void Navigate(string page)
         {
             if (Store == null) return;
+            CancelChat();
             Activity();
             if (page != "Me") StopPreview();
             view.cameraPanel.SetActive(false); view.chatPanel.SetActive(false);
@@ -158,7 +174,7 @@ namespace Sleepet
             Activity(); StopPreview();
             view.cameraPanel.SetActive(true); cameraCompanion.StartCamera();
         }
-        public void CloseCamera() => view.cameraPanel.SetActive(false);
+        public void CloseCamera() { CloseChat(); view.cameraPanel.SetActive(false); }
         public void StartSleep()
         {
             if (Detector.Running) return;
@@ -344,48 +360,130 @@ namespace Sleepet
         public void CloseReminder() => view.reminderPanel.SetActive(false);
         public void ReminderOpenSleep() { CloseReminder(); OpenSleep(); }
 
-        public void OpenChat() { Activity(); view.chatPanel.SetActive(true); Logger.Log("AI_CHAT_OPENED", "MOCK"); RefreshChat(); }
-        public void CloseChat() { view.chatPanel.SetActive(false); Logger.Log("AI_CHAT_CLOSED"); }
+        public void OpenChat() { Activity(); view.chatPanel.SetActive(true); Logger.Log("AI_CHAT_OPENED", OnlineAI ? "OpenAI" : "Offline"); RefreshChat(); }
+        public void CloseChat() { CancelChat(); view.chatPanel.SetActive(false); Logger?.Log("AI_CHAT_CLOSED"); }
         public void ChatInputChanged(string text) { Activity(); RefreshChat(); }
-        public void SendChat()
+        public void SelectChatSkill(string id)
         {
-            string input = view.chatInput.text.Trim();
-            if (ChatBusy || input.Length == 0) return;
+            CompanionSkills.Load(id); // Validate the versioned preset before selection.
+            if (ChatSkill == id) return;
+            CancelChat(); ChatSkill = id; retryInput = null; conversation.Clear(); messages.Clear();
+            ChatStatus = (OnlineAI ? "OpenAI" : "Offline LLM") + " | " + CompanionSkills.Label(id);
+            RefreshChat();
+        }
+        public void SetAIDataSharing(bool enabled)
+        {
+            CancelChat(); ShareAIData = enabled; skillSnapshots.Clear();
+            // Previous assistant messages may contain saved data; do not resend them after revocation.
+            conversation.Clear(); messages.Clear(); retryInput = null;
+            ChatStatus = enabled ? "Saved data ON | Local in Offline; sent to OpenAI when online" : "Saved data off | Conversation cleared";
+            RefreshChat();
+        }
+        public void SetOnlineAI(bool online)
+        {
+            CancelChat();
+            AI = online ? (ICompanionAI)new OpenAICompanion(CompanionAIConfig.Load(), Environment.GetEnvironmentVariable("SLEEPET_BACKEND_TOKEN")) : new LocalCompanionAI();
+            conversation.Clear(); messages.Clear(); retryInput = null;
+            ChatStatus = online ? "OpenAI selected | Sends chat to the configured backend" : "Offline LLM | Model loads on first message";
+            RefreshChat();
+        }
+        public void SetChatDraft(string text) { ChatDraft = text ?? ""; }
+        public void SendChat() { SendChatMessage(view.chatInput.text); }
+        public bool SendChatMessage(string text)
+        {
+            string input = (text ?? "").Trim();
+            if (ChatBusy || input.Length == 0) return false;
+            if (input.Length > 2000) { ChatStatus = "Use 2000 characters or fewer."; RefreshChat(); return false; }
+            ChatSkill = CompanionSkillRouter.Resolve(input, ChatSkill);
             Activity(); Logger.Log("AI_MESSAGE_SENT", input.Length.ToString(), "character count only");
-            AddMessage("You: " + input); view.chatInput.SetTextWithoutNotify("");
-            ChatBusy = true; RefreshChat(); StartCoroutine(Reply(input, chatVersion));
+            // Retrying the same failed turn must not duplicate its visible message.
+            if (retryInput != input || messages.Count == 0 || messages[messages.Count - 1] != "You: " + input)
+                AddMessage("You: " + input);
+            view.chatInput.SetTextWithoutNotify("");
+            ChatDraft = ""; pendingInput = input; retryInput = null;
+            ChatBusy = true; ChatStatus = (OnlineAI ? "OpenAI" : "Offline") + " | " + CompanionSkills.Label(ChatSkill) + " | Replying...";
+            RefreshChat(); chatRoutine = StartCoroutine(Reply(input, chatVersion)); return true;
+        }
+        public void RetryChat()
+        {
+            if (!CanRetryChat) return;
+            var input = retryInput;
+            SendChatMessage(input);
+        }
+        public void CancelChat()
+        {
+            chatVersion++;
+            (AI as ICancellableCompanionAI)?.CancelPending();
+            if (chatRoutine != null) { StopCoroutine(chatRoutine); chatRoutine = null; }
+            if (ChatBusy && !string.IsNullOrEmpty(pendingInput))
+            { ChatDraft = pendingInput; retryInput = pendingInput; ChatStatus = "Request cancelled | Message kept for retry"; }
+            pendingInput = null; ChatBusy = false;
         }
         IEnumerator Reply(string input, int version)
         {
-            yield return new WaitForSecondsRealtime(config.mockReplyDelay);
-            var context = new CompanionContext { petName = "Mocha", currentMode = Page, companionMode = Companion, sleepState = Detector.State };
+            // Yield once so the coroutine handle is assigned even for immediate providers.
+            yield return null;
+            if (AI is MockCompanionAI) yield return new WaitForSecondsRealtime(config.mockReplyDelay);
+            var context = CompanionSnapshots.Build(Store, ChatSkill, ShareAIData && !(AI is MockCompanionAI), DateTime.Now);
+            // Keep the visible transcript, but never send old model context after saved facts change.
+            var comparable = context; comparable.capturedAt = null;
+            string snapshot = JsonUtility.ToJson(comparable);
+            if (skillSnapshots.TryGetValue(ChatSkill, out var previousSnapshot) && previousSnapshot != snapshot)
+                conversation.Clear();
+            skillSnapshots[ChatSkill] = snapshot;
+            context.currentMode = view.cameraPanel.activeSelf ? "AR" : Page;
+            context.companionMode = Companion; context.sleepState = Detector.State;
+            context.conversation = conversation.ToArray();
             System.Threading.Tasks.Task<string> task;
             try { task = AI.SendMessage(input, context); } catch (Exception) { task = null; }
-            float deadline = Time.realtimeSinceStartup + 8;
+            float deadline = Time.realtimeSinceStartup + (OnlineAI ? Mathf.Clamp(CompanionAIConfig.Load().timeoutSeconds, 5, 90) + 2 : AI is LocalCompanionAI ? 245 : 8);
             while (task != null && !task.IsCompleted && Time.realtimeSinceStartup < deadline)
             { if (version != chatVersion) yield break; yield return null; }
             if (version != chatVersion) yield break;
-            bool failed = task == null || !task.IsCompleted || task.IsCanceled || task.IsFaulted;
-            string response = failed ? new MockCompanionAI().SendMessage(input, context).Result : task.Result;
-            if (failed) Logger.Log("AI_FALLBACK_USED", "MOCK");
-            AddMessage("Mocha: " + response); ChatBusy = false;
-            Logger.Log("AI_RESPONSE_RECEIVED", response.Length.ToString(), "MOCK"); RefreshChat();
+            bool failed = task == null || !task.IsCompleted || task.IsCanceled || task.IsFaulted || string.IsNullOrWhiteSpace(task.Result);
+            ChatBusy = false; chatRoutine = null; pendingInput = null;
+            if (failed)
+            {
+                if (task != null && task.IsFaulted) { var observed = task.Exception; }
+                (AI as ICancellableCompanionAI)?.CancelPending();
+                retryInput = input; ChatDraft = input;
+                view.chatInput.SetTextWithoutNotify(input);
+                ChatStatus = ((AI as LocalCompanionAI)?.LastError ?? (AI as OpenAICompanion)?.LastError ?? "Connection failed.") + " Please retry.";
+                Logger.Log("AI_REQUEST_FAILED", OnlineAI ? "OpenAI" : "Offline");
+                RefreshChat(); yield break;
+            }
+            string response = task.Result;
+            string petName = string.IsNullOrWhiteSpace(Store.Preferences.petName) ? "Mocha" : Store.Preferences.petName;
+            AddMessage(petName + ": " + response);
+            conversation.Add(new CompanionTurn { role = "user", content = input });
+            conversation.Add(new CompanionTurn { role = "assistant", content = response });
+            while (conversation.Count > 12) conversation.RemoveRange(0, 2);
+            string source = (AI as OpenAICompanion)?.LastResponse?.source;
+            if (!OnlineAI) source = (AI as LocalCompanionAI)?.Source ?? "Internet access required";
+            ChatStatus = (OnlineAI ? "OpenAI" : "Offline LLM") + " | " + source;
+            ChatReplyRevision++;
+            Logger.Log("AI_RESPONSE_RECEIVED", response.Length.ToString(), OnlineAI ? "OpenAI" : "Offline"); RefreshChat();
         }
-        void AddMessage(string text) { messages.Add(text); while (messages.Count > view.chatBubbles.Length) messages.RemoveAt(0); }
+        void AddMessage(string text) { messages.Add(text); while (messages.Count > 24) messages.RemoveAt(0); }
         void RefreshChat()
         {
+            int start = Mathf.Max(0, messages.Count - view.chatBubbles.Length);
             for (int i = 0; i < view.chatBubbles.Length; i++)
             {
-                view.chatBubbles[i].transform.parent.gameObject.SetActive(i < messages.Count);
-                view.chatBubbles[i].text = i < messages.Count ? messages[i] : "";
+                view.chatBubbles[i].supportRichText = false;
+                view.chatBubbles[i].transform.parent.gameObject.SetActive(start + i < messages.Count);
+                view.chatBubbles[i].text = start + i < messages.Count ? messages[start + i] : "";
             }
             view.sendChat.interactable = !ChatBusy && !string.IsNullOrWhiteSpace(view.chatInput.text);
-            view.chatStatus.text = ChatBusy ? "Mocha is replying..." : "Short, quiet replies / offline demo";
+            view.chatStatus.supportRichText = false;
+            view.chatStatus.text = ChatStatus;
         }
         public static string FormatDuration(float seconds) => seconds >= 3600 ? (seconds / 3600).ToString("0.0") + " hr" : seconds >= 60 ? (seconds / 60).ToString("0.0") + " min" : seconds.ToString("0") + " sec";
         static string StateLabel(SleepState s) => s == SleepState.LowAttention ? "Settling down" : s == SleepState.LikelyAsleep ? "Likely asleep (simulated)" : "Awake";
         public static string BehaviourLabel(SleepBehaviour b) => b == SleepBehaviour.StopWhenAsleep ? "Stop when asleep" : b == SleepBehaviour.FadeOutGently ? "Fade out gently" : "Play all night";
-        void OnApplicationPause(bool paused) { if (paused) Logger?.Save(); else Activity(); }
-        void OnApplicationQuit() { PrepareToQuit(); }
+        void OnApplicationPause(bool paused) { if (paused) { CancelChat(); Logger?.Save(); } else Activity(); }
+        void OnDisable() { CancelChat(); }
+        void OnDestroy() { (AI as IDisposable)?.Dispose(); }
+        void OnApplicationQuit() { PrepareToQuit(); (AI as IDisposable)?.Dispose(); }
     }
 }

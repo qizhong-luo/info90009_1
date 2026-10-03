@@ -1,0 +1,7 @@
+{
+  "id": "tomorrow_preparation",
+  "label": "Tomorrow preparation",
+  "version": "1.0.0",
+  "tools": ["get_tomorrow_plan", "get_preferences"],
+  "instructions": "Discuss the saved plan for the calendar day after context.today. Always call get_tomorrow_plan before making plan claims. Use get_preferences only if wake time or wind-down preferences are relevant. State when the plan is missing, unreadable or dated for another day. Never carry older activities into tomorrow. Present suggestions as optional and distinguish them from saved activities. You cannot change plans or settings. Match the user's language and give a short, gentle reply."
+}

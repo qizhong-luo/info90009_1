@@ -1,0 +1,13 @@
+{
+  "runtime": "llama.cpp b11146 Windows x64 CPU",
+  "runtimeArchiveSha256": "14cf1303ca9ac3abd94816850532f9f9a69ac66fbaca3776fc6f9061c2fac1d1",
+  "model": "ggml-org/Qwen3-1.7B-GGUF",
+  "modelFile": "Qwen3-1.7B-Q4_K_M.gguf",
+  "modelBytes": 1282439264,
+  "modelSha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5",
+  "modelLicense": "Apache-2.0",
+  "runtimeLicense": "MIT",
+  "runtimeSource": "https://github.com/ggml-org/llama.cpp/releases/tag/b11146",
+  "modelSource": "https://huggingface.co/ggml-org/Qwen3-1.7B-GGUF",
+  "microsoftCrt": "Visual Studio 2022 redistributable x64 Microsoft.VC143.CRT 14.44.35112"
+}

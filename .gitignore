@@ -111,6 +111,14 @@ InitTestScene*.unity*
 /Validation/Compile/
 /Validation/Reference/
 /SleepetData/
+/Backend/.env
+/Backend/.env.*
+/Backend/node_modules/
+/Validation/AI/
+/LocalAI/downloads/
+/LocalAI/runtime/
+/LocalAI/models/
+/Validation/LocalAI/
 /Validation/AudioTools/
 /Validation/SourceAudio/
 /Validation/Editable/TestData/

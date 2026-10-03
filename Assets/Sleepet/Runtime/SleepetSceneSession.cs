@@ -33,6 +33,7 @@ namespace Sleepet
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             Demo = GetComponent<SleepetDemo>();
+            if (LocalAISkillValidation.DataDirectory != null) Demo.dataDirectoryOverride = LocalAISkillValidation.DataDirectory;
 #if UNITY_EDITOR
             if (!string.IsNullOrEmpty(TestDataDirectoryOverride)) Demo.dataDirectoryOverride = TestDataDirectoryOverride;
 #endif

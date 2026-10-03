@@ -20,3 +20,10 @@ Build Settings 只包含以上 8 个 Scene。每个 Scene 只有一个主页面�
 `Assets/Sleepet/Prefabs/SleepetApp.prefab` 现在仅是不可渲染的功能内核。`SleepetSceneSession` 在切换 Scene 时保留内核、`SleepetDemo.Store` 和睡眠会话；`SceneTransitionCount` 记录切换次数，`StateRevision` 记录已提交的状态更改。页面重新进入时从同一个数据对象和本地存档刷新。原初版 `PhoneFrame` 已删除。
 
 底部月亮优先进入周报；周报的七个日期柱状按钮进入独立历史日报 Scene，右上角 `TEST +` 写入明确标记的固定样本数据（包括三段 Sleep Stage 时长）。详见 [HIGH_FI_IMPLEMENTATION.md](HIGH_FI_IMPLEMENTATION.md)。最新测试结果位于 `Validation/four-fixes-final.xml`（13/13 通过），页面截图位于 `Validation/SceneScreens/`。外部健康 App、摄像头权限、屏幕安全区和 iOS 构建仍需在真机验收。
+# AR AI conversation
+
+The first AI chat version includes Daily companionship, Record review and Tomorrow preparation presets. The AR screen has independent “Meet the Sleepet in AR” and “Chat with the Sleepet” actions. Chat does not require placing the pet. Skills are automatically routed from English or Chinese message content. Offline mode runs the bundled Qwen3 model and all three skills without Internet, Node, a terminal or an API key. Saved data is enabled by default with scoped, read-only access; the chat UI exposes only the local/online model switch. Windows users can double-click `Builds/Sleepet-LocalAI-Windows/Sleepet.exe`; keep the complete folder together. See [Local AI packaging](LocalAI/README.md). Use the provider switch for optional OpenAI. See [Backend setup and AI behavior](Backend/README.md) for API configuration and validation.
+
+## One-command Windows package
+
+Double-click `BuildGame.cmd` in the project root. No command-line input is required; the output folder opens after success. The Git-friendly script downloads and verifies the local model/runtime, runs Unity, and produces a complete portable ZIP plus SHA-256 checksum. See [build prerequisites and options](Tools/BUILD_GAME.md). Model binaries, build outputs and logs remain excluded from Git.
