@@ -8,7 +8,7 @@ For terminal users, the equivalent command is:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\Tools\BuildCompleteGame.ps1
 ```
 
-`ExecutionPolicy Bypass` applies only to this command's PowerShell process; it does not change the machine's policy. The script also works in PowerShell 7. It does not require Python, Node, Git LFS or an API key.
+`ExecutionPolicy Bypass` applies only to this command's PowerShell process; it does not change the machine's policy. The script also works in PowerShell 7. The build script does not require Python, Node or an API key. The source repository uses Git LFS for binary assets: install Git LFS and run `git lfs pull` in your checkout before building. The script does not download missing LFS assets for you.
 
 ## Build-machine prerequisites
 

@@ -33,7 +33,7 @@ The canonical JSON presets are in `Assets/Sleepet/Resources/CompanionSkills`. Un
 | `record_review` | `get_sleep_history` | Review up to 30 records from the last seven local calendar days. Samples are separate; totals describe app use, not measured sleep. |
 | `tomorrow_preparation` | `get_tomorrow_plan`, `get_preferences` | Read a saved plan whose date matches tomorrow. Missing, stale and unreadable data are explicit. |
 
-Skill switching is explicit in version one. It clears the previous conversation to prevent cross-skill data carryover. Provider switching and changing data access also clear context. Conversation history keeps at most six completed turns in memory; visible chat retains up to 24 messages. Failed and cancelled turns are not included in model context. Nothing automatically becomes long-term memory.
+Skills are routed automatically from English or Chinese message content; short follow-ups retain the previous skill. Topic changes preserve the visible transcript. Settings changes invalidate stale model context while retaining the visible transcript. Provider switching clears conversation context. Conversation history keeps at most six completed turns in memory; visible chat retains up to 24 messages. Failed and cancelled turns are not included in model context. Nothing automatically becomes long-term memory.
 
 ## Reliability and boundaries
 
@@ -42,8 +42,8 @@ Skill switching is explicit in version one. It clears the previous conversation 
 - The backend validates skill IDs, dates, history roles, data scopes and tool arguments. All tools are read-only and bounded; activity text is untrusted data.
 - Source labels are derived from executed tools, not from model-generated citations. Responses API requests use `store: false`; this is not a claim of zero provider data retention.
 - The backend accepts at most 64 KiB per request, 20 requests per minute per address and four concurrent requests. Provider work times out after 35 seconds; the default Unity timeout is 45 seconds.
-- No automatic retries of paid API calls. No raw chat or keys in application logs. No streaming, voice, persistent memory, automatic skill routing, measured-sleep analysis or write actions in this version.
-- Shared data and online mode start disabled on each app launch. Saved-data revocation clears in-memory conversation; it cannot retract information from a previously completed network request.
+- No automatic retries of paid API calls. No raw chat or keys in application logs. No streaming, voice, persistent long-term chat memory, measured-sleep analysis or model-driven write actions in this version.
+- Saved-data access is enabled by default and remains scoped and read-only; there is no visible saved-data toggle. Local inference is the default provider. Switching to online mode sends permitted snapshots to the configured backend; later context changes cannot retract a completed network request.
 
 ## Validation
 
