@@ -48,6 +48,7 @@ namespace Sleepet
         readonly List<CompanionTurn> conversation = new List<CompanionTurn>();
         readonly Dictionary<string, string> skillSnapshots = new Dictionary<string, string>();
         Coroutine chatRoutine;
+        string lastSettingsSnapshot;
         string pendingInput, retryInput;
         bool finished, occasionalShown, proactiveShown, previewing;
         float elapsed, previewUntil;
@@ -256,7 +257,10 @@ namespace Sleepet
             Result = value; Logger.Log("DEBUG_RESULT_SELECTED", value.ToString());
             if (finished && currentSummary != null)
             {
-                currentSummary.result = value.ToString(); Store.Add(currentSummary);
+                // Morning feedback may have replaced this row since EndSleep. Update by ID
+                // instead of re-saving the stale summary and erasing the user's answers.
+                if (!Store.SaveMorning(currentSummary.sessionId, record => record.result = value.ToString())) return;
+                currentSummary = Store.History.records.Find(record => record.sessionId == currentSummary.sessionId);
                 Logger.Log("MORNING_RESULT_SHOWN", value.ToString(), "debug preview");
                 RefreshResult(); RefreshHistory();
             }
@@ -285,14 +289,10 @@ namespace Sleepet
         public void SaveSettings()
         {
             Activity();
-            var p = new UserPreferences { reminderEnabled = view.reminderEnabled.isOn, reminderTime = view.reminderTime.text.Trim(),
-                lastReminderDate = Store.Preferences.lastReminderDate, sound = view.sound.value, volume = view.volume.value,
-                behaviour = (SleepBehaviour)view.behaviour.value, companion = (CompanionMode)view.companion.value,
-                wakeTime = Store.Preferences.wakeTime, windDownMinutes = Store.Preferences.windDownMinutes,
-                windDownSeconds = Store.Preferences.windDownSeconds,
-                petName = Store.Preferences.petName, petOption = Store.Preferences.petOption,
-                petAppearance = Store.Preferences.petAppearance, petPose = Store.Preferences.petPose,
-                profileName = Store.Preferences.profileName, profileAvatar = Store.Preferences.profileAvatar };
+            var p = Store.CopyPreferences();
+            p.reminderEnabled = view.reminderEnabled.isOn; p.reminderTime = view.reminderTime.text.Trim();
+            p.sound = view.sound.value; p.volume = view.volume.value;
+            p.behaviour = (SleepBehaviour)view.behaviour.value; p.companion = (CompanionMode)view.companion.value;
             if (!Store.SavePreferences(p)) { view.settingsNotice.text = Store.Error; return; }
             ApplyPreferences();
             view.settingsNotice.text = p.reminderEnabled ? "Saved. Reminder at " + p.reminderTime + " while the app is open." : "Saved on this device. Reminder is off.";
@@ -424,6 +424,11 @@ namespace Sleepet
             // Yield once so the coroutine handle is assigned even for immediate providers.
             yield return null;
             if (AI is MockCompanionAI) yield return new WaitForSecondsRealtime(config.mockReplyDelay);
+            // Settings affect identity across every skill, including a newly selected skill.
+            string settings = ShareAIData ? JsonUtility.ToJson(Store.Preferences) : "";
+            if (lastSettingsSnapshot != null && lastSettingsSnapshot != settings)
+            { conversation.Clear(); skillSnapshots.Clear(); }
+            lastSettingsSnapshot = settings;
             var context = CompanionSnapshots.Build(Store, ChatSkill, ShareAIData && !(AI is MockCompanionAI), DateTime.Now);
             // Keep the visible transcript, but never send old model context after saved facts change.
             var comparable = context; comparable.capturedAt = null;

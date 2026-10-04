@@ -24,6 +24,10 @@ namespace Sleepet
         public int petAppearance, petPose;
         public string profileName = "Sally";
         public int profileAvatar;
+        public string accountEmail = "";
+        public bool onboardingComplete;
+        public string petSpecies = "dog", petBreed = "Border Collie", petColour = "Black & white";
+        public string petPhoto = "";
     }
     [Serializable] public sealed class SleepSummary
     {
@@ -31,6 +35,9 @@ namespace Sleepet
         public float durationSeconds;
         public bool sample;
         public int deepMinutes, lightMinutes, remMinutes;
+        public bool morningRated, morningCompleted, notifyLater;
+        public int morningRating;
+        public string waterStatus = "", stretchStatus = "", morningCompletedAt = "";
     }
     [Serializable] public sealed class SleepHistory { public List<SleepSummary> records = new List<SleepSummary>(); }
 
@@ -57,6 +64,8 @@ namespace Sleepet
                 Preferences.windDownMinutes = Mathf.Clamp(Preferences.windDownMinutes, 0, 180);
                 Preferences.windDownSeconds = Mathf.Clamp(Preferences.windDownSeconds, 0, 59);
                 if (string.IsNullOrWhiteSpace(Preferences.petName)) Preferences.petName = "Mocha";
+                Preferences.petOption = Mathf.Clamp(Preferences.petOption, 0, 2);
+                Preferences.petSpecies = Preferences.petOption == 0 ? "dog" : Preferences.petOption == 1 ? "cat" : "other";
                 if (!ValidProfileName(Preferences.profileName)) Preferences.profileName = "Sally";
                 Preferences.profileAvatar = Mathf.Clamp(Preferences.profileAvatar, 0, 3);
                 if (!Enum.IsDefined(typeof(SleepBehaviour), Preferences.behaviour)) Preferences.behaviour = SleepBehaviour.FadeOutGently;
@@ -76,12 +85,38 @@ namespace Sleepet
         }
         public bool SavePreferences(UserPreferences value)
         {
+            value.petOption = Mathf.Clamp(value.petOption, 0, 2);
+            value.petSpecies = value.petOption == 0 ? "dog" : value.petOption == 1 ? "cat" : "other";
             if (!ValidProfileName(value.profileName)) { Error = "Use 1–10 English letters for your name."; return false; }
             if (!TryTime(value.reminderTime, out _)) { Error = "Use a valid 24-hour time, such as 22:30."; return false; }
             if (!TryTime(value.wakeTime, out _)) { Error = "Use a valid wake time, such as 08:00."; return false; }
             if (!Write("settings.json", value)) return false;
             Preferences = value;
             return true;
+        }
+        public UserPreferences CopyPreferences() => JsonUtility.FromJson<UserPreferences>(JsonUtility.ToJson(Preferences));
+
+        // Update the exact sleep session, never whichever row happens to be newest.
+        public bool SaveMorning(string sessionId, Action<SleepSummary> update)
+        {
+            var next = JsonUtility.FromJson<SleepHistory>(JsonUtility.ToJson(History));
+            var record = next.records.Find(r => r.sessionId == sessionId && !r.sample);
+            if (record == null) { Error = "The sleep session is unavailable. Return Home and start a session."; return false; }
+            update(record);
+            if (!Write("history.json", next)) return false;
+            History = next;
+            return true;
+        }
+
+        public TomorrowPlan ReadPlan()
+        {
+            try
+            {
+                string path = Path.Combine(DirectoryPath, "tomorrow-plan.json");
+                return File.Exists(path) ? JsonUtility.FromJson<TomorrowPlan>(File.ReadAllText(path)) ?? new TomorrowPlan() : new TomorrowPlan();
+            }
+            catch (Exception e) when (e is IOException || e is UnauthorizedAccessException || e is ArgumentException)
+            { Error = "Could not read the morning plan: " + e.Message; return null; }
         }
         public static bool ValidProfileName(string value)
         {

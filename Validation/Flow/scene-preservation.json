@@ -1,0 +1,34 @@
+[
+  {
+    "scene": "Sleepet_AR.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_Daily.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_DayDetail.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_Home.unity",
+    "unchanged": false
+  },
+  {
+    "scene": "Sleepet_Me.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_Routine.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_Sleep.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Sleepet_Weekly.unity",
+    "unchanged": true
+  }
+]

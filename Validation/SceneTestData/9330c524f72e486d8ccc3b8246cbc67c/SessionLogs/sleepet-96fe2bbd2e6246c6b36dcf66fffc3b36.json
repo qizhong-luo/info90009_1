@@ -1,0 +1,111 @@
+{
+    "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+    "sessionStartTime": "2026-10-04T01:08:49.4643050Z",
+    "events": [
+        {
+            "timestamp": "2026-10-04T01:08:49.4643050Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:50.8989383Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.2849020Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_STARTED",
+            "value": "",
+            "context": "live frames received; no recording"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3301297Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_TEST_BACKGROUND_SELECTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3322545Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "PET_PLACED",
+            "value": "Mocha",
+            "context": "explicit test background"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3332589Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3358761Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3379475Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_CHAT_OPENED",
+            "value": "Offline",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.3491476Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_MESSAGE_SENT",
+            "value": "11",
+            "context": "character count only"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.7599292Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_RESPONSE_RECEIVED",
+            "value": "53",
+            "context": "Offline"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.9554381Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.9564545Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.9589651Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.9599956Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:51.9609990Z",
+            "sessionId": "96fe2bbd2e6246c6b36dcf66fffc3b36",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+    "sessionStartTime": "2026-10-04T06:57:41.0426487Z",
+    "events": [
+        {
+            "timestamp": "2026-10-04T06:57:41.0426487Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T06:57:41.5672827Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T06:57:44.1720421Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        },
+        {
+            "timestamp": "2026-10-04T06:57:44.5806848Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "CAMERA_STARTED",
+            "value": "",
+            "context": "live frames received; no recording"
+        },
+        {
+            "timestamp": "2026-10-04T06:57:44.6007848Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "AI_CHAT_CLOSED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T06:57:44.6257115Z",
+            "sessionId": "3b3e796138684f81bc42e77d5296e2bd",
+            "eventType": "CAMERA_CLOSED",
+            "value": "",
+            "context": ""
+        }
+    ]
+}

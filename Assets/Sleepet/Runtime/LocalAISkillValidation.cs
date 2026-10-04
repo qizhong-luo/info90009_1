@@ -56,7 +56,27 @@ namespace Sleepet
                 File.WriteAllText(Path.Combine(DataDirectory, "tomorrow-plan.json"), JsonUtility.ToJson(plan));
                 string stale = await Ask(demo, ui, CompanionSkills.Tomorrow, true, "What is saved for tomorrow?", "05-stale-plan", report);
                 if (stale.IndexOf("library", StringComparison.OrdinalIgnoreCase) >= 0) throw new Exception("Stale activity leaked.");
-                await Ask(demo, ui, CompanionSkills.Daily, true, "I feel tired. Can you keep me company?", "06-companionship", report);
+                string comfort = await Ask(demo, ui, CompanionSkills.Daily, true, "I feel tired. Can you keep me company?", "06-companionship", report);
+                AssertNoPetAddress(comfort, demo.Store.Preferences.petName);
+                // Reproduce editing the name through the real settings UI, without restarting the app or model.
+                int modelProcessBefore = ((LocalCompanionAI)demo.AI).ProcessId;
+                session.Navigate(HighFiPage.Me); await Task.Delay(500);
+                ui = UnityEngine.Object.FindFirstObjectByType<SleepetHighFi>();
+                ui.OpenPetSheet(); ui.petNameInput.text = "Miia"; ui.SavePet();
+                ui.OpenTimeSheet();
+                if (ui.timePicker) ui.timePicker.SetDraft(demo.Store.Preferences.reminderTime, "08:23", demo.Store.Preferences.windDownMinutes, demo.Store.Preferences.windDownSeconds);
+                else ui.timeWakeInput.text = "08:23";
+                ui.SaveTimeSheet();
+                session.Navigate(HighFiPage.AR); await Task.Delay(500);
+                ui = UnityEngine.Object.FindFirstObjectByType<SleepetHighFi>(); ui.OpenSleepetChat();
+                string introduction = await Ask(demo, ui, CompanionSkills.Daily, true, "Hi! Please introduce yourself by name.", "07-renamed-pet", report, "Miia");
+                if (introduction.Contains("Mocha")) throw new Exception("Old pet identity leaked into the new answer.");
+                await Ask(demo, ui, CompanionSkills.Daily, true, "What is my current saved wake time?", "08-updated-wake-time", report, "08:23");
+                string renamedComfort = await Ask(demo, ui, CompanionSkills.Daily, true, "I feel lonely this evening. Please stay with me.", "09-renamed-companionship", report);
+                AssertNoPetAddress(renamedComfort, "Miia");
+                string chineseComfort = await Ask(demo, ui, CompanionSkills.Daily, true, "今天有点累，陪我安静待一会儿吧。", "10-chinese-companionship", report);
+                AssertNoPetAddress(chineseComfort, "Miia");
+                if (((LocalCompanionAI)demo.AI).ProcessId != modelProcessBefore) throw new Exception("Model restarted during settings update.");
                 demo.SendChatMessage("Tell me a story.");
                 await Task.Delay(100); demo.CancelChat();
                 if (demo.ChatBusy || !demo.CanRetryChat) throw new Exception("Cancellation did not preserve retry.");
@@ -76,13 +96,23 @@ namespace Sleepet
             if (demo.ChatReplyRevision == revision) throw new Exception(demo.ChatStatus);
             if (demo.ChatSkill != skill) throw new Exception("Automatic skill routing failed for " + input);
             string transcript = demo.ChatTranscript;
-            string answer = transcript.Substring(transcript.LastIndexOf("Mocha: ", StringComparison.Ordinal));
+            string prefix = demo.Store.Preferences.petName + ": ";
+            string answer = transcript.Substring(transcript.LastIndexOf(prefix, StringComparison.Ordinal) + prefix.Length);
+            foreach (string stock in new[] { "how can i assist", "how can i help", "how can i best support", "let me know if", "anything else" })
+                if (answer.IndexOf(stock, StringComparison.OrdinalIgnoreCase) >= 0) throw new Exception(name + " contains a generic service ending: " + answer);
             if (required != null && answer.IndexOf(required, StringComparison.OrdinalIgnoreCase) < 0) throw new Exception(name + " missing fact: " + answer);
             report.AppendLine(name + " (" + ((LocalCompanionAI)demo.AI).LastReplySeconds.ToString("0.00") + " seconds)\n" + answer);
             await Task.Delay(100);
             Capture(ui, Path.Combine(output, name + ".png"));
             await Task.Delay(300);
             return answer;
+        }
+        static void AssertNoPetAddress(string answer, string petName)
+        {
+            // These prompts do not request an introduction. Any pet name here is unnecessary,
+            // and previously exposed the model addressing the user by its own name.
+            if (answer.IndexOf(petName, StringComparison.OrdinalIgnoreCase) >= 0)
+                throw new Exception("Unrequested pet name in companionship reply: " + answer);
         }
         static void Capture(SleepetHighFi ui, string path)
         {

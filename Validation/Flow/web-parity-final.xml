@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="28" result="Passed" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:04:35Z" duration="112.0525452">
+  <test-suite type="TestSuite" id="1059" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:04:35Z" duration="112.052545" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1053" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:04:35Z" duration="112.042537" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="39560" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1054" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:04:35Z" duration="112.040857" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1055" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:04:35Z" duration="112.039466" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1021" name="FlowTests" fullname="Sleepet.Tests.FlowTests" classname="Sleepet.Tests.FlowTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:03:27Z" duration="44.199841" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1028" name="AllNewScenesHaveEditableUIAndSameBackend" fullname="Sleepet.Tests.FlowTests.AllNewScenesHaveEditableUIAndSameBackend" methodname="AllNewScenesHaveEditableUIAndSameBackend" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="1934812923" result="Passed" start-time="2026-10-04 07:02:43Z" end-time="2026-10-04 07:03:08Z" duration="25.280247" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="CancelledDraftLeavesSavedPetUnchanged" fullname="Sleepet.Tests.FlowTests.CancelledDraftLeavesSavedPetUnchanged" methodname="CancelledDraftLeavesSavedPetUnchanged" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="568362685" result="Passed" start-time="2026-10-04 07:03:08Z" end-time="2026-10-04 07:03:10Z" duration="2.047293" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="CompletedStretchAndSelectedPetStayConsistent" fullname="Sleepet.Tests.FlowTests.CompletedStretchAndSelectedPetStayConsistent" methodname="CompletedStretchAndSelectedPetStayConsistent" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="1119226806" result="Passed" start-time="2026-10-04 07:03:10Z" end-time="2026-10-04 07:03:14Z" duration="3.259486" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="MissingSessionAndFailedWritesDoNotClaimSuccess" fullname="Sleepet.Tests.FlowTests.MissingSessionAndFailedWritesDoNotClaimSuccess" methodname="MissingSessionAndFailedWritesDoNotClaimSuccess" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="177378415" result="Passed" start-time="2026-10-04 07:03:14Z" end-time="2026-10-04 07:03:14Z" duration="0.668986" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="MorningReadsPlanAndUpdatesOnlyItsSession" fullname="Sleepet.Tests.FlowTests.MorningReadsPlanAndUpdatesOnlyItsSession" methodname="MorningReadsPlanAndUpdatesOnlyItsSession" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="806534497" result="Passed" start-time="2026-10-04 07:03:14Z" end-time="2026-10-04 07:03:18Z" duration="3.702282" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="OnboardingCommitsOnceAndSurvivesLegacySettingsSave" fullname="Sleepet.Tests.FlowTests.OnboardingCommitsOnceAndSurvivesLegacySettingsSave" methodname="OnboardingCommitsOnceAndSurvivesLegacySettingsSave" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="756475790" result="Passed" start-time="2026-10-04 07:03:18Z" end-time="2026-10-04 07:03:23Z" duration="4.575958" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="StretchRequiresElapsedTimeAndSkipIsRecorded" fullname="Sleepet.Tests.FlowTests.StretchRequiresElapsedTimeAndSkipIsRecorded" methodname="StretchRequiresElapsedTimeAndSkipIsRecorded" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="462980406" result="Passed" start-time="2026-10-04 07:03:23Z" end-time="2026-10-04 07:03:25Z" duration="2.023119" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="UpwardGestureCompletesMorningButShortDragDoesNot" fullname="Sleepet.Tests.FlowTests.UpwardGestureCompletesMorningButShortDragDoesNot" methodname="UpwardGestureCompletesMorningButShortDragDoesNot" classname="Sleepet.Tests.FlowTests" runstate="Runnable" seed="216823351" result="Passed" start-time="2026-10-04 07:03:25Z" end-time="2026-10-04 07:03:27Z" duration="2.625098" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1030" name="P0Tests" fullname="Sleepet.Tests.P0Tests" classname="Sleepet.Tests.P0Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-04 07:03:27Z" end-time="2026-10-04 07:03:27Z" duration="0.007258" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1032" name="InactivityDetectorKeepsItsStateBetweenFrames" fullname="Sleepet.Tests.P0Tests.InactivityDetectorKeepsItsStateBetweenFrames" methodname="InactivityDetectorKeepsItsStateBetweenFrames" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="549305230" result="Passed" start-time="2026-10-04 07:03:27Z" end-time="2026-10-04 07:03:27Z" duration="0.000418" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="StorePersistsPreferencesWithoutSceneObjects" fullname="Sleepet.Tests.P0Tests.StorePersistsPreferencesWithoutSceneObjects" methodname="StorePersistsPreferencesWithoutSceneObjects" classname="Sleepet.Tests.P0Tests" runstate="Runnable" seed="1997547286" result="Passed" start-time="2026-10-04 07:03:27Z" end-time="2026-10-04 07:03:27Z" duration="0.005422" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1033" name="SceneArchitectureTests" fullname="Sleepet.Tests.SceneArchitectureTests" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-04 07:03:27Z" end-time="2026-10-04 07:04:01Z" duration="34.273227" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1038" name="ARUsesTheSavedPetOptionAcrossScenes" fullname="Sleepet.Tests.SceneArchitectureTests.ARUsesTheSavedPetOptionAcrossScenes" methodname="ARUsesTheSavedPetOptionAcrossScenes" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="863436173" result="Passed" start-time="2026-10-04 07:03:27Z" end-time="2026-10-04 07:03:29Z" duration="2.202706" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1045" name="AuthoredButtonsCallTheirOwnSceneController" fullname="Sleepet.Tests.SceneArchitectureTests.AuthoredButtonsCallTheirOwnSceneController" methodname="AuthoredButtonsCallTheirOwnSceneController" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="33479028" result="Passed" start-time="2026-10-04 07:03:29Z" end-time="2026-10-04 07:03:31Z" duration="2.022062" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="BuildContainsExistingScreensAndTwelveFlowScreens" fullname="Sleepet.Tests.SceneArchitectureTests.BuildContainsExistingScreensAndTwelveFlowScreens" methodname="BuildContainsExistingScreensAndTwelveFlowScreens" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="31208974" result="Passed" start-time="2026-10-04 07:03:31Z" end-time="2026-10-04 07:03:32Z" duration="0.497135" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="CounterAndSavedStateContinueAcrossScenes" fullname="Sleepet.Tests.SceneArchitectureTests.CounterAndSavedStateContinueAcrossScenes" methodname="CounterAndSavedStateContinueAcrossScenes" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="516475460" result="Passed" start-time="2026-10-04 07:03:32Z" end-time="2026-10-04 07:03:35Z" duration="3.049728" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1043" name="DailyNormalHasOnlyBottomPageSwitching" fullname="Sleepet.Tests.SceneArchitectureTests.DailyNormalHasOnlyBottomPageSwitching" methodname="DailyNormalHasOnlyBottomPageSwitching" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="722983591" result="Passed" start-time="2026-10-04 07:03:35Z" end-time="2026-10-04 07:03:37Z" duration="2.517610" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1046" name="EachAuthoredSceneRendersAtPhoneReferenceSize" fullname="Sleepet.Tests.SceneArchitectureTests.EachAuthoredSceneRendersAtPhoneReferenceSize" methodname="EachAuthoredSceneRendersAtPhoneReferenceSize" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="1825322569" result="Passed" start-time="2026-10-04 07:03:37Z" end-time="2026-10-04 07:03:42Z" duration="4.619882" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="EachSceneHasOneEditablePage" fullname="Sleepet.Tests.SceneArchitectureTests.EachSceneHasOneEditablePage" methodname="EachSceneHasOneEditablePage" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="1933720498" result="Passed" start-time="2026-10-04 07:03:42Z" end-time="2026-10-04 07:03:47Z" duration="4.491308" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1042" name="HealthEntryHasAnExplicitFallback" fullname="Sleepet.Tests.SceneArchitectureTests.HealthEntryHasAnExplicitFallback" methodname="HealthEntryHasAnExplicitFallback" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="2087779900" result="Passed" start-time="2026-10-04 07:03:47Z" end-time="2026-10-04 07:03:48Z" duration="1.005541" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1040" name="HomeAndMeHaveNoAuthoredSystemStatusAndNavigationIsTranslucent" fullname="Sleepet.Tests.SceneArchitectureTests.HomeAndMeHaveNoAuthoredSystemStatusAndNavigationIsTranslucent" methodname="HomeAndMeHaveNoAuthoredSystemStatusAndNavigationIsTranslucent" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="953642873" result="Passed" start-time="2026-10-04 07:03:48Z" end-time="2026-10-04 07:03:49Z" duration="1.024604" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1044" name="MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" fullname="Sleepet.Tests.SceneArchitectureTests.MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" methodname="MoonOpensWeeklyAndEachDateOpensItsOwnSavedReport" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="2009068789" result="Passed" start-time="2026-10-04 07:03:49Z" end-time="2026-10-04 07:03:51Z" duration="2.623469" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="RoutineAndARReturnKeepSession" fullname="Sleepet.Tests.SceneArchitectureTests.RoutineAndARReturnKeepSession" methodname="RoutineAndARReturnKeepSession" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="2076723498" result="Passed" start-time="2026-10-04 07:03:51Z" end-time="2026-10-04 07:03:55Z" duration="3.580124" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="TimePickerValidatesAndPetPreviewDoesNotChangeSelection" fullname="Sleepet.Tests.SceneArchitectureTests.TimePickerValidatesAndPetPreviewDoesNotChangeSelection" methodname="TimePickerValidatesAndPetPreviewDoesNotChangeSelection" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="1303069549" result="Passed" start-time="2026-10-04 07:03:55Z" end-time="2026-10-04 07:03:59Z" duration="4.432640" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="WebSettingProfileAndControlsPersistAcrossScenes" fullname="Sleepet.Tests.SceneArchitectureTests.WebSettingProfileAndControlsPersistAcrossScenes" methodname="WebSettingProfileAndControlsPersistAcrossScenes" classname="Sleepet.Tests.SceneArchitectureTests" runstate="Runnable" seed="1680740604" result="Passed" start-time="2026-10-04 07:03:59Z" end-time="2026-10-04 07:04:01Z" duration="2.201125" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1047" name="WebParityTests" fullname="Sleepet.Tests.WebParityTests" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-04 07:04:01Z" end-time="2026-10-04 07:04:35Z" duration="33.555553" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1048" name="AllScenesUseBundledFrontendFont" fullname="Sleepet.Tests.WebParityTests.AllScenesUseBundledFrontendFont" methodname="AllScenesUseBundledFrontendFont" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" seed="813906328" result="Passed" start-time="2026-10-04 07:04:01Z" end-time="2026-10-04 07:04:13Z" duration="11.627770" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="BottomNavigationHasIdenticalHitAreasAndCentersAcrossScenes" fullname="Sleepet.Tests.WebParityTests.BottomNavigationHasIdenticalHitAreasAndCentersAcrossScenes" methodname="BottomNavigationHasIdenticalHitAreasAndCentersAcrossScenes" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" seed="874041647" result="Passed" start-time="2026-10-04 07:04:13Z" end-time="2026-10-04 07:04:16Z" duration="2.564559" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1049" name="FooterPositionsStayStableAtPhoneTabletAndSafeAreaSizes" fullname="Sleepet.Tests.WebParityTests.FooterPositionsStayStableAtPhoneTabletAndSafeAreaSizes" methodname="FooterPositionsStayStableAtPhoneTabletAndSafeAreaSizes" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" seed="534872866" result="Passed" start-time="2026-10-04 07:04:16Z" end-time="2026-10-04 07:04:20Z" duration="4.605003" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1051" name="MorningMotionUsesStaggerAndNonDriftingGlassLoop" fullname="Sleepet.Tests.WebParityTests.MorningMotionUsesStaggerAndNonDriftingGlassLoop" methodname="MorningMotionUsesStaggerAndNonDriftingGlassLoop" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" seed="2062345497" result="Passed" start-time="2026-10-04 07:04:20Z" end-time="2026-10-04 07:04:21Z" duration="1.071203" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1052" name="ResponsiveScreensRenderWithoutFooterClipping" fullname="Sleepet.Tests.WebParityTests.ResponsiveScreensRenderWithoutFooterClipping" methodname="ResponsiveScreensRenderWithoutFooterClipping" classname="Sleepet.Tests.WebParityTests" runstate="Runnable" seed="2090120174" result="Passed" start-time="2026-10-04 07:04:21Z" end-time="2026-10-04 07:04:35Z" duration="13.684536" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

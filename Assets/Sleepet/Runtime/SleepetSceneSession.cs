@@ -21,6 +21,31 @@ namespace Sleepet
         public int SceneTransitionCount => sceneTransitionCount;
         public int StateRevision => stateRevision;
         public Guid RuntimeSessionId { get; private set; }
+        public UserPreferences OnboardingDraft { get; private set; }
+        public string MorningSessionId { get; private set; }
+        public TomorrowPlan MorningPlan { get; private set; }
+        public bool InFlow { get; private set; }
+        public void AdoptFlow() { InFlow = true; }
+
+        public void BeginOnboarding()
+        {
+            OnboardingDraft = Demo.Store.CopyPreferences();
+            OpenFlow("OnboardingSplash");
+        }
+        public void BeginMorning()
+        {
+            MorningSessionId = Demo.Logger.Record.sessionId;
+            MorningPlan = Demo.Store.ReadPlan();
+            Demo.OpenHome(); // Close the legacy result overlay; keep the same backend and record.
+            OpenFlow("WakeFeedback");
+        }
+        public void OpenFlow(string page)
+        {
+            if (Array.IndexOf(SleepetFlow.PageNames, page) < 0) throw new ArgumentException("Unknown flow page", nameof(page));
+            InFlow = true; sceneTransitionCount++;
+            SceneManager.LoadScene("Sleepet_" + page);
+        }
+        public void EnsureDraft() { if (OnboardingDraft == null) OnboardingDraft = Demo.Store.CopyPreferences(); }
 
         static readonly string[] SceneNames =
         {
@@ -49,7 +74,8 @@ namespace Sleepet
 
         public void Navigate(HighFiPage target)
         {
-            if (target == CurrentPage) return;
+            if (target == CurrentPage && !InFlow) return;
+            InFlow = false;
             if (target == HighFiPage.AR) ReturnPage = CurrentPage;
             if (CurrentPage == HighFiPage.AR && target != HighFiPage.AR) Demo.CloseCamera();
             CurrentPage = target;

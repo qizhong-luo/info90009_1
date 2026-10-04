@@ -29,6 +29,42 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sleepet/Scenes/Sleepet_DayDetail.unity
     guid: 4e0c83ffcf3c4b458b0632219309816a
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_OnboardingSplash.unity
+    guid: b88db36972b4c9c439a44d866e1ba822
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_Account.unity
+    guid: c7bfb214cb1f1c74bb2ce15f979e2b6e
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_ChooseCompanion.unity
+    guid: 6201df5fae64bfb4b8615993862f2f40
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_PersonalisePet.unity
+    guid: a2eb5e4ec7a29024eb37ccd6113e9f70
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_CreatingPet.unity
+    guid: d5e3254a34d7bf94eb70aaf78f32956d
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MeetPet.unity
+    guid: 0043b40c8e5645d408504605adc608fa
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_WakeFeedback.unity
+    guid: c14f41cc871e5064591da7022469c5e5
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MorningRating.unity
+    guid: 53c2c655d94af3f4e8104016460deed6
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MorningDrink.unity
+    guid: 74ce7e8828ffc1b4586eee24800e0cc8
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MorningStretch.unity
+    guid: 5169ebc113ec8604181b58e96d0c15e2
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MorningTodos.unity
+    guid: 4a1a2244fb70cc7438ef6a836eaffcc7
+  - enabled: 1
+    path: Assets/Sleepet/Scenes/Sleepet_MorningEnd.unity
+    guid: 6449304e27197a54aa4ef57937b61878
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

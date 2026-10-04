@@ -18,8 +18,9 @@ namespace Sleepet
         void LateUpdate()
         {
             if (app == null || app.pages == null || app.pages.Length == 0) return;
-            bool landscapePreview = Screen.width > Screen.height;
+            bool landscapePreview = (float)Screen.width / Mathf.Max(1, Screen.height) > 402f / 874f;
             var scaler = GetComponent<CanvasScaler>();
+            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
             float match = landscapePreview ? 1f : 0f;
             if (!Mathf.Approximately(scaler.matchWidthOrHeight, match))
             {
@@ -29,7 +30,7 @@ namespace Sleepet
             var canvasRect = (RectTransform)transform;
             float height = canvasRect.rect.height;
             if (height < 100) return;
-            float scale = Mathf.Max(0.01f, landscapePreview ? Screen.height / 874f : Screen.width / 402f);
+            float scale = Mathf.Max(0.01f, GetComponent<Canvas>().scaleFactor);
             float bottomInset = landscapePreview ? 0 : Screen.safeArea.yMin / scale;
             float extra = Mathf.Max(0, bottomInset - 34f);
             var activePage = app.pages[(int)app.scenePage];
@@ -52,7 +53,8 @@ namespace Sleepet
                 var background = page.transform.Find("Figma gradient") ?? page.transform.Find("Lake and moon");
                 if (background != null) ((RectTransform)background).sizeDelta = new Vector2(402, height);
             }
-            Bottom(app.bottomNavigation != null ? app.bottomNavigation.transform as RectTransform : null, 0, extra);
+            // Extend the background into the inset once; do not shift the whole bar as well.
+            Bottom(app.bottomNavigation != null ? app.bottomNavigation.transform as RectTransform : null, 0, 0);
             if (app.bottomNavigation != null)
             {
                 ((RectTransform)app.bottomNavigation.transform).sizeDelta = new Vector2(402, 66 + extra);

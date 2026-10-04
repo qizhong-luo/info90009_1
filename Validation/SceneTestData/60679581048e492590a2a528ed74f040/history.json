@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "sessionId": "c265baf711584ff6a7a52b824014d72d",
+            "startedAt": "2026-10-04T01:08:30.6746589Z",
+            "result": "Calm",
+            "behaviour": "FadeOutGently",
+            "companion": "Quiet",
+            "sound": "Ocean",
+            "durationSeconds": 0.48784351348876955,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0,
+            "morningRated": false,
+            "morningCompleted": false,
+            "notifyLater": false,
+            "morningRating": 0,
+            "waterStatus": "",
+            "stretchStatus": "",
+            "morningCompletedAt": ""
+        }
+    ]
+}

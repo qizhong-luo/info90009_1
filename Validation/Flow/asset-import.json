@@ -1,0 +1,302 @@
+[
+  {
+    "source": "flow\\drink-background.png",
+    "target": "drink-background.png"
+  },
+  {
+    "source": "flow\\drink-bubble.svg",
+    "target": "drink-bubble.png"
+  },
+  {
+    "source": "flow\\drink-glass.png",
+    "target": "drink-glass.png"
+  },
+  {
+    "source": "flow\\drink-mocha-animated.webm",
+    "target": "drink-mocha-animated.webm"
+  },
+  {
+    "source": "flow\\drink-mocha-poster.png",
+    "target": "drink-mocha-poster.png"
+  },
+  {
+    "source": "flow\\drink-pet-overlay.png",
+    "target": "drink-pet-overlay.png"
+  },
+  {
+    "source": "flow\\drink-pet.png",
+    "target": "drink-pet.png"
+  },
+  {
+    "source": "flow\\end-background.png",
+    "target": "end-background.png"
+  },
+  {
+    "source": "flow\\end-bubble.svg",
+    "target": "end-bubble.png"
+  },
+  {
+    "source": "flow\\end-landscape.mp4",
+    "target": "end-landscape.mp4"
+  },
+  {
+    "source": "flow\\rating-background.png",
+    "target": "rating-background.png"
+  },
+  {
+    "source": "flow\\rating-bubble.svg",
+    "target": "rating-bubble.png"
+  },
+  {
+    "source": "flow\\rating-glass-bubble.png",
+    "target": "rating-glass-bubble.png"
+  },
+  {
+    "source": "flow\\rating-slider-dots.svg",
+    "target": "rating-slider-dots.png"
+  },
+  {
+    "source": "flow\\rating-slider-track.svg",
+    "target": "rating-slider-track.png"
+  },
+  {
+    "source": "flow\\setting-calendar.svg",
+    "target": "setting-calendar.png"
+  },
+  {
+    "source": "flow\\setting-check.svg",
+    "target": "setting-check.png"
+  },
+  {
+    "source": "flow\\setting-divider.svg",
+    "target": "setting-divider.png"
+  },
+  {
+    "source": "flow\\setting-line.svg",
+    "target": "setting-line.png"
+  },
+  {
+    "source": "flow\\setting-plus.svg",
+    "target": "setting-plus.png"
+  },
+  {
+    "source": "flow\\setting-trash.svg",
+    "target": "setting-trash.png"
+  },
+  {
+    "source": "flow\\sleep-mocha.png",
+    "target": "sleep-mocha.png"
+  },
+  {
+    "source": "flow\\sleep-mode-arrow.svg",
+    "target": "sleep-mode-arrow.png"
+  },
+  {
+    "source": "flow\\sleep-slider-handle.png",
+    "target": "sleep-slider-handle.png"
+  },
+  {
+    "source": "flow\\stretch-background.png",
+    "target": "stretch-background.png"
+  },
+  {
+    "source": "flow\\stretch-bubble.svg",
+    "target": "stretch-bubble.png"
+  },
+  {
+    "source": "flow\\stretch-mocha-video.mp4",
+    "target": "stretch-mocha-video.mp4"
+  },
+  {
+    "source": "flow\\stretch-pet.png",
+    "target": "stretch-pet.png"
+  },
+  {
+    "source": "flow\\stretch-ring-base.svg",
+    "target": "stretch-ring-base.png"
+  },
+  {
+    "source": "flow\\stretch-ring-dot.svg",
+    "target": "stretch-ring-dot.png"
+  },
+  {
+    "source": "flow\\stretch-ring-progress.svg",
+    "target": "stretch-ring-progress.png"
+  },
+  {
+    "source": "flow\\todos-background.png",
+    "target": "todos-background.png"
+  },
+  {
+    "source": "flow\\todos-email.svg",
+    "target": "todos-email.png"
+  },
+  {
+    "source": "flow\\todos-grocery.svg",
+    "target": "todos-grocery.png"
+  },
+  {
+    "source": "flow\\todos-marker.svg",
+    "target": "todos-marker.png"
+  },
+  {
+    "source": "flow\\todos-meeting.svg",
+    "target": "todos-meeting.png"
+  },
+  {
+    "source": "flow\\todos-pet.png",
+    "target": "todos-pet.png"
+  },
+  {
+    "source": "flow\\todos-radio.svg",
+    "target": "todos-radio.png"
+  },
+  {
+    "source": "flow\\wake-landscape.png",
+    "target": "wake-landscape.png"
+  },
+  {
+    "source": "flow\\wake-medium-poster.jpg",
+    "target": "wake-medium-poster.jpg"
+  },
+  {
+    "source": "flow\\wake-medium-video.mp4",
+    "target": "wake-medium-video.mp4"
+  },
+  {
+    "source": "flow\\wake-mocha.png",
+    "target": "wake-mocha.png"
+  },
+  {
+    "source": "onboarding\\svg\\account-divider.svg",
+    "target": "account-divider.png"
+  },
+  {
+    "source": "onboarding\\svg\\back-step.svg",
+    "target": "back-step.png"
+  },
+  {
+    "source": "onboarding\\svg\\camera.svg",
+    "target": "camera.png"
+  },
+  {
+    "source": "onboarding\\svg\\cat-icon.svg",
+    "target": "cat-icon.png"
+  },
+  {
+    "source": "onboarding\\svg\\companion-cat.svg",
+    "target": "companion-cat.png"
+  },
+  {
+    "source": "onboarding\\svg\\companion-dog.svg",
+    "target": "companion-dog.png"
+  },
+  {
+    "source": "onboarding\\svg\\companion-other.svg",
+    "target": "companion-other.png"
+  },
+  {
+    "source": "onboarding\\svg\\companion-radio-selected.svg",
+    "target": "companion-radio-selected.png"
+  },
+  {
+    "source": "onboarding\\svg\\companion-radio.svg",
+    "target": "companion-radio.png"
+  },
+  {
+    "source": "onboarding\\svg\\creating-dog.svg",
+    "target": "creating-dog.png"
+  },
+  {
+    "source": "onboarding\\svg\\creating-dot.svg",
+    "target": "creating-dot.png"
+  },
+  {
+    "source": "onboarding\\svg\\dog-icon.svg",
+    "target": "dog-icon.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-arrow-1.svg",
+    "target": "home-arrow-1.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-arrow-2.svg",
+    "target": "home-arrow-2.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-arrow-3.svg",
+    "target": "home-arrow-3.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-icon-a.svg",
+    "target": "home-icon-a.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-icon-b.svg",
+    "target": "home-icon-b.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-icon-c.svg",
+    "target": "home-icon-c.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-nav-home.svg",
+    "target": "home-nav-home.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-nav-me.svg",
+    "target": "home-nav-me.png"
+  },
+  {
+    "source": "onboarding\\svg\\home-nav-sleep.svg",
+    "target": "home-nav-sleep.png"
+  },
+  {
+    "source": "onboarding\\svg\\meet-speech.svg",
+    "target": "meet-speech.png"
+  },
+  {
+    "source": "onboarding\\svg\\radio-selected.svg",
+    "target": "radio-selected.png"
+  },
+  {
+    "source": "onboarding\\svg\\radio-unselected.svg",
+    "target": "radio-unselected.png"
+  },
+  {
+    "source": "onboarding\\svg\\select-chevron.svg",
+    "target": "select-chevron.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-e-1.svg",
+    "target": "letter-e-1.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-e-2.svg",
+    "target": "letter-e-2.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-e-3.svg",
+    "target": "letter-e-3.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-l.svg",
+    "target": "letter-l.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-p.svg",
+    "target": "letter-p.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-s.svg",
+    "target": "letter-s.png"
+  },
+  {
+    "source": "onboarding\\splash\\letter-t.svg",
+    "target": "letter-t.png"
+  },
+  {
+    "source": "onboarding\\splash\\symbol.svg",
+    "target": "symbol.png"
+  }
+]

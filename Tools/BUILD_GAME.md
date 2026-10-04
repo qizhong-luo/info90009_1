@@ -41,6 +41,6 @@ Players extract the entire ZIP and double-click `Sleepet.exe`. The complete pack
 
 ## Git
 
-Commit `BuildGame.cmd`, all three PowerShell scripts in `Tools`, this guide, `Assets/Sleepet/Editor/SleepetWindowsBuild.cs` and its `.meta`, all other Unity source/assets, and the `LocalAI` manifest/license documentation. The normal project commit should include these files.
+Commit `BuildGame.cmd`, all PowerShell scripts in `Tools`, this guide, `Assets/Sleepet/Editor/SleepetWindowsBuild.cs` and its `.meta`, all other Unity source/assets, and the `LocalAI` manifest/license documentation. The normal project commit should include these files.
 
 `LocalAI/models`, `LocalAI/runtime`, `LocalAI/downloads`, `Builds`, and `Logs` remain ignored. Cloning the source and running this script recreates those dependencies and the complete distributable. Do not force-add model binaries or generated ZIPs to ordinary Git.

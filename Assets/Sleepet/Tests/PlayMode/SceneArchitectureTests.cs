@@ -46,12 +46,13 @@ namespace Sleepet.Tests
         }
 
         [Test]
-        public void BuildContainsOnlyTheEightRequestedScreens()
+        public void BuildContainsExistingScreensAndTwelveFlowScreens()
         {
             var names = EditorBuildSettings.scenes.Where(s => s.enabled)
                 .Select(s => Path.GetFileNameWithoutExtension(s.path)).ToArray();
             CollectionAssert.AreEqual(new[] { "Sleepet_Home", "Sleepet_Sleep", "Sleepet_Me", "Sleepet_Routine",
-                "Sleepet_Daily", "Sleepet_Weekly", "Sleepet_AR", "Sleepet_DayDetail" }, names);
+                "Sleepet_Daily", "Sleepet_Weekly", "Sleepet_AR", "Sleepet_DayDetail" }
+                .Concat(SleepetFlow.PageNames.Select(n => "Sleepet_" + n)).ToArray(), names);
         }
 
         [UnityTest]
@@ -90,10 +91,9 @@ namespace Sleepet.Tests
             Assert.AreEqual(30, store.Preferences.windDownSeconds);
             ui.EndSleepBySlide();
             yield return null; yield return null;
-            ui = Object.FindFirstObjectByType<SleepetHighFi>();
-            Assert.AreEqual(HighFiPage.Daily, ui.scenePage);
+            Assert.AreEqual("WakeFeedback", Object.FindFirstObjectByType<SleepetFlow>().page);
             Assert.AreEqual(1, store.History.records.Count);
-            ui.OpenWeekly();
+            session.Navigate(HighFiPage.Weekly);
             yield return null; yield return null;
             ui = Object.FindFirstObjectByType<SleepetHighFi>();
             Assert.AreEqual(HighFiPage.Weekly, ui.scenePage);
@@ -498,6 +498,8 @@ namespace Sleepet.Tests
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = camera;
             canvas.planeDistance = 1;
+            scaler.enabled = false; canvas.scaleFactor = 1;
+            foreach(var text in canvas.GetComponentsInChildren<Text>(true)){text.cachedTextGenerator.Invalidate();text.SetAllDirty();}
             Canvas.ForceUpdateCanvases(); camera.Render();
             var prior = RenderTexture.active;
             RenderTexture.active = target;
@@ -509,6 +511,7 @@ namespace Sleepet.Tests
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.worldCamera = null;
             scaler.matchWidthOrHeight = savedMatch;
+            scaler.enabled = true;
             Canvas.ForceUpdateCanvases();
             layout.ApplyLayout(((RectTransform)canvas.transform).rect.height, 0);
             camera.targetTexture = null;

@@ -1,0 +1,20 @@
+{
+    "sessionId": "a9f94ec929804cfd9b6ddbdba6254733",
+    "sessionStartTime": "2026-10-03T16:35:24.7978619Z",
+    "events": [
+        {
+            "timestamp": "2026-10-03T16:35:24.7978619Z",
+            "sessionId": "a9f94ec929804cfd9b6ddbdba6254733",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-03T16:35:25.8626068Z",
+            "sessionId": "a9f94ec929804cfd9b6ddbdba6254733",
+            "eventType": "CAMERA_OPEN_REQUESTED",
+            "value": "",
+            "context": "desktop overlay; no spatial tracking"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "sessionId": "fixture",
+            "startedAt": "2026-10-04T01:08:12.9883687Z",
+            "result": "",
+            "behaviour": "",
+            "companion": "",
+            "sound": "",
+            "durationSeconds": 0.0,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0,
+            "morningRated": false,
+            "morningCompleted": false,
+            "notifyLater": false,
+            "morningRating": 0,
+            "waterStatus": "",
+            "stretchStatus": "",
+            "morningCompletedAt": ""
+        }
+    ]
+}

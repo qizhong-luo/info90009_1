@@ -1,0 +1,118 @@
+{
+    "sessionId": "d72c48aa26ef47eb9140963767af761c",
+    "sessionStartTime": "2026-10-04T01:08:57.3792993Z",
+    "events": [
+        {
+            "timestamp": "2026-10-04T01:08:57.3792993Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9402647Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9417691Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9422779Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9483935Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9494007Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9509040Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9585211Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9610379Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9620446Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Proactive",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9691407Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9706466Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9716469Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9775788Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9790817Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:57.9811051Z",
+            "sessionId": "d72c48aa26ef47eb9140963767af761c",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": ""
+        }
+    ]
+}

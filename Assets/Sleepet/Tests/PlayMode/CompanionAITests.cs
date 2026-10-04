@@ -47,6 +47,27 @@ namespace Sleepet.Tests
         }
 
         [Test]
+        public void LocalPromptUsesCurrentPetNameForEverySkill()
+        {
+            foreach (string skill in CompanionSkills.Ids)
+            {
+                var context = new CompanionContext { skillId = skill, shareData = true };
+                foreach (string name in new[] { "Miia", "Luna", "小月" })
+                {
+                    context.petName = name;
+                    string prompt = LocalSkillPrompt.Build(context);
+                    StringAssert.Contains(name, prompt);
+                    StringAssert.DoesNotContain("Mocha", prompt);
+                }
+                context.petName = " ";
+                StringAssert.Contains("Mocha", LocalSkillPrompt.Build(context));
+                context.petName = "Miia";
+                context.shareData = false;
+                StringAssert.DoesNotContain("Miia", LocalSkillPrompt.Build(context));
+            }
+        }
+
+        [Test]
         public void LocalSkillsEnforceDataScopesAndExcludeSamples()
         {
             var context = new CompanionContext { skillId = CompanionSkills.Records, shareData = true,
@@ -175,6 +196,12 @@ namespace Sleepet.Tests
                 Assert.AreEqual("09:41", next.context.preferences.wakeTime);
                 StringAssert.Contains("Old wake time", demo.ChatTranscript);
                 next.completion.SetResult("09:41"); yield return null; yield return null;
+                demo.Store.Preferences.petName = "Miia";
+                var renamed = new DeferredAI(); demo.AI = renamed;
+                demo.SendChatMessage("Review my records"); yield return null; yield return null;
+                Assert.AreEqual(CompanionSkills.Records, renamed.context.skillId);
+                Assert.AreEqual("Miia", renamed.context.petName); Assert.IsEmpty(renamed.context.conversation);
+                renamed.completion.SetResult("Current records"); yield return null; yield return null;
             }
             finally { Object.Destroy(session.gameObject); SleepetSceneSession.TestDataDirectoryOverride = null; }
             yield return null;

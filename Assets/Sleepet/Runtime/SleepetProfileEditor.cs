@@ -14,6 +14,7 @@ namespace Sleepet
         public Sprite[] presets;
         public Image[] selectionBorders;
         int selected;
+        Text emailDisplay;
 
         void Awake() { nameInput.onValidateInput = ValidateLetter; }
         public static char ValidateLetter(string text, int index, char added)
@@ -22,6 +23,10 @@ namespace Sleepet
         {
             var p = app.demo.Store.Preferences;
             displayName.text = p.profileName;
+            if (!emailDisplay)
+                foreach (var label in app.GetComponentsInChildren<Text>(true))
+                    if (label.name == "Email") { emailDisplay = label; emailDisplay.supportRichText = false; break; }
+            if (emailDisplay && !string.IsNullOrEmpty(p.accountEmail)) emailDisplay.text = p.accountEmail;
             avatar.sprite = presets[Mathf.Clamp(p.profileAvatar, 0, presets.Length - 1)];
         }
         public void Open()

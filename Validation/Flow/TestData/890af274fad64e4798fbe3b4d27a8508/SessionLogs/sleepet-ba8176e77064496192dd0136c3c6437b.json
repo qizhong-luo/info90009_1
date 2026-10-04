@@ -1,0 +1,90 @@
+{
+    "sessionId": "ba8176e77064496192dd0136c3c6437b",
+    "sessionStartTime": "2026-10-04T01:08:23.5143800Z",
+    "events": [
+        {
+            "timestamp": "2026-10-04T01:08:23.5143800Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5240154Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5260299Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": "effective at start"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5270300Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_SOUND_SELECTED",
+            "value": "Ocean",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5275329Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_SESSION_STARTED",
+            "value": "",
+            "context": "inactivity demo; not measured sleep"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5285390Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Awake",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5295426Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "MEDIA_STARTED",
+            "value": "Ocean",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5315576Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_MODE_OPENED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5320604Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_STATE_CHANGED",
+            "value": "Ended",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5335713Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "MEDIA_STOPPED",
+            "value": "Ocean",
+            "context": "Unity-owned audio"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5345832Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "SLEEP_SESSION_ENDED",
+            "value": "0.0",
+            "context": "duration seconds"
+        },
+        {
+            "timestamp": "2026-10-04T01:08:23.5360861Z",
+            "sessionId": "ba8176e77064496192dd0136c3c6437b",
+            "eventType": "MORNING_RESULT_SHOWN",
+            "value": "Calm",
+            "context": "simulated"
+        }
+    ]
+}

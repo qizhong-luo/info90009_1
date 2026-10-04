@@ -196,6 +196,7 @@ namespace Sleepet
             CloseSheets(); Show(HighFiPage.Me); RefreshMe();
         }
         public void OpenRoutine() { CloseSheets(); Show(HighFiPage.Routine); ApplyPlanToUI(); }
+        public void OpenRegistration() { SleepetSceneSession.Instance?.BeginOnboarding(); }
         public void OpenDaily() { CloseSheets(); Show(HighFiPage.Daily); RefreshReports(); }
         public void OpenWeekly() { CloseSheets(); Show(HighFiPage.Weekly); RefreshReports(); }
         public void OpenWeekDay(int index)
@@ -242,13 +243,13 @@ namespace Sleepet
         public void ShowHelp() { ShowSupport("Help & Q&A"); }
         public void StartOrEndSleep()
         {
-            if (demo.Detector.Running) { demo.EndSleep(); SleepetSceneSession.Instance?.MarkStateChanged(); OpenDaily(); }
+            if (demo.Detector.Running) { demo.EndSleep(); SleepetSceneSession.Instance?.MarkStateChanged(); SleepetSceneSession.Instance?.BeginMorning(); }
             else { demo.StartSleep(); SleepetSceneSession.Instance?.MarkStateChanged(); RefreshSleep(); }
         }
         public void EndSleepBySlide()
         {
             if (!demo.Detector.Running) { ShowNotice("Start a sleep session first."); return; }
-            demo.EndSleep(); SleepetSceneSession.Instance?.MarkStateChanged(); OpenDaily();
+            demo.EndSleep(); SleepetSceneSession.Instance?.MarkStateChanged(); SleepetSceneSession.Instance?.BeginMorning();
         }
         public void CycleBehaviour()
         {
@@ -419,6 +420,7 @@ namespace Sleepet
         {
             var p = JsonUtility.FromJson<UserPreferences>(JsonUtility.ToJson(demo.Store.Preferences));
             p.petOption = selectedPet; p.petName = string.IsNullOrWhiteSpace(petNameInput.text) ? "Mocha" : petNameInput.text.Trim();
+            p.petSpecies = selectedPet == 0 ? "dog" : selectedPet == 1 ? "cat" : "other";
             p.petAppearance = selectedAppearance; p.petPose = selectedPose;
             if (!demo.Store.SavePreferences(p)) { ShowNotice(demo.Store.Error); return; }
             petSheet.SetActive(false); RefreshMe();

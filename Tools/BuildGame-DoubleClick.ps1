@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'
 try {
     $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
     $builder = Join-Path $PSScriptRoot 'BuildCompleteGame.ps1'
-    foreach ($file in @($builder, (Join-Path $PSScriptRoot 'PrepareLocalAI.ps1'))) {
+    foreach ($file in @($builder, (Join-Path $PSScriptRoot 'PrepareLocalAI.ps1'), (Join-Path $PSScriptRoot 'TestGameArchive.ps1'))) {
         if (!(Test-Path -LiteralPath $file)) { throw "Required project script is missing: $file" }
         $tokens = $null; $parseErrors = $null
         [System.Management.Automation.Language.Parser]::ParseFile($file, [ref]$tokens, [ref]$parseErrors) | Out-Null

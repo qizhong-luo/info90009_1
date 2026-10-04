@@ -1,0 +1,34 @@
+{
+    "sessionId": "88378dbf46f447f8bb464cacda181419",
+    "sessionStartTime": "2026-10-03T16:35:18.7379843Z",
+    "events": [
+        {
+            "timestamp": "2026-10-03T16:35:18.7379843Z",
+            "sessionId": "88378dbf46f447f8bb464cacda181419",
+            "eventType": "APP_STARTED",
+            "value": "",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-03T16:35:22.2094542Z",
+            "sessionId": "88378dbf46f447f8bb464cacda181419",
+            "eventType": "PREFERENCES_SAVED",
+            "value": "20:10",
+            "context": "local preferences"
+        },
+        {
+            "timestamp": "2026-10-03T16:35:22.2104559Z",
+            "sessionId": "88378dbf46f447f8bb464cacda181419",
+            "eventType": "SLEEP_BEHAVIOUR_SELECTED",
+            "value": "FadeOutGently",
+            "context": ""
+        },
+        {
+            "timestamp": "2026-10-03T16:35:22.2115529Z",
+            "sessionId": "88378dbf46f447f8bb464cacda181419",
+            "eventType": "COMPANION_MODE_SELECTED",
+            "value": "Quiet",
+            "context": ""
+        }
+    ]
+}

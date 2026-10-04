@@ -80,16 +80,8 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $zipPath = $output + '.zip'
 $partial = $zipPath + '.partial'
 [IO.Compression.ZipFile]::CreateFromDirectory($output, $partial, [IO.Compression.CompressionLevel]::Fastest, $true)
-$archive = [IO.Compression.ZipFile]::OpenRead($partial)
-try {
-    $modelEntry = $archive.GetEntry($runName + '/LocalAI/models/' + $manifest.modelFile)
-    if (!$modelEntry -or !$archive.GetEntry($runName + '/Sleepet.exe')) { throw 'ZIP is missing its model or executable.' }
-    $stream = $modelEntry.Open()
-    $sha = [Security.Cryptography.SHA256]::Create()
-    try { $modelHash = [BitConverter]::ToString($sha.ComputeHash($stream)).Replace('-', '').ToLowerInvariant() }
-    finally { $stream.Dispose(); $sha.Dispose() }
-    if ($modelHash -ne $manifest.modelSha256) { throw 'Model checksum inside ZIP does not match.' }
-} finally { $archive.Dispose() }
+. (Join-Path $PSScriptRoot 'TestGameArchive.ps1')
+Test-GameArchive -Path $partial -RootName $runName -ModelFile $manifest.modelFile -ModelSha256 $manifest.modelSha256
 Move-Item -LiteralPath $partial -Destination $zipPath
 $zipHash = (Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLowerInvariant()
 [IO.File]::WriteAllText($zipPath + '.sha256', $zipHash + '  ' + [IO.Path]::GetFileName($zipPath) + [Environment]::NewLine)

@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 6ec99a6db61136c47b2677cfb153fc1a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4888570527395128645
+    second: drink-glass_0
+  - first:
+      213: 2871804411194399159
+    second: drink-glass_1
+  - first:
+      213: 8708434091215522150
+    second: drink-glass_2
+  - first:
+      213: -4667175428516143159
+    second: drink-glass_3
+  - first:
+      213: 5742332261547847127
+    second: drink-glass_4
+  - first:
+      213: 5130533457555758842
+    second: drink-glass_5
+  - first:
+      213: -8724494680420149775
+    second: drink-glass_6
+  - first:
+      213: -6732150805614455469
+    second: drink-glass_7
+  - first:
+      213: 1544017877355041010
+    second: drink-glass_8
+  - first:
+      213: 1783612268090218019
+    second: drink-glass_9
+  - first:
+      213: -763331896884283390
+    second: drink-glass_10
+  - first:
+      213: -7456649312162562848
+    second: drink-glass_11
+  - first:
+      213: 8410053025329841255
+    second: drink-glass_12
+  - first:
+      213: -8099500553606371202
+    second: drink-glass_13
+  - first:
+      213: 6332259999318071553
+    second: drink-glass_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: drink-glass_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 1027
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba5b2f810f482cb0800000000000000
+      internalID: -4888570527395128645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_1
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1082
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b954a185e2bad720800000000000000
+      internalID: 2871804411194399159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 743
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6698dccaaa29ad870800000000000000
+      internalID: 8708434091215522150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 744
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf1ddeecacda3fb0800000000000000
+      internalID: -4667175428516143159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_4
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 665
+        width: 286
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd23d784ccd0bf40800000000000000
+      internalID: 5742332261547847127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 634
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe1ed53ff0533740800000000000000
+      internalID: 5130533457555758842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_6
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 628
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f595c0005e5ce680800000000000000
+      internalID: -8724494680420149775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_7
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 579
+        width: 110
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3559df0c2889292a0800000000000000
+      internalID: -6732150805614455469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 505
+        width: 113
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0999234147d6510800000000000000
+      internalID: 1544017877355041010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_9
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 229
+        width: 215
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326db8868e9a0c810800000000000000
+      internalID: 1783612268090218019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_10
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 351
+        width: 109
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208bc702fa91865f0800000000000000
+      internalID: -763331896884283390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_11
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 298
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecb3e525f8a48890800000000000000
+      internalID: -7456649312162562848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_12
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 207
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7640cfc0ba286b470800000000000000
+      internalID: 8410053025329841255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_13
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 78
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e786634d82bc89f80800000000000000
+      internalID: -8099500553606371202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drink-glass_14
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 34
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109d4cc6be4b0e750800000000000000
+      internalID: 6332259999318071553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      drink-glass_0: -4888570527395128645
+      drink-glass_1: 2871804411194399159
+      drink-glass_10: -763331896884283390
+      drink-glass_11: -7456649312162562848
+      drink-glass_12: 8410053025329841255
+      drink-glass_13: -8099500553606371202
+      drink-glass_14: 6332259999318071553
+      drink-glass_2: 8708434091215522150
+      drink-glass_3: -4667175428516143159
+      drink-glass_4: 5742332261547847127
+      drink-glass_5: 5130533457555758842
+      drink-glass_6: -8724494680420149775
+      drink-glass_7: -6732150805614455469
+      drink-glass_8: 1544017877355041010
+      drink-glass_9: 1783612268090218019
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,44 @@
+{
+    "records": [
+        {
+            "sessionId": "unrelated",
+            "startedAt": "2026-10-05T07:03:15.7865383Z",
+            "result": "Calm",
+            "behaviour": "",
+            "companion": "",
+            "sound": "",
+            "durationSeconds": 0.0,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0,
+            "morningRated": false,
+            "morningCompleted": false,
+            "notifyLater": false,
+            "morningRating": 0,
+            "waterStatus": "",
+            "stretchStatus": "",
+            "morningCompletedAt": ""
+        },
+        {
+            "sessionId": "08662f4862964d24b13edabadbaedefb",
+            "startedAt": "2026-10-04T07:03:15.2654351Z",
+            "result": "Difficult",
+            "behaviour": "FadeOutGently",
+            "companion": "Quiet",
+            "sound": "Ocean",
+            "durationSeconds": 0.0,
+            "sample": false,
+            "deepMinutes": 0,
+            "lightMinutes": 0,
+            "remMinutes": 0,
+            "morningRated": true,
+            "morningCompleted": true,
+            "notifyLater": true,
+            "morningRating": 4,
+            "waterStatus": "",
+            "stretchStatus": "",
+            "morningCompletedAt": "2026-10-04T07:03:17.3460213Z"
+        }
+    ]
+}
