@@ -429,7 +429,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba14456e0a501a6458d26d459d4d7de6, type: 3}
-    m_FontSize: 26
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1781,8 +1781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 334, y: -426}
-  m_SizeDelta: {x: 48, y: 48}
+  m_AnchoredPosition: {x: 330, y: -440}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &580534828
 MonoBehaviour:
@@ -1797,15 +1797,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06, g: 0.13, b: 0.29, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4945170033793404046, guid: d9a707ae687547ceb7fea63efaaea760, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a5bd4e53360442743894dbf66085bca0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1843,11 +1843,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.06, g: 0.16, b: 0.32, a: 1}
+    m_HighlightedColor: {r: 0.12, g: 0.32, b: 0.52, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_SelectedColor: {r: 0.06, g: 0.16, b: 0.32, a: 1}
+    m_DisabledColor: {r: 0.65, g: 0.74, b: 0.82, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1911,7 +1911,6 @@ RectTransform:
   - {fileID: 892433908}
   - {fileID: 321172833}
   - {fileID: 1267584627}
-  - {fileID: 580534827}
   - {fileID: 987617230}
   - {fileID: 1609507259}
   - {fileID: 1106076833}
@@ -1923,6 +1922,7 @@ RectTransform:
   - {fileID: 551397856}
   - {fileID: 1644749742}
   - {fileID: 659231142}
+  - {fileID: 580534827}
   m_Father: {fileID: 1019115935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -1985,7 +1985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &659231142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2651,6 +2651,15 @@ MonoBehaviour:
   weeklyBedtimeLabel: {fileID: 0}
   weeklyDataNote: {fileID: 0}
   weeklyAverageLine: {fileID: 0}
+  dateSheet: {fileID: 0}
+  dateYear: {fileID: 0}
+  dateMonth: {fileID: 0}
+  dateDay: {fileID: 0}
+  dateError: {fileID: 0}
+  customEventContent: {fileID: 0}
+  selectedEventContent: {fileID: 0}
+  customEventTemplate: {fileID: 0}
+  selectedEventTemplate: {fileID: 0}
   timePicker: {fileID: 0}
   dailyDateCaption: {fileID: 0}
   dailyRelativeDate: {fileID: 0}
@@ -3934,8 +3943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -426}
-  m_SizeDelta: {x: 302, y: 48}
+  m_AnchoredPosition: {x: 20, y: -428}
+  m_SizeDelta: {x: 362, y: 64}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1267584628
 MonoBehaviour:
@@ -3950,14 +3959,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.9647059, b: 0.99607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 5094977377986672036, guid: 74b357d192e8424ab67c23b5fd661b2f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3997,9 +4006,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4022,7 +4031,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_CharacterValidation: 0
   m_CharacterLimit: 2000
@@ -4728,8 +4737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: -23, y: 0}
+  m_SizeDelta: {x: -78, y: -26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735004240
 MonoBehaviour:
@@ -4758,7 +4767,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4851,7 +4860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Here with you
+  m_Text: 
 --- !u!1 &1758203910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5098,8 +5107,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: -23, y: 0}
+  m_SizeDelta: {x: -78, y: -26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888161317
 MonoBehaviour:
@@ -5128,10 +5137,10 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 

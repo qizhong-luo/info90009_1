@@ -31,12 +31,29 @@ namespace Sleepet
     public enum HighFiPage { Home, Sleep, Me, Routine, Daily, Weekly, AR, DayDetail }
 
     [Serializable]
+    public sealed class PlannedEvent
+    {
+        public string title;
+        public bool selected = true;
+    }
+
+    [Serializable]
     public sealed class TomorrowPlan
     {
         public string date = "";
         public bool water = true, stretch = true, breakfast;
         public bool groceries = true, gym, meeting = true, call;
         public string shortEvent = "";
+        public List<PlannedEvent> events = new List<PlannedEvent>();
+        public void MigrateEvents()
+        {
+            if (events == null) events = new List<PlannedEvent>();
+            if (!string.IsNullOrWhiteSpace(shortEvent))
+            {
+                events.Add(new PlannedEvent { title = shortEvent });
+                shortEvent = "";
+            }
+        }
     }
 
     // The UI owns navigation and presentation. SleepetDemo remains the session/data backend.
@@ -64,6 +81,12 @@ namespace Sleepet
         public Text homeReadyLabel, homeARLabel, homeTapHint;
         public Text weeklyWakeCount, weeklyAverageSleep, weeklyBedtimeLabel, weeklyDataNote;
         public RectTransform weeklyAverageLine;
+        public GameObject dateSheet;
+        public InputField dateYear, dateMonth, dateDay;
+        public Text dateError;
+        public RectTransform customEventContent, selectedEventContent;
+        public Toggle customEventTemplate;
+        public Button selectedEventTemplate;
         public SleepetTimePicker timePicker;
         public Text dailyDateCaption, dailyRelativeDate;
         public SleepetProfileEditor profileEditor;
@@ -101,6 +124,9 @@ namespace Sleepet
         int selectedPet;
         int selectedAppearance, selectedPose;
         Coroutine petAnimation;
+        Coroutine homeReaction;
+        Vector3 homePetScale;
+        Quaternion homePetRotation;
         string lastPageBeforeAR = "Home";
         float previousReportScroll;
         ScrollRect reportScroll;
@@ -122,6 +148,7 @@ namespace Sleepet
             dataPath = Path.Combine(demo.Store.DirectoryPath, "tomorrow-plan.json");
             LoadPlan();
             ApplyPlanToUI();
+            if (homePet) { homePetScale = homePet.transform.localScale; homePetRotation = homePet.transform.localRotation; }
             if (meVolume != null)
             {
                 meVolume.SetValueWithoutNotify(demo.Store.Preferences.volume);
@@ -178,7 +205,27 @@ namespace Sleepet
             if (demo != null && demo.Store != null) demo.OpenHome();
             CloseSheets(); Show(HighFiPage.Home);
         }
-        public void TapPetHighFi() { if (demo != null && demo.Store != null) demo.TapPet(); }
+        public void TapPetHighFi()
+        {
+            if (demo == null || demo.Store == null) return;
+            demo.TapPet();
+            if (!homePet) return;
+            if (homeReaction != null) StopCoroutine(homeReaction);
+            homeReaction = StartCoroutine(ReactHomePet());
+        }
+        IEnumerator ReactHomePet()
+        {
+            for (float t = 0; t < .8f; t += Time.unscaledDeltaTime)
+            {
+                float pulse = Mathf.Sin(t / .8f * Mathf.PI);
+                homePet.transform.localScale = Vector3.Scale(homePetScale, new Vector3(1 - .05f * pulse, 1 + .09f * pulse, 1));
+                homePet.transform.localRotation = homePetRotation * Quaternion.Euler(0, 0, Mathf.Sin(t * Mathf.PI * 5) * 6 * pulse);
+                yield return null;
+            }
+            homePet.transform.localScale = homePetScale;
+            homePet.transform.localRotation = homePetRotation;
+            homeReaction = null;
+        }
         public void OpenSleep()
         {
             if (demo != null && demo.Store != null) demo.OpenSleep();
@@ -216,7 +263,7 @@ namespace Sleepet
         public void Back()
         {
             if (profileEditor && profileEditor.sheet.activeSelf) { profileEditor.Cancel(); return; }
-            if ((eventSheet && eventSheet.activeSelf) || (timeSheet && timeSheet.activeSelf) ||
+            if ((dateSheet && dateSheet.activeSelf) || (eventSheet && eventSheet.activeSelf) || (timeSheet && timeSheet.activeSelf) ||
                 (petSheet && petSheet.activeSelf) || (noticeSheet && noticeSheet.activeSelf)) { CloseSheets(); return; }
             if (CurrentPage == HighFiPage.AR) { CloseAR(); return; }
             if (CurrentPage == HighFiPage.Routine) { OpenHome(); return; }
@@ -231,11 +278,12 @@ namespace Sleepet
             if (petSheet) petSheet.SetActive(false);
             if (eventSheet) eventSheet.SetActive(false);
             if (noticeSheet) noticeSheet.SetActive(false);
+            if (dateSheet) dateSheet.SetActive(false);
         }
         public void CloseTimeSheet() { if (timeSheet) timeSheet.SetActive(false); }
         public void ClosePetSheet() { if (petSheet) petSheet.SetActive(false); }
         public void CloseEventSheet() { if (eventSheet) eventSheet.SetActive(false); }
-        public void ShowRoutineHelp() { ShowNotice("Use the checkboxes to change your gentle start."); }
+        public void ShowRoutineHelp() { RoutineChanged(false); if (PersistPlan()) ShowNotice("Your routine has been saved."); }
         public void ShowPrivacy() { ShowSupport("Privacy & data"); }
         public void ShowAccessibility() { ShowSupport("Accessibility"); }
         public void ShowDevices() { ShowSupport("Connected Devices"); }
@@ -457,6 +505,7 @@ namespace Sleepet
             try { plan = File.Exists(dataPath) ? JsonUtility.FromJson<TomorrowPlan>(File.ReadAllText(dataPath)) : null; }
             catch (Exception) { plan = null; }
             if (plan == null) plan = new TomorrowPlan();
+            plan.MigrateEvents();
             if (string.IsNullOrEmpty(plan.date)) plan.date = DateTime.Today.AddDays(1).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
         }
         void ApplyPlanToUI()
@@ -472,6 +521,7 @@ namespace Sleepet
                 (plan.gym ? "Gym day\n" : "") + (plan.call ? "Call family or a friend\n" : "") +
                 (string.IsNullOrWhiteSpace(plan.shortEvent) ? "" : plan.shortEvent);
             if (string.IsNullOrWhiteSpace(routineEvents.text)) routineEvents.text = "No extra events yet";
+            RenderEventRows();
             applyingPlan = false;
         }
         public void RoutineChanged(bool unused)
@@ -483,17 +533,68 @@ namespace Sleepet
         }
         public void NextRoutineDate()
         {
-            if (!DateTime.TryParseExact(plan.date, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date)) date = DateTime.Today;
-            plan.date = date.AddDays(1).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture); ApplyPlanToUI();
+            if (!DateTime.TryParseExact(plan.date, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date)) date = DateTime.Today.AddDays(1);
+            dateYear.SetTextWithoutNotify(date.Year.ToString()); dateMonth.SetTextWithoutNotify(date.Month.ToString("00")); dateDay.SetTextWithoutNotify(date.Day.ToString("00"));
+            dateError.text = ""; dateSheet.SetActive(true);
         }
-        public void OpenEventSheet() { eventInput.SetTextWithoutNotify(plan.shortEvent); eventSheet.SetActive(true); }
-        public void SaveEvent() { plan.shortEvent = eventInput.text.Trim(); eventSheet.SetActive(false); ApplyPlanToUI(); }
-        public void ClearEvent() { plan.shortEvent = ""; ApplyPlanToUI(); }
+        public void CloseDateSheet() { dateSheet.SetActive(false); }
+        public void SaveRoutineDate()
+        {
+            string value = dateYear.text + "/" + dateMonth.text.PadLeft(2, '0') + "/" + dateDay.text.PadLeft(2, '0');
+            if (!DateTime.TryParseExact(value, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
+            { dateError.text = "Please enter a valid date."; return; }
+            plan.date = date.ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
+            CloseDateSheet(); ApplyPlanToUI(); routineNotice.text = "Changes not saved yet";
+        }
+        public void OpenEventSheet() { eventInput.SetTextWithoutNotify(""); eventSheet.SetActive(true); }
+        public void SaveEvent()
+        {
+            string title = eventInput.text.Trim();
+            if (title.Length == 0) return;
+            plan.events.Add(new PlannedEvent { title = title });
+            eventSheet.SetActive(false); ApplyPlanToUI(); routineNotice.text = "Changes not saved yet";
+        }
+        public void ClearEvent() { plan.events.Clear(); plan.shortEvent = ""; ApplyPlanToUI(); }
+        void RenderEventRows()
+        {
+            if (!customEventTemplate || !selectedEventTemplate) return;
+            foreach (Transform child in customEventContent) if (child != customEventTemplate.transform) { child.gameObject.SetActive(false); Destroy(child.gameObject); }
+            foreach (Transform child in selectedEventContent) if (child != selectedEventTemplate.transform) { child.gameObject.SetActive(false); Destroy(child.gameObject); }
+            int row = 0;
+            foreach (var item in plan.events)
+            {
+                var toggle = Instantiate(customEventTemplate, customEventContent);
+                toggle.gameObject.SetActive(true); toggle.GetComponentInChildren<Text>().text = item.title;
+                toggle.SetIsOnWithoutNotify(item.selected);
+                toggle.onValueChanged.AddListener(on => { item.selected = on; ApplyPlanToUI(); routineNotice.text = "Changes not saved yet"; });
+                ((RectTransform)toggle.transform).anchoredPosition = new Vector2(0, -row++ * 32);
+            }
+            customEventContent.sizeDelta = new Vector2(customEventContent.sizeDelta.x, Mathf.Max(32, row * 32));
+            row = 0;
+            Action<string, Action> add = (title, remove) =>
+            {
+                var button = Instantiate(selectedEventTemplate, selectedEventContent);
+                button.gameObject.SetActive(true); button.GetComponentInChildren<Text>().text = title;
+                ((RectTransform)button.transform).anchoredPosition = new Vector2(0, -row++ * 38);
+                button.onClick.AddListener(() => { remove(); ApplyPlanToUI(); routineNotice.text = "Changes not saved yet"; });
+            };
+            if (plan.groceries) add("Go grocery shopping", () => plan.groceries = false);
+            if (plan.meeting) add("Group meeting", () => plan.meeting = false);
+            if (plan.gym) add("Gym day", () => plan.gym = false);
+            if (plan.call) add("Call family or a friend", () => plan.call = false);
+            foreach (var item in plan.events) if (item.selected) add(item.title, () => plan.events.Remove(item));
+            selectedEventContent.sizeDelta = new Vector2(selectedEventContent.sizeDelta.x, Mathf.Max(38, row * 38));
+        }
+        bool PersistPlan()
+        {
+            try { Directory.CreateDirectory(Path.GetDirectoryName(dataPath)); File.WriteAllText(dataPath, JsonUtility.ToJson(plan, true)); routineNotice.text = "Saved for " + plan.date; SleepetSceneSession.Instance?.MarkStateChanged(); return true; }
+            catch (IOException) { routineNotice.text = "Could not save on this device"; return false; }
+            catch (UnauthorizedAccessException) { routineNotice.text = "Could not save on this device"; return false; }
+        }
         public void SaveRoutine()
         {
             RoutineChanged(false);
-            try { Directory.CreateDirectory(Path.GetDirectoryName(dataPath)); File.WriteAllText(dataPath, JsonUtility.ToJson(plan, true)); routineNotice.text = "Saved for " + plan.date; SleepetSceneSession.Instance?.MarkStateChanged(); OpenHome(); }
-            catch (Exception) { routineNotice.text = "Could not save on this device"; }
+            if (PersistPlan()) OpenHome();
         }
 
         void RefreshReports()
@@ -561,7 +662,7 @@ namespace Sleepet
                 ? firstDay.ToString("MMMM d", CultureInfo.InvariantCulture).ToUpperInvariant() + " — " + DateTime.Today.ToString("d, yyyy", CultureInfo.InvariantCulture)
                 : firstDay.ToString("MMM d", CultureInfo.InvariantCulture).ToUpperInvariant() + " — " + DateTime.Today.ToString("MMM d, yyyy", CultureInfo.InvariantCulture).ToUpperInvariant();
             if (!weeklyCount || !weeklyAverage || !weeklyChart) return;
-            int count = 0, bedGoals = 0, wakeGoals = 0, sampleCount = 0; float total = 0, startMinutes = 0;
+            int count = 0, bedGoals = 0, wakeGoals = 0, sampleCount = 0; float total = 0, startMinutes = 0, plottedTotal = 0;
             SleepetStore.TryTime(demo.Store.Preferences.reminderTime, out var bedtimeGoal);
             SleepetStore.TryTime(demo.Store.Preferences.wakeTime, out var wakeGoal);
             var bars = new string[7];
@@ -576,6 +677,7 @@ namespace Sleepet
                 if (found)
                 {
                     count++; total += chosen.durationSeconds;
+                    plottedTotal += DurationPlotHeight(chosen.durationSeconds);
                     start = DateTime.Parse(chosen.startedAt, null, DateTimeStyles.RoundtripKind).ToLocalTime();
                     end = start.AddSeconds(chosen.durationSeconds);
                     startMinutes += NightMinutes(start.TimeOfDay);
@@ -596,7 +698,7 @@ namespace Sleepet
                     {
                         // Figma uses top-aligned duration columns, not floating sleep intervals.
                         float top = found ? 0 : 103;
-                        float bottom = found ? Mathf.Clamp(chosen.durationSeconds / 3600f * 11.2f, 2, 105) : 105;
+                        float bottom = found ? DurationPlotHeight(chosen.durationSeconds) : 105;
                         bar.anchorMin = bar.anchorMax = bar.pivot = new Vector2(0, 1);
                         bar.anchoredPosition = new Vector2(7, -top);
                         bar.sizeDelta = new Vector2(22, Mathf.Max(2, bottom - top));
@@ -612,17 +714,11 @@ namespace Sleepet
             if (weeklyBedtimeLabel) weeklyBedtimeLabel.text = count > sampleCount ? "Average session start" : "Average bedtime";
             if (weeklyAverageSleep) weeklyAverageSleep.text = count > 0 ? FormatAsleep(total / count) + (count > sampleCount ? " average session" : " average sleep") : "No sessions this week";
             if (weeklyDataNote) weeklyDataNote.text = sampleCount > 0 ? "TEST DATA · goals use sample sleep times" : "Sleep goal counts need sensor data";
-            if (weeklyAverageLine) { weeklyAverageLine.gameObject.SetActive(count > 0); weeklyAverageLine.anchoredPosition = new Vector2(63, -102 - NightPlotY(startMinutes / Mathf.Max(1, count))); }
+            if (weeklyAverageLine) { weeklyAverageLine.gameObject.SetActive(count > 0); weeklyAverageLine.anchoredPosition = new Vector2(63, -102 - plottedTotal / Mathf.Max(1, count)); }
             weeklyChart.text = weeklyDayButtons != null && weeklyDayButtons.Length == 7 ? "" : "M    T    W    T    F    S    S\n" + string.Join("    ", bars);
         }
         static float NightMinutes(TimeSpan time) { float m = (float)time.TotalMinutes; return m < 720 ? m + 1440 : m; }
-        static float NightPlotY(float minute)
-        {
-            // Match the design's compressed overnight axis: 23:00, 00:00, 08:00, 09:00.
-            if (minute <= 1440) return Mathf.Clamp((minute - 1380) / 60 * 35, 0, 35);
-            if (minute <= 1920) return 35 + (minute - 1440) / 480 * 35;
-            return Mathf.Clamp(70 + (minute - 1920) / 60 * 35, 70, 105);
-        }
+        public static float DurationPlotHeight(float seconds) => Mathf.Clamp(seconds / 3600f * 11.2f, 2, 105);
         public void OpenHealthApp()
         {
             if (HealthLauncher != null && HealthLauncher.TryOpen(HealthAppUrl)) return;
@@ -656,10 +752,10 @@ namespace Sleepet
             arSendButton.interactable = !string.IsNullOrWhiteSpace(arInput.text) && !demo.ChatBusy;
             arInput.interactable = !demo.ChatBusy;
             if (arModelLabel) arModelLabel.text = demo.OnlineAI ? "Online model  ↔" : "Local model  ↔";
-            if (arModelNotice) arModelNotice.text = demo.OnlineAI ? "Chat and saved information are sent online." : "On your device. No Internet needed.";
+            if (arModelNotice) arModelNotice.gameObject.SetActive(false);
             if (arAIStatus) arAIStatus.text = demo.ChatBusy
                 ? (demo.AI is LocalCompanionAI local && !local.Ready ? "Getting ready..." : "Thinking...")
-                : demo.CanRetryChat ? "Try again when you're ready." : "Here with you";
+                : demo.CanRetryChat ? "Try again when you're ready." : "";
             if (arRetryButton) arRetryButton.gameObject.SetActive(demo.CanRetryChat);
             if (arCancelButton) arCancelButton.gameObject.SetActive(demo.ChatBusy);
             if (!demo.ChatBusy && string.IsNullOrEmpty(arInput.text) && !string.IsNullOrEmpty(demo.ChatDraft))

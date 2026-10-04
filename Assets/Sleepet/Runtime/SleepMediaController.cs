@@ -30,7 +30,9 @@ namespace Sleepet
             Sound = Mathf.Clamp(sound, 0, 2);
             selectedVolume = Mathf.Clamp01(volume);
             if (changed) Stop();
-            source.clip = Sound == 0 ? rain : Sound == 1 ? ocean : null;
+            var clip = Sound == 0 ? rain : Sound == 1 ? ocean : null;
+            // Assigning AudioSource.clip again can interrupt an active session.
+            if (source.clip != clip) source.clip = clip;
             if (!IsFading) source.volume = selectedVolume;
             if (changed && wasPlaying && source.clip != null) Play();
         }

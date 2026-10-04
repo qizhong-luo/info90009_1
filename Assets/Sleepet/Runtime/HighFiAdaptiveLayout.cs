@@ -92,7 +92,7 @@ namespace Sleepet
             TopShift(Find(HighFiPage.DayDetail, "Stages card"), 519, compact);
             TopShift(Find(HighFiPage.Weekly, "Routine card"), 296, compact);
             TopShift(Find(HighFiPage.Weekly, "Bedtime card"), 422, compact);
-            foreach (var sheet in new[] { app.timeSheet, app.petSheet, app.eventSheet, app.noticeSheet, app.profileEditor ? app.profileEditor.sheet : null })
+            foreach (var sheet in new[] { app.timeSheet, app.petSheet, app.eventSheet, app.noticeSheet, app.dateSheet, app.profileEditor ? app.profileEditor.sheet : null })
             {
                 if (sheet == null) continue;
                 var sheetRect = (RectTransform)sheet.transform;

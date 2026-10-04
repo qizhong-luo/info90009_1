@@ -97,7 +97,8 @@ namespace Sleepet
                     if (plan.gym) activities.Add("Go to the gym");
                     if (plan.meeting) activities.Add("Group meeting");
                     if (plan.call) activities.Add("Call family or a friend");
-                    if (!string.IsNullOrWhiteSpace(plan.shortEvent)) activities.Add(Limit(plan.shortEvent, 300));
+                    plan.MigrateEvents();
+                    foreach (var item in plan.events) if (item.selected) activities.Add(Limit(item.title, 300));
                     context.plan.activities = activities.ToArray();
                 }
                 catch (Exception e) when (e is IOException || e is UnauthorizedAccessException || e is ArgumentException)

@@ -291,12 +291,26 @@ namespace Sleepet
             var events = new List<string>();
             if (p != null)
             {
+                p.MigrateEvents();
                 if (p.breakfast) events.Add("Make breakfast");
                 if (p.groceries) events.Add("Go grocery shopping"); if (p.meeting) events.Add("Group meeting");
                 if (p.gym) events.Add("Gym day"); if (p.call) events.Add("Call family or a friend");
-                if (!string.IsNullOrWhiteSpace(p.shortEvent)) events.Add(p.shortEvent);
+                foreach (var item in p.events) if (item.selected) events.Add(item.title);
             }
             if (events.Count == 0) events.Add("A gentle start. Nothing extra planned.");
+            if (events.Count > todoLabels.Length && todoLabels.Length > 0)
+            {
+                var labels = new List<Text>(todoLabels);
+                var template = todoLabels[0].transform.parent;
+                if (template.name == "Motion visual") template = template.parent;
+                while (labels.Count < events.Count)
+                {
+                    var card = Instantiate(template, template.parent);
+                    ((RectTransform)card).anchoredPosition = new Vector2(((RectTransform)template).anchoredPosition.x, -labels.Count * 73);
+                    labels.Add(card.GetComponentInChildren<Text>(true));
+                }
+                todoLabels = labels.ToArray();
+            }
             for (int i = 0; i < todoLabels.Length; i++) { var card=todoLabels[i].transform.parent; if(card.name=="Motion visual")card=card.parent;card.gameObject.SetActive(i < events.Count); if (i < events.Count) todoLabels[i].text = events[i]; }
             if (todoLabels.Length > 0) {var card=todoLabels[0].transform.parent;if(card.name=="Motion visual")card=card.parent;((RectTransform)card.parent).sizeDelta = new Vector2(348, Mathf.Max(288, events.Count * 73));}
         }
@@ -341,7 +355,8 @@ namespace Sleepet
         public void OnEndDrag(PointerEventData e)
         {
             if(page!="MorningEnd" || leaving)return;
-            if((e.position.y-dragStart.y)/GetComponentInParent<Canvas>().scaleFactor>=60)FinishMorning();
+            Vector2 delta = (e.position-dragStart)/GetComponentInParent<Canvas>().scaleFactor;
+            if(delta.y>=60 && delta.y>Mathf.Abs(delta.x))FinishMorning();
             else transition.gameObject.SetActive(false);
         }
         void Fail(string message) { if (error) error.text = message; }

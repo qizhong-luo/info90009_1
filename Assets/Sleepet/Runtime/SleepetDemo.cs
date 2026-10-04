@@ -296,6 +296,7 @@ namespace Sleepet
             if (!Store.SavePreferences(p)) { view.settingsNotice.text = Store.Error; return; }
             ApplyPreferences();
             view.settingsNotice.text = p.reminderEnabled ? "Saved. Reminder at " + p.reminderTime + " while the app is open." : "Saved on this device. Reminder is off.";
+            if (Detector.Running && Detector.State == SleepState.Awake) media.Play();
             Logger.Log("PREFERENCES_SAVED", p.reminderTime, "local preferences");
             Logger.Log("SLEEP_BEHAVIOUR_SELECTED", Behaviour.ToString()); Logger.Log("COMPANION_MODE_SELECTED", Companion.ToString());
         }
