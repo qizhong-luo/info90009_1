@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const sharp = require('C:/Users/zzhon/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+const { rasterizeSplashLetter } = require('./RasterizeSplashLetters.cjs');
 const source = 'C:/Users/zzhon/Desktop/info90009/Sleepet-Unity/Sleepet/assets';
 const project = path.resolve(__dirname, '..');
 const out = path.join(project, 'Assets/Sleepet/Art/Flow');
@@ -19,7 +20,11 @@ if(!fs.existsSync(path.join(validation,'original-scenes.json'))) fs.writeFileSyn
   const from=path.join(source,folder,file), target=path.join(out,file.replace(/\.svg$/,'.png'));
   if(file.endsWith('.svg')) {
    let svg=fs.readFileSync(from,'utf8').replace(/(width|height)="([\d.]+)"/g,(m,key,v)=>Number(v)<1?`${key}="1"`:m);
-   try { await sharp(Buffer.from(svg),{density:192}).png().toFile(target); }
+   try {
+    if (folder === 'onboarding/splash' && file.startsWith('letter-'))
+     await rasterizeSplashLetter(svg, target);
+    else await sharp(Buffer.from(svg),{density:192}).png().toFile(target);
+   }
    catch(e) { throw new Error(file+': '+e.message); }
   }
   else fs.copyFileSync(from,target);
