@@ -51,7 +51,7 @@ namespace Sleepet.Tests
         {
             foreach (string skill in CompanionSkills.Ids)
             {
-                var context = new CompanionContext { skillId = skill, shareData = true };
+                var context = new CompanionContext { skillId = skill, shareData = true, thoughtMotion = "sitting", thoughtTrigger = "tap" };
                 foreach (string name in new[] { "Miia", "Luna", "小月" })
                 {
                     context.petName = name;

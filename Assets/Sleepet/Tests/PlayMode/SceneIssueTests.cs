@@ -33,9 +33,12 @@ namespace Sleepet.Tests
         [UnityTest] public IEnumerator PetRespondsAndReturnsToOriginalTransform()
         {
             var scale = UI.homePet.transform.localScale; var rotation = UI.homePet.transform.localRotation;
+            var sprite = UI.homePet.sprite;
             UI.TapPetHighFi(); yield return new WaitForSecondsRealtime(.2f);
-            Assert.AreNotEqual(scale, UI.homePet.transform.localScale);
-            UI.TapPetHighFi(); yield return new WaitForSecondsRealtime(.9f);
+            Assert.AreNotSame(sprite, UI.homePet.sprite);
+            Assert.AreEqual(scale, UI.homePet.transform.localScale);
+            UI.TapPetHighFi(); yield return new WaitForSecondsRealtime(1.3f);
+            Assert.AreSame(sprite, UI.homePet.sprite);
             Assert.AreEqual(scale, UI.homePet.transform.localScale); Assert.AreEqual(rotation, UI.homePet.transform.localRotation);
         }
         [UnityTest] public IEnumerator DropdownShowsReadableOptionsAndCanSelect()

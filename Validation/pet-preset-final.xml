@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.3053963">
+  <test-suite type="TestSuite" id="1077" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.305396" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1071" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.295774" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34436" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1072" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.294213" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1073" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.292991" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1033" name="PetThoughtTests" fullname="Sleepet.Tests.PetThoughtTests" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:21:00Z" duration="6.288272" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1035" name="HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" fullname="Sleepet.Tests.PetThoughtTests.HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" methodname="HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="41509869" result="Passed" start-time="2026-10-05 08:20:54Z" end-time="2026-10-05 08:20:56Z" duration="2.372610" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="OnlyOriginalBlackWhiteBorderCollieCanAnimate" fullname="Sleepet.Tests.PetThoughtTests.OnlyOriginalBlackWhiteBorderCollieCanAnimate" methodname="OnlyOriginalBlackWhiteBorderCollieCanAnimate" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="239680533" result="Passed" start-time="2026-10-05 08:20:56Z" end-time="2026-10-05 08:20:56Z" duration="0.002448" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="RealPointerTapSurvivesWobbleAndDragDoesNotTap" fullname="Sleepet.Tests.PetThoughtTests.RealPointerTapSurvivesWobbleAndDragDoesNotTap" methodname="RealPointerTapSurvivesWobbleAndDragDoesNotTap" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="2057130321" result="Passed" start-time="2026-10-05 08:20:56Z" end-time="2026-10-05 08:20:58Z" duration="1.578709" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="SelectingOriginalPresetClearsStaleCustomizationAndAnimatesAfterReload" fullname="Sleepet.Tests.PetThoughtTests.SelectingOriginalPresetClearsStaleCustomizationAndAnimatesAfterReload" methodname="SelectingOriginalPresetClearsStaleCustomizationAndAnimatesAfterReload" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1493636122" result="Passed" start-time="2026-10-05 08:20:58Z" end-time="2026-10-05 08:21:00Z" duration="2.317439" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="300000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

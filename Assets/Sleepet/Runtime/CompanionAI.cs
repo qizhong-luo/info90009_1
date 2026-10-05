@@ -10,6 +10,7 @@ namespace Sleepet
         public CompanionMode companionMode;
         public SleepState sleepState;
         public string skillId, today, capturedAt;
+        public string thoughtMotion, thoughtTrigger;
         public bool shareData;
         public CompanionPreferences preferences;
         public CompanionRecord[] records;

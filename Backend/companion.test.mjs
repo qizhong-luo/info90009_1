@@ -13,10 +13,27 @@ const body = (skillId = 'daily_companionship', shareData = true) => ({ message: 
 const output = reply => ({ status: 'completed', output: [{ type: 'message', content: [{ type: 'output_text', text: reply }] }] });
 const response = value => ({ ok: true, json: async () => value });
 
-test('all three versioned presets load with distinct allowed tools', () => {
-  assert.equal(Object.keys(skills).length, 3);
+test('all four versioned presets load with distinct allowed tools', () => {
+  assert.equal(Object.keys(skills).length, 4);
   assert.deepEqual(skills.record_review.tools, ['get_sleep_history']);
   assert.deepEqual(skills.tomorrow_preparation.tools, ['get_tomorrow_plan', 'get_preferences']);
+});
+
+test('thoughts reject ambient affection and strip plans outside bark', () => {
+  const raw = body('thoughts');
+  raw.context.thoughtTrigger = 'ambient'; raw.context.thoughtMotion = 'licking1';
+  assert.throws(() => normalizeRequest(raw), /Invalid thought/);
+  for (const motion of ['itching', 'stretching', 'sitting']) {
+    raw.context.thoughtMotion = motion;
+    const normalized = normalizeRequest(raw).context;
+    assert.equal(normalized.thoughtMotion, motion);
+    assert.equal(normalized.plan.status, 'missing');
+    assert.equal(normalized.plan.activities, undefined);
+  }
+  raw.context.thoughtTrigger = 'tap'; raw.context.thoughtMotion = 'bark';
+  assert.deepEqual(normalizeRequest(raw).context.plan.activities, ['Group meeting']);
+  raw.context.plan.date = '2026-10-01';
+  assert.equal(normalizeRequest(raw).context.plan.status, 'outdated');
 });
 test('disabled sharing strips saved data and malicious extra fields', () => {
   const raw = body('tomorrow_preparation', false); raw.context.apiKey = 'never forward';

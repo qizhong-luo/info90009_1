@@ -1,0 +1,14 @@
+{
+  "tool": "Built-in image_gen",
+  "reference": "Assets/Sleepet/Art/Figma/home-mocha-transparent.png; Figma wL0dEDwxixjr25vdROZULV Slide 16:9 - 1, overlapping reference node 13:106",
+  "constraints": "Same black-white Border Collie, blue white-crescent bandana, hand-drawn shaded illustration; six full-body chronological keyframes in one transparent row; shared size, facing direction and baseline; no Golden Retriever, scenery or labels.",
+  "actions": {
+    "bark": "Friendly bark: seated neutral, small chest inhale, muzzle lifts, mouth opens clearly in a short happy woof, mouth closes, return to seated neutral. Six successive distinct keyframes.",
+    "licking1": "Affectionate nose lick: seated neutral, tongue begins to emerge, pink tongue curls UP over own nose, tongue sweeps to right side of own muzzle, tongue retracts, seated neutral again. Six distinct successive keyframes.",
+    "licking2": "Gentle paw grooming: seated neutral, right front paw lifts toward mouth, head bows toward paw, pink tongue touches raised paw, paw lowers, return to neutral. Six distinct successive keyframes.",
+    "itching": "Cute ear scratch: seated neutral, hind paw raises toward own ear, head tilts while hind paw touches ear, second scratch contact with a different paw angle, paw lowers, seated neutral. Exactly four natural legs and no extra limbs.",
+    "stretching": "Play bow stretch inspired by the reference border collie with front paws extended: seated neutral, stands on all fours, front paws slide forward and chest lowers, full play bow hindquarters high tail up tongue visible, rises back, seated neutral. Keep all four feet visible; recognizable progressive poses.",
+    "sitting": "Quiet sitting: seated neutral eyes open, ears relax, eyes half close and shoulders settle, eyes softly closed with slight head tilt, eyes reopen, seated neutral. Calm breathing, subtle head and tail changes; NOT a duplicate of other actions."
+  },
+  "stretchingRepair": "Preserve six poses, repair overlap by uniformly reducing character size and adding 15% horizontal cell padding. Final packaging uses alpha-connected character extraction to preserve complete tails."
+}

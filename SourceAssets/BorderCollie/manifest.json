@@ -1,0 +1,44 @@
+[
+  {
+    "motion": "bark",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  },
+  {
+    "motion": "licking1",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  },
+  {
+    "motion": "licking2",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  },
+  {
+    "motion": "itching",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  },
+  {
+    "motion": "stretching",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  },
+  {
+    "motion": "sitting",
+    "frames": 6,
+    "fps": 5,
+    "durationSeconds": 1.2,
+    "size": 256
+  }
+]

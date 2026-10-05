@@ -128,6 +128,9 @@ namespace Sleepet
                             messages.Add(new LocalMessage { role = turn.role, content = CompanionSnapshots.Limit(turn.content, 400) });
                 messages.Add(new LocalMessage { role = "user", content = userText });
                 var payload = new LocalChatRequest { messages = messages.ToArray() };
+                // Thoughts are short English UI copy. Constrain decoding as well as prompting
+                // so the small multilingual model cannot insert unsupported mixed-language text.
+                if (context.skillId == CompanionSkills.Thoughts) payload.grammar = @"root ::= [\x20-\x7E]{1,160}";
                 using (var request = new UnityWebRequest(baseUrl + "/v1/chat/completions", "POST"))
                 {
                     request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(payload)));
@@ -173,6 +176,7 @@ namespace Sleepet
     [Serializable] sealed class LocalChatRequest
     {
         public string model = "local";
+        public string grammar = "";
         public LocalMessage[] messages;
         public int max_tokens = 192;
         public float temperature = .2f;

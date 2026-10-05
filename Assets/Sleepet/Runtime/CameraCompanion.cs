@@ -155,12 +155,14 @@ namespace Sleepet
             app?.Logger?.Log("CAMERA_TEST_BACKGROUND_SELECTED");
         }
         public void PlacePet()
+        { PlacePetOverlay(true); }
+        public void PlacePetOverlay(bool showLegacyPet)
         {
             if (!IsLive && !IsTestMode) return;
-            pet.gameObject.SetActive(true);
+            pet.gameObject.SetActive(showLegacyPet);
             ((RectTransform)pet.transform).anchoredPosition = new Vector2(0, -30);
             placementMarker.SetActive(false);
-            pet.Tap();
+            if (showLegacyPet) pet.Tap();
             app?.Logger?.Log("PET_PLACED", "Mocha", IsLive ? "webcam screen overlay" : "explicit test background");
         }
         public void SwitchCamera() { index++; StartCamera(); }

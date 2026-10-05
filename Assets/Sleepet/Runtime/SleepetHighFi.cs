@@ -124,9 +124,6 @@ namespace Sleepet
         int selectedPet;
         int selectedAppearance, selectedPose;
         Coroutine petAnimation;
-        Coroutine homeReaction;
-        Vector3 homePetScale;
-        Quaternion homePetRotation;
         string lastPageBeforeAR = "Home";
         float previousReportScroll;
         ScrollRect reportScroll;
@@ -134,6 +131,9 @@ namespace Sleepet
         string lastChatText;
         int lastReplyRevision;
         float arReactionUntil;
+        PetThoughts thoughts;
+        public bool ThoughtsActive => CurrentPage == HighFiPage.AR && placed && !arChatOpen && arPet.gameObject.activeInHierarchy
+            && (demo.cameraCompanion.IsLive || demo.cameraCompanion.IsTestMode);
 
         IEnumerator Start()
         {
@@ -148,7 +148,6 @@ namespace Sleepet
             dataPath = Path.Combine(demo.Store.DirectoryPath, "tomorrow-plan.json");
             LoadPlan();
             ApplyPlanToUI();
-            if (homePet) { homePetScale = homePet.transform.localScale; homePetRotation = homePet.transform.localRotation; }
             if (meVolume != null)
             {
                 meVolume.SetValueWithoutNotify(demo.Store.Preferences.volume);
@@ -156,6 +155,8 @@ namespace Sleepet
             }
             if (scenePage == HighFiPage.AR)
             {
+                thoughts = arPet.gameObject.AddComponent<PetThoughts>();
+                thoughts.Initialize(this, demo);
                 placed = false; arChatOpen = false;
                 arPet.gameObject.SetActive(false); arChat.text = "";
                 arPlaceControls.SetActive(true); arChatControls.SetActive(false);
@@ -208,23 +209,10 @@ namespace Sleepet
         public void TapPetHighFi()
         {
             if (demo == null || demo.Store == null) return;
-            demo.TapPet();
+            demo.Activity();
             if (!homePet) return;
-            if (homeReaction != null) StopCoroutine(homeReaction);
-            homeReaction = StartCoroutine(ReactHomePet());
-        }
-        IEnumerator ReactHomePet()
-        {
-            for (float t = 0; t < .8f; t += Time.unscaledDeltaTime)
-            {
-                float pulse = Mathf.Sin(t / .8f * Mathf.PI);
-                homePet.transform.localScale = Vector3.Scale(homePetScale, new Vector3(1 - .05f * pulse, 1 + .09f * pulse, 1));
-                homePet.transform.localRotation = homePetRotation * Quaternion.Euler(0, 0, Mathf.Sin(t * Mathf.PI * 5) * 6 * pulse);
-                yield return null;
-            }
-            homePet.transform.localScale = homePetScale;
-            homePet.transform.localRotation = homePetRotation;
-            homeReaction = null;
+            var reaction = homePet.GetComponent<HomePetReaction>() ?? homePet.gameObject.AddComponent<HomePetReaction>();
+            reaction.Tap(demo.Store.Preferences);
         }
         public void OpenSleep()
         {
@@ -338,6 +326,7 @@ namespace Sleepet
         public void RefreshMe()
         {
             if (demo == null || demo.Store == null) return;
+            if (homePet) homePet.GetComponent<HomePetReaction>()?.Stop();
             var p = demo.Store.Preferences;
             if (homeGreeting) homeGreeting.text = "Good evening, " + p.profileName + ".";
             if (homeReadyLabel) homeReadyLabel.text = "Ready to sleep with " + p.petName;
@@ -364,6 +353,11 @@ namespace Sleepet
                 var saved = PetSprite(p.petOption, p.petAppearance, p.petPose);
                 foreach (var target in new[] { homePet, mePet, arPet }) if (target) target.sprite = saved;
                 if (sleepPet) sleepPet.sprite = PetSprite(p.petOption, p.petAppearance, p.petOption == 0 && p.petAppearance == 0 ? 1 : p.petPose);
+            }
+            if (homePet)
+            {
+                var reaction = homePet.GetComponent<HomePetReaction>() ?? homePet.gameObject.AddComponent<HomePetReaction>();
+                reaction.Configure(p);
             }
         }
         static string Format12(string value)
@@ -414,6 +408,7 @@ namespace Sleepet
         }
         public void OpenPetSheet()
         {
+            petPresetChanged = false;
             var p = demo.Store.Preferences;
             selectedPet = Mathf.Clamp(p.petOption, 0, petOptions.Length - 1);
             selectedAppearance = p.petAppearance; selectedPose = p.petPose;
@@ -424,11 +419,12 @@ namespace Sleepet
         {
             SelectPet((selectedPet + 1) % petOptions.Length);
         }
-        public void SelectPet(int option) { selectedPet = Mathf.Clamp(option, 0, petOptions.Length - 1); selectedAppearance = selectedPose = 0; RefreshPetDraft(); }
+        bool petPresetChanged;
+        public void SelectPet(int option) { selectedPet = Mathf.Clamp(option, 0, petOptions.Length - 1); selectedAppearance = selectedPose = 0; petPresetChanged = true; RefreshPetDraft(); }
         public void ChangePetAppearance()
         {
             if (selectedPet != 0) { ShowNotice("This pet currently has one preset appearance."); return; }
-            selectedAppearance = 1 - selectedAppearance; selectedPose = 0; RefreshPetDraft();
+            selectedAppearance = 1 - selectedAppearance; selectedPose = 0; petPresetChanged = true; RefreshPetDraft();
         }
         public void ChangePetPose()
         {
@@ -470,6 +466,15 @@ namespace Sleepet
             p.petOption = selectedPet; p.petName = string.IsNullOrWhiteSpace(petNameInput.text) ? "Mocha" : petNameInput.text.Trim();
             p.petSpecies = selectedPet == 0 ? "dog" : selectedPet == 1 ? "cat" : "other";
             p.petAppearance = selectedAppearance; p.petPose = selectedPose;
+            // A deliberate preset selection replaces any previous customization metadata.
+            // Renaming or changing pose alone must preserve a custom pet's static behavior.
+            if (petPresetChanged)
+            {
+                p.petPhoto = "";
+                p.petBreed = selectedPet == 0 ? (selectedAppearance == 0 ? "Border Collie" : "Golden Retriever")
+                    : selectedPet == 1 ? "Domestic Shorthair" : "Other";
+                p.petColour = selectedPet == 0 ? (selectedAppearance == 0 ? "Black & white" : "Golden") : "";
+            }
             if (!demo.Store.SavePreferences(p)) { ShowNotice(demo.Store.Error); return; }
             petSheet.SetActive(false); RefreshMe();
             SleepetSceneSession.Instance?.MarkStateChanged();
@@ -776,9 +781,8 @@ namespace Sleepet
             }
             if (placed)
             {
-                float pulse = demo.ChatBusy ? Mathf.Sin(Time.unscaledTime * 2) * .012f
-                    : Time.unscaledTime < arReactionUntil ? Mathf.Sin((arReactionUntil - Time.unscaledTime) * Mathf.PI / .8f) * .035f : 0;
-                arPet.transform.localScale = Vector3.one * (1 + pulse);
+                // Frame animation is owned by PetThoughts. Customized pets stay completely static.
+                arPet.transform.localScale = Vector3.one;
             }
         }
         // Placement and chat are independent actions. Chat never requires a camera or placed pet.
@@ -786,12 +790,13 @@ namespace Sleepet
         {
             if (!demo.cameraCompanion.IsLive && !demo.cameraCompanion.IsTestMode)
             { ShowNotice("Camera unavailable. Use Test background to try placement."); return; }
-            demo.cameraCompanion.PlacePet(); placed = true;
-            arPet.rectTransform.anchoredPosition = new Vector2(116, -210); arPet.rectTransform.sizeDelta = new Vector2(170, 165);
+            demo.cameraCompanion.PlacePetOverlay(false); placed = true;
+            arPet.rectTransform.anchoredPosition = new Vector2(116, -300); arPet.rectTransform.sizeDelta = new Vector2(170, 165);
             arPet.gameObject.SetActive(true); RefreshAR();
         }
         public void OpenSleepetChat()
         {
+            thoughts?.Cancel();
             demo.CloseCamera();
             placed = false; arChatOpen = true;
             arPet.rectTransform.anchoredPosition = new Vector2(141, -168); arPet.rectTransform.sizeDelta = new Vector2(120, 126);

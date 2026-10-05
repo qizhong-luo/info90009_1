@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Failed(Child)" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.7542409">
+  <test-suite type="TestSuite" id="1076" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.754241" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1070" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.742364" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17508" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1071" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.740436" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1072" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.738950" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1033" name="PetThoughtTests" fullname="Sleepet.Tests.PetThoughtTests" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:52Z" duration="6.734482" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1035" name="HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" fullname="Sleepet.Tests.PetThoughtTests.HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" methodname="HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1484204487" result="Failed" start-time="2026-10-05 02:41:45Z" end-time="2026-10-05 02:41:46Z" duration="1.180069" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Real home pet click did not play animation
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.PetThoughtTests+<HomeTapUsesFramesWithoutThoughtsAndCustomPetStaysStatic>d__3.MoveNext () [0x00207] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\PetThoughtTests.cs:71
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1034" name="RealPointerTapSurvivesWobbleAndDragDoesNotTap" fullname="Sleepet.Tests.PetThoughtTests.RealPointerTapSurvivesWobbleAndDragDoesNotTap" methodname="RealPointerTapSurvivesWobbleAndDragDoesNotTap" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1280746947" result="Failed" start-time="2026-10-05 02:41:46Z" end-time="2026-10-05 02:41:48Z" duration="1.720645" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  A slow click with small movement must still count as one tap
+  Expected: 1
+  But was:  0
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.PetThoughtTests+<RealPointerTapSurvivesWobbleAndDragDoesNotTap>d__2.MoveNext () [0x0036e] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\PetThoughtTests.cs:45
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1037" name="VisibleARPetAnimatesShowsBubbleAndStopsForChat" fullname="Sleepet.Tests.PetThoughtTests.VisibleARPetAnimatesShowsBubbleAndStopsForChat" methodname="VisibleARPetAnimatesShowsBubbleAndStopsForChat" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="810333415" result="Passed" start-time="2026-10-05 02:41:48Z" end-time="2026-10-05 02:41:52Z" duration="3.814863" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

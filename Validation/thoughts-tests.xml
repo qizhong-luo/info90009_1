@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="24" result="Failed(Child)" total="24" passed="22" failed="1" inconclusive="0" skipped="1" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:33Z" duration="11.1551909">
+  <test-suite type="TestSuite" id="1074" name="info90009_1" fullname="info90009_1" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:33Z" duration="11.155191" total="24" passed="22" failed="1" inconclusive="0" skipped="1" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1068" name="Sleepet.PlayModeTests.dll" fullname="C:/Users/zzhon/Desktop/info90009/unity/info90009_1/Library/ScriptAssemblies/Sleepet.PlayModeTests.dll" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:33Z" duration="11.144268" total="24" passed="22" failed="1" inconclusive="0" skipped="1" asserts="0">
+      <properties>
+        <property name="_PID" value="3872" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1069" name="Sleepet" fullname="Sleepet" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:33Z" duration="11.142576" total="24" passed="22" failed="1" inconclusive="0" skipped="1" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1070" name="Tests" fullname="Sleepet.Tests" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:33Z" duration="11.141241" total="24" passed="22" failed="1" inconclusive="0" skipped="1" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="CompanionAITests" fullname="Sleepet.Tests.CompanionAITests" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" testcasecount="18" result="Skipped" label="Ignored" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:26Z" duration="4.037705" total="18" passed="17" failed="0" inconclusive="0" skipped="1" asserts="0">
+            <properties />
+            <reason>
+              <message><![CDATA[One or more child tests were ignored]]></message>
+            </reason>
+            <test-case id="1010" name="ARSkillControlsReadLocalDataAndSurviveReturn" fullname="Sleepet.Tests.CompanionAITests.ARSkillControlsReadLocalDataAndSurviveReturn" methodname="ARSkillControlsReadLocalDataAndSurviveReturn" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1066025473" result="Passed" start-time="2026-10-04 17:56:22Z" end-time="2026-10-04 17:56:25Z" duration="3.101237" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1019" name="AutomaticSkillsMatchConversationIntent" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.006331" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1011" name="AutomaticSkillsMatchConversationIntent(&quot;What did I save for tomorrow?&quot;,&quot;tomorrow_preparation&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;What did I save for tomorrow?&quot;,&quot;tomorrow_preparation&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1172062853" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.001979" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="AutomaticSkillsMatchConversationIntent(&quot;Review my last seven days&quot;,&quot;record_review&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;Review my last seven days&quot;,&quot;record_review&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="12606816" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000110" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="AutomaticSkillsMatchConversationIntent(&quot;How long did I sleep last night?&quot;,&quot;record_review&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;How long did I sleep last night?&quot;,&quot;record_review&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1641033549" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000097" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="AutomaticSkillsMatchConversationIntent(&quot;What is my wake time?&quot;,&quot;daily_companionship&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;What is my wake time?&quot;,&quot;daily_companionship&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="516401087" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000146" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="AutomaticSkillsMatchConversationIntent(&quot;I am tired&quot;,&quot;daily_companionship&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;I am tired&quot;,&quot;daily_companionship&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="692635704" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000077" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="AutomaticSkillsMatchConversationIntent(&quot;明天有什么安排&quot;,&quot;tomorrow_preparation&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;明天有什么安排&quot;,&quot;tomorrow_preparation&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="124389712" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000456" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="AutomaticSkillsMatchConversationIntent(&quot;看看最近的睡眠记录&quot;,&quot;record_review&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;看看最近的睡眠记录&quot;,&quot;record_review&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="257950162" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000073" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="AutomaticSkillsMatchConversationIntent(&quot;陪我聊聊天&quot;,&quot;daily_companionship&quot;)" fullname="Sleepet.Tests.CompanionAITests.AutomaticSkillsMatchConversationIntent(&quot;陪我聊聊天&quot;,&quot;daily_companionship&quot;)" methodname="AutomaticSkillsMatchConversationIntent" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1852651957" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:25Z" duration="0.000065" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1009" name="ChangedSavedFactsInvalidateModelHistoryButKeepTranscript" fullname="Sleepet.Tests.CompanionAITests.ChangedSavedFactsInvalidateModelHistoryButKeepTranscript" methodname="ChangedSavedFactsInvalidateModelHistoryButKeepTranscript" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="470966914" result="Passed" start-time="2026-10-04 17:56:25Z" end-time="2026-10-04 17:56:26Z" duration="0.441711" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="ChatKeepsHistoryRetriesAndDiscardsLateReplies" fullname="Sleepet.Tests.CompanionAITests.ChatKeepsHistoryRetriesAndDiscardsLateReplies" methodname="ChatKeepsHistoryRetriesAndDiscardsLateReplies" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1654973737" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.440069" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="FollowupKeepsRelevantSkillUntilTopicChanges" fullname="Sleepet.Tests.CompanionAITests.FollowupKeepsRelevantSkillUntilTopicChanges" methodname="FollowupKeepsRelevantSkillUntilTopicChanges" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="623705618" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.000276" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="LegacyMockKeepsItsExplicitFallbackMessage" fullname="Sleepet.Tests.CompanionAITests.LegacyMockKeepsItsExplicitFallbackMessage" methodname="LegacyMockKeepsItsExplicitFallbackMessage" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="838480393" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.000364" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="LocalPromptUsesCurrentPetNameForEverySkill" fullname="Sleepet.Tests.CompanionAITests.LocalPromptUsesCurrentPetNameForEverySkill" methodname="LocalPromptUsesCurrentPetNameForEverySkill" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="529348220" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.006707" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="LocalSkillsEnforceDataScopesAndExcludeSamples" fullname="Sleepet.Tests.CompanionAITests.LocalSkillsEnforceDataScopesAndExcludeSamples" methodname="LocalSkillsEnforceDataScopesAndExcludeSamples" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1802028102" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.001105" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="OnlineClientRoundTripsThroughLocalBackend" fullname="Sleepet.Tests.CompanionAITests.OnlineClientRoundTripsThroughLocalBackend" methodname="OnlineClientRoundTripsThroughLocalBackend" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1801646848" result="Skipped" label="Ignored" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.002438" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <reason>
+                <message><![CDATA[Set SLEEPET_AI_TEST_URL and start the documented integration fixture.]]></message>
+              </reason>
+            </test-case>
+            <test-case id="1006" name="ThreeSkillsLoadAndSnapshotsRespectPermissionAndProvenance" fullname="Sleepet.Tests.CompanionAITests.ThreeSkillsLoadAndSnapshotsRespectPermissionAndProvenance" methodname="ThreeSkillsLoadAndSnapshotsRespectPermissionAndProvenance" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="285315393" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.011714" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="TomorrowSnapshotRequiresMatchingSavedDate" fullname="Sleepet.Tests.CompanionAITests.TomorrowSnapshotRequiresMatchingSavedDate" methodname="TomorrowSnapshotRequiresMatchingSavedDate" classname="Sleepet.Tests.CompanionAITests" runstate="Runnable" seed="1439101128" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.009652" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1033" name="PetThoughtTests" fullname="Sleepet.Tests.PetThoughtTests" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:33Z" duration="7.100750" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1039" name="AllSixBorderCollieClipsHaveSixFrames" fullname="Sleepet.Tests.PetThoughtTests.AllSixBorderCollieClipsHaveSixFrames" methodname="AllSixBorderCollieClipsHaveSixFrames" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="516852366" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.036012" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="AmbientCannotSelectTapOnlyMotionsOrRepeat" fullname="Sleepet.Tests.PetThoughtTests.AmbientCannotSelectTapOnlyMotionsOrRepeat" methodname="AmbientCannotSelectTapOnlyMotionsOrRepeat" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1056267298" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.005681" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="AmbientPromptCannotReadPlansAndRejectsCrossThemeReminder" fullname="Sleepet.Tests.PetThoughtTests.AmbientPromptCannotReadPlansAndRejectsCrossThemeReminder" methodname="AmbientPromptCannotReadPlansAndRejectsCrossThemeReminder" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="615809290" result="Passed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:26Z" duration="0.002687" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="BundledModelProducesMotionScopedThoughts" fullname="Sleepet.Tests.PetThoughtTests.BundledModelProducesMotionScopedThoughts" methodname="BundledModelProducesMotionScopedThoughts" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1053255892" result="Failed" start-time="2026-10-04 17:56:26Z" end-time="2026-10-04 17:56:30Z" duration="3.329433" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="300000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  bark: I'm here to chat and play, anytime.
+  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[at Sleepet.Tests.PetThoughtTests+<BundledModelProducesMotionScopedThoughts>d__0.MoveNext () [0x00252] in C:\Users\zzhon\Desktop\info90009\unity\info90009_1\Assets\Sleepet\Tests\PlayMode\PetThoughtTests.cs:39
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@bd7f943e9647\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1038" name="OnlyOriginalBlackWhiteBorderCollieCanAnimate" fullname="Sleepet.Tests.PetThoughtTests.OnlyOriginalBlackWhiteBorderCollieCanAnimate" methodname="OnlyOriginalBlackWhiteBorderCollieCanAnimate" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="387533465" result="Passed" start-time="2026-10-04 17:56:30Z" end-time="2026-10-04 17:56:30Z" duration="0.000648" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="VisibleARPetAnimatesShowsBubbleAndStopsForChat" fullname="Sleepet.Tests.PetThoughtTests.VisibleARPetAnimatesShowsBubbleAndStopsForChat" methodname="VisibleARPetAnimatesShowsBubbleAndStopsForChat" classname="Sleepet.Tests.PetThoughtTests" runstate="Runnable" seed="1579174472" result="Passed" start-time="2026-10-04 17:56:30Z" end-time="2026-10-04 17:56:33Z" duration="3.723574" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/zzhon/AppData/LocalLow/DefaultCompany/info90009_1\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

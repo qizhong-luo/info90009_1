@@ -11,13 +11,16 @@ namespace Sleepet
     {
         public string id, label, version, instructions;
         public string[] tools;
+        public CompanionThoughtRule[] thoughts;
     }
+    [Serializable] public sealed class CompanionThoughtRule { public string motion, theme, example; }
 
     public static class CompanionSkills
     {
         public const string Daily = "daily_companionship", Records = "record_review", Tomorrow = "tomorrow_preparation";
-        public static readonly string[] Ids = { Daily, Records, Tomorrow };
-        public static string Label(string id) => id == Records ? "Record review" : id == Tomorrow ? "Tomorrow preparation" : "Daily companionship";
+        public const string Thoughts = "thoughts";
+        public static readonly string[] Ids = { Daily, Records, Tomorrow, Thoughts };
+        public static string Label(string id) => id == Thoughts ? "Thoughts" : id == Records ? "Record review" : id == Tomorrow ? "Tomorrow preparation" : "Daily companionship";
         public static CompanionSkill Load(string id)
         {
             if (!Ids.Contains(id)) throw new ArgumentException("Unknown companion skill.");
@@ -76,7 +79,7 @@ namespace Sleepet
                 }
                 context.records = records.OrderByDescending(r => r.date).Take(30).ToArray();
             }
-            if (skill == CompanionSkills.Tomorrow)
+            if (skill == CompanionSkills.Tomorrow || skill == CompanionSkills.Thoughts)
             {
                 string path = Path.Combine(store.DirectoryPath, "tomorrow-plan.json");
                 try

@@ -30,6 +30,7 @@ namespace Sleepet
         public string Page { get; private set; } = "Home";
         public PetController Pet => view.resultPanel.activeSelf ? view.resultPet : Page == "Sleep" ? view.sleepPet : view.homePet;
         public bool ChatBusy { get; private set; }
+        public event Action ThoughtsInterrupted;
         public string ChatSkill { get; private set; } = CompanionSkills.Daily;
         public bool ShareAIData { get; private set; } = true;
         public bool OnlineAI => AI is OpenAICompanion;
@@ -394,6 +395,7 @@ namespace Sleepet
         {
             string input = (text ?? "").Trim();
             if (ChatBusy || input.Length == 0) return false;
+            ThoughtsInterrupted?.Invoke();
             if (input.Length > 2000) { ChatStatus = "Use 2000 characters or fewer."; RefreshChat(); return false; }
             ChatSkill = CompanionSkillRouter.Resolve(input, ChatSkill);
             Activity(); Logger.Log("AI_MESSAGE_SENT", input.Length.ToString(), "character count only");
@@ -413,6 +415,7 @@ namespace Sleepet
         }
         public void CancelChat()
         {
+            ThoughtsInterrupted?.Invoke();
             chatVersion++;
             (AI as ICancellableCompanionAI)?.CancelPending();
             if (chatRoutine != null) { StopCoroutine(chatRoutine); chatRoutine = null; }

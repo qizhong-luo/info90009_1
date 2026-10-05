@@ -4,11 +4,12 @@ Double-click `Builds/Sleepet-LocalAI-Windows/Sleepet.exe`. Keep its entire folde
 
 Enter the AR screen and choose **Chat with the Sleepet** to chat directly. **Meet the Sleepet in AR** is a separate placement action; Test background is available if there is no camera. Offline LLM is the default; the model loads on the first request. The provider switch selects optional OpenAI, which still requires a configured backend and Internet access. A missing or broken local model produces a retryable error, never a fabricated answer or silent cloud fallback.
 
-## Three application skills
+## Application skills
 
 - Daily companionship: brief conversation and, when enabled, saved preferences.
 - Record review: the last seven calendar days of app sessions, excluding samples from real totals. These records are not measured sleep.
 - Tomorrow preparation: the saved plan must be dated for tomorrow; missing or outdated plans are not reused.
+- Thoughts: AR tap reactions and random 2–10 minute foreground idle reactions. Tap permits six themes; idle permits only playful daydreams, stretching and quiet companionship. The original black/white Border Collie uses six matching animations; customized pets stay static. Thoughts do not enter chat history.
 
 The chat surface has one local/online model switch and no manual skill selector. The versioned presets live in `Assets/Sleepet/Resources/CompanionSkills`. These are application skills, not Codex plugins. The app executes scoped reads, computes record totals, and passes bounded results to the model. The model cannot write settings or read arbitrary files. Saved data is enabled by default and has no user-facing toggle. The application chooses the relevant skill automatically from English or Chinese message content, using the previous skill for short follow-up questions. Automatic topic changes preserve the conversation. Changing model provider clears conversation context. In Offline LLM the prompt and data remain on the device; in OpenAI mode enabled data is sent to the configured backend.
 
